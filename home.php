@@ -3,12 +3,14 @@
 if (!isset($_SESSION)) {
   session_start();
 }
+
 require_once('Connections/db_adidas.php');
 mysql_select_db($database_db_adidas, $db_adidas);
 
 $LoginRS__query="INSERT INTO visitas(id_usuario,fecha,hora_entrada) VALUES ('".$_SESSION['MM_UserId']."','".date('Y-m-d', time())."','".date('G:i',time())."')"; 
 
 $LoginRS = mysql_query($LoginRS__query, $db_adidas) or die(mysql_error());
+
 
 // ** Logout the current user. **
 $logoutAction = $_SERVER['PHP_SELF']."?doLogout=true";
@@ -128,7 +130,7 @@ function TyC() {
 			<div id="content">
 				<div class="top"></div>
 				<div id="content-home">
-					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="500" id="Vid" title="video">
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="600" id="Vid" title="video">
         	  	<param name="movie" value="swf/Adidas_.swf" />
         	  	<param name="quality" value="high" />
         	  	<param name="wmode" value="transparent" />
@@ -137,7 +139,7 @@ function TyC() {
         	  	<param name="expressinstall" value="Scripts/expressInstall.swf" />
         	  	<!-- La siguiente etiqueta object es para navegadores distintos de IE. Ocúltela a IE mediante IECC. -->
         	  	<!--[if !IE]>-->
-              	<object type="application/x-shockwave-flash" data="swf/Adidas_.swf" width="1000" height="500">
+              	<object type="application/x-shockwave-flash" data="swf/Adidas_.swf" width="1000" height="600">
         	    <!--<![endif]-->
         	    <param name="quality" value="high" />
         	    <param name="wmode" value="transparent" />
