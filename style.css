@@ -10,6 +10,17 @@ body {
 	height: 100%;
 	
 }
+
+img {
+	border: 0;
+	outline: none;
+}
+.titleRegistros {
+    left: -430px;
+    position: relative;
+}
+
+
 #container {
 	width: 100%;
 	height: auto;
@@ -30,15 +41,22 @@ body {
 }
 .logo {
 	float: left;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-left: 25px;
+	
 }
 .adidas-reebok {
-	float: right;
-	padding-top: 20px;
-	margin-right: 25px;
+    float: right;
+    position: relative;
+    right: 25px;
+    top: 55px;
 }
-
+.adidasgroup {
+float: right;
+    position: relative;
+    right: 25px;
+    top: 25px;
+}
 #menuPerfil  {
 				background-image: url(imagesAdidas/menu/perfil.png);
 				width : 69px;
@@ -65,12 +83,15 @@ body {
 				display:block;
 			}
 			#menu {
-				width: 500px;
-				float: right;
-				z-index: 100;
-				position: relative;
-				top:33px;
-			}
+    clear: both;
+    float: right;
+    margin-top: 7px;
+    position: relative;
+    right: 15px;
+    width: 500px;
+    z-index: 100;
+    *top: 50px !important;
+}
 			#menu ul {
 				display: inline;
 			}
@@ -83,10 +104,12 @@ body {
 		a:hover.menu {
 			background-position: 0 28px;
 		}
+.linea {   
+   border-bottom: solid thin #6e6e6e;
+    width: 100%;
+}
+		
 #content {
-	
-	border-top: thin solid black;
-
 	width: 100%;
 	margin-bottom: 50px;
 }
@@ -95,12 +118,10 @@ body {
 }
 .bottom {
     background-image: url("imagesAdidas/bottomGrid.png");
-   
+    position: absolute;
     height: 168px;
-    /*position: absolute;*/
     width: 100%;
     z-index: 1;
-   
 }
 #registrate {
 	float: left;
@@ -114,31 +135,50 @@ body {
 	margin: 0 auto;
 	text-align: center;
 }
+
 #user {
     height: 40px;
+    left: 30px;
     margin: 0 auto;
-    padding-top: 95px;
+    padding-top: 15px;
+    position: absolute;
     text-align: left;
     width: 150px;
-} 
+    z-index: 100;
+    *top: 150px !important;
+}
 .user {
     color: #6E6E6E;
     font-size: 12px;
     font-weight: lighter;
     margin: 0 auto;
     text-align: left;
+    text-transform: capitalize;
 }
 .logout {
 	margin: 0 auto;
 	text-align: center;
 }
-#user a:link, a:hover, a:visited  {
+#user a:link {
 	font-size: 10px;
 	color: #6e6e6e;
 	font-style: normal;
 	text-decoration: none;
 	
 }
+#user a:hover{
+	font-size: 10px;
+	color: #6e6e6e;
+	font-style: normal;
+	text-decoration: none;
+}
+#user a:visited{
+	font-size: 10px;
+	color: #6e6e6e;
+	font-style: normal;
+	text-decoration: none;
+}
+
 
 .top {
 	position: relative;
@@ -169,7 +209,7 @@ body {
 .form input.entrar {
     float: left;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 30px;
     top: 10px;
     width: 106px;
     height: 29px;
@@ -177,43 +217,69 @@ body {
 .userOptions {
     float: right;
     font-size: 12px;
-    margin: 30px;
+    margin: 30px 30px 0 0;
     text-align: right;
-    width: 155px;
-    
+    width: 185px;
 }
-.userOptions a:link, a:hover, a:visited, a:active{
+input.password {
+	width: 200px;
+}
+.userOptions  a:hover{
 	font-size: 12px;
-	color: #e3e3e3;
+	color: #fff;
+	text-decoration: none;
+	font-style: normal;
+}
+.userOptions a:link{
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	font-style: normal;
+}
+.userOptions a:visited{
+	font-size: 12px;
+	color: #fff;
 	text-decoration: none;
 	font-style: normal;
 }
 #footer {
 	width: 100%;
 	height: 50px;
-	border-top: thin solid black;
 	position: fixed;
 	bottom: 0;
-	background-color: white;
+	background-color: #fff;
+	z-index: 100;
 	color: #6e6e6e;
 }
 #footer p {
-	width: 700px;
-	color: #6e6e6e;
-	font-size: 12px;
-	text-align: center;
-	margin: 0 auto;
+    color: #6E6E6E;
+    font-size: 10px;
+    margin: 0 auto;
+    text-align: center;
+    width: 850px;
+	padding-top: 10px;
+	*padding-top: 0px !important;
 }
-#footer a:link, a:hover, a:visited {
-	font-style: italic;
+
+#footer a:visited {
+	text-decoration: none;
+	color:  #6e6e6e;
+}
+#footer a:link{
+	text-decoration: none;
+	color:   #6e6e6e;
+}
+#footer a:hover {
+
 	text-decoration: underline;
-	color: #6e6e6e;
+	color:   #6e6e6e;
 }
 #error {
-	/*width: 530px;
-	height: 252px;
-	background-image: url(imagesAdidas/error.png);*/
-	
+    cursor: pointer;
+    left: 270px;
+    position: absolute;
+    text-align: center;
+    z-index: 100;
 }
 #registro {
 	width: 1000px;
@@ -233,15 +299,64 @@ body {
 #reg td {
 	width: 125px;
 	text-align: right;
+	
 }
 #reg .long {
     float: right;
+    display: inline;
     width: 690px;
     text-align: right;
+    margin-left: 10px;
+    *margin-left: 10px !important;
 }
 #reg .short {
     float: left;
-    width: 686px;
+    display: inline-table;
+   margin-left: 10px;
+   *margin-left: 10px !important;
+
+}
+.dos {
+	*position: relative !important;
+	*right: 300px !important;
+}
+.tres {
+	*position: relative !important;
+	*right: 300px !important;
+}
+
+.acepto {
+	float: right;
+	*float:right !important;
+	color: #6e6e6e;
+	font-size: 10px;
+}
+.aTyC {
+	width: 200px;
+	float: right;
+	position: relative;
+	top:300px;
+	*position: relative !important;
+	*top: -30px !important;
+	*left: 150px !important;
+	right: 80px;
+}
+.aTyC input {
+	float: right;
+	*float: right !important;
+	margin-left:10px;
+}
+.aTyC a:link {
+	color: #6e6e6e;
+	
+}
+.aTyC a:hover {
+	color: #6e6e6e;
+	
+}
+.aTyC a:visited{
+	color: #6e6e6e;
+	
 }
 #reg .long input{
 	width: 533px;
@@ -254,11 +369,10 @@ body {
 	
 }
 .long input {
-	/*width: 400px;*/
+
 }
 .short input {
 	width: 200px;
-	/*float: left;*/
 }
 .double {
 	width: 700px;
@@ -270,9 +384,11 @@ body {
 }
 .enviarRegistro {
 	float: right;
+	*float: right !important;
 	position: relative;
 	top:200px;
-
+	*position: relative !important;
+	*top:-200px !important;
 }
 .enviarRegistro input[type="image"] {
     background: none repeat scroll 0 0 transparent;
@@ -297,6 +413,8 @@ body {
 }
 #miPerfil img  {
 	text-align: left;
+	position: relative;
+	top:-40px;
 }
 #infoModulos {
     background-image: url("imagesAdidas/perfil/bgForm.png");
@@ -312,6 +430,8 @@ body {
     
     height: 230px;
     width: 485px;
+    *position:relative !important;
+    *top: -25px !important;
 }
 #datosP{
 	margin-top: 40px;
@@ -337,9 +457,10 @@ body {
 #miPerfil {
     float: right;
     position: relative;
-    top: -30px;
+    top: -60px;
     width: 450px;
     text-align: left;
+    
     
    
 }
@@ -362,7 +483,9 @@ body {
 	text-align: center;
 }
 #content-home {
-	
+	margin: 0 auto;
+	text-align: center;
+	width: 1000px;	
 }
 
 #mainHome {
@@ -400,7 +523,7 @@ body {
 .especificaciones {
     float: right;
     position: relative;
-    top: 65px;
+    top: 140px;
     width: 460px;
     text-align: left;
 }
@@ -409,6 +532,11 @@ body {
 	float: left;
 	text-align: left;
 	
+}
+.cerrar {
+	position: relative;
+	right: 200px;
+	display: none;
 }
 .clientes {
 	width: 220px;
@@ -442,11 +570,16 @@ span.info p {
 	margin-top: 50px;
 	display: none;
 }
-.jugadores a:link, a:visited {
+.jugadores a:link{
 	color: #6e6e6e;
 	font-size: 12px;
 	text-decoration: none;
 	
+}
+.jugadores a:visited {
+color: #6e6e6e;
+	font-size: 12px;
+	text-decoration: none;
 }
 .jugadores a:hover {
 	color: #00aeef;
@@ -466,6 +599,7 @@ a.moreInfo {
 	font-style: normal;
 	text-align: left;
 }
+
 #content-forgot {
 	width: 1000px;
 	height: 500px;
@@ -479,7 +613,8 @@ a.moreInfo {
 	text-align: center;
 }
 .titleGray {
-	text-align: right;
+    margin-bottom: 40px;
+    text-align: right;
 }
 .olvide-text {
 	color: #fff;
@@ -492,17 +627,85 @@ a.moreInfo {
 	text-align: left;
 }
 .sendMail {
-	width: 500px;
+	width: 470px;
 	margin-top: 5px;
 }
 .enviar {
-	position: relative;
-	left: 520px;
-	top:-50px;
+    left: 345px;
+    position: relative;
+    top: 30px;
+    
 }
 
 .jugadoresP td {
     padding: 0 10px;
+}
+
+
+#vistaLateral {
+	
+	display: block;
+
+}
+#vistaSuperior {
+
+	display: none;
+}
+#vistaInferior {
+	display: none;
+}
+#vistaTrasera {
+	display: none;
+}
+
+.vistaCuero {
+	display: none;
+}
+.vistaSprint{
+	display: none;
+}
+.vistaTaurus {
+	display: none;
+}
+.vistaZona {
+	display: none;
+}
+.vistaTraxion {
+	display: none;
+}
+
+.superiorCuero {
+	display: none;
+}
+.superiorTaurus {
+	display: none;
+}
+.superiorZona {
+	display: none;
+}
+
+.vistaSpineInferior {
+	display: none;
+}
+.vistaSprintInferior {
+	display: none;
+}
+.vistaTraxionInferior {
+	display: none;
+}
+
+.traseraSprint{
+	display: none;
+	}
+.traseraTraxion {
+	display: none;
+}	
+.traseraCuero{
+	display: none;
+}
+
+area {
+	cursor: pointer;
 }
 
 #registroBien {
@@ -524,15 +727,30 @@ a.moreInfo {
 	font-size: 12px;
 	color: #fff;
 	}
-#registroBien a{
+
+#registroBien a:link{
 	font-size: 12px;
 	color: #fff;
 	text-decoration: none;
 	font-style: normal;
 	font-weight: bold;
 }
+#registroBien a:hover {
+font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+}
+#registroBien a:visited{
+font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+}
 .terminos {
-    height: 400px;
+    height: 340px;
     width: 500px;
     overflow: auto;
     color: #e3e3e3;
@@ -542,18 +760,47 @@ a.moreInfo {
 .terminos p {
 	padding: 10px;
 }
+
+#left {
+	width: 1000px;
+	height: 350px;
+	overflow: hidden;
+	padding: 0px;
+	clear:both;
+	margin: 0 auto;
+	text-align: center;
+	}
+
+/* Immagini */
+#left img {
+	
+	margin: 0 70px 0 70px;
+	border: 0px;
+	clear:both;
+	}
+
+
+
+
+
 /*-------------------Carrousel style-------------------------*/
-.wrapper {
-				background-color: white;
-				width: 1000px;
-				margin: 0px auto;
-				text-align: center;
-				padding: 50px;
-				
+
+#intro {
+				width: 580px;
+				margin: 0 auto;
 			}
+			.wrapper {
+    background-color: white;
+    box-shadow: 0 0 20px #999999;
+    height: 300px;
+    margin: 40px auto;
+    padding: 50px;
+    width: 1000px;
+}
 			.list_carousel {
-				margin: 0 0 30px 60px;
-				width: 1000px;
+				margin: 0 auto;
+				width: 850px;
+				text-align: center;
 			}
 			.list_carousel ul {
 				
@@ -567,7 +814,7 @@ a.moreInfo {
 				color: #999;
 				text-align: center;
 				
-				width: 300px;
+								width: 230px;
 				height: 300px;
 				padding: 0;
 				margin: 6px;
@@ -604,3 +851,4 @@ a.moreInfo {
 				height: 6px;
 				width: 0px;
 			}
+
