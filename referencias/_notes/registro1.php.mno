@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_estado_civil" value="name:id_estado_civil;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_registro" value="name:id_estado_civil;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_estao_civil" value="name:id_estado_civil;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_estados" value="name:id_cadena;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_estado" value="name:id_estado;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_dia_descanso" value="name:id_dia_descanso;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_departamento" value="name:id_departamento;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_sucursal" value="name:id_sucursal;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_vendedor" value="name:id_puesto;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_cadena" value="name:id_cadena;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_sucursal1" value="name:id_sucursal;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_tipo_vendedor" value="name:id_puesto;datatype:int,name:nombre;datatype:string" />
+	<infoitem key="UD_tipo_usuario" value="name:id_tipo_usuario;datatype:int,name:descripcion;datatype:string" />
+</info>

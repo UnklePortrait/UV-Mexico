@@ -1,0 +1,311 @@
+*{
+	margin: 0 ;
+	padding: 0;
+	font-family: Tahoma;
+}
+
+body {
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	
+}
+#container {
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+}
+#header {
+	width: 1200px;
+	height: 100px;
+	
+}
+.logo {
+	float: left;
+	margin-top: 20px;
+}
+.adidas-reebok {
+	float: right;
+	margin-top: 60px;
+}
+#mainmenu {
+   
+    float: right;
+    
+    position: relative;
+    top: 33px;
+    
+}
+#mainmenu  a:link, a:visited {
+	background-position: 0 0;
+	
+}
+#mainmenu  a:active, a:hover {
+	background-position: 10, 10;
+}
+#mainmenu .main li {
+    
+    float: left;
+    list-style-type: none;
+  
+}
+.perfil {
+	background-image: url(imagesAdidas/menu/perfil.png);
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 69px;
+	margin: 2px;
+}
+.ventas{
+	background-image: url(imagesAdidas/menu/ventas.png);
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 83px;
+	margin: 2px;
+}
+.foro{
+	background-image: url(imagesAdidas/menu/foro.png);
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 138px;
+	margin: 2px;
+}
+.catalogo{
+	background-image: url(imagesAdidas/menu/catalogo.png);
+	background-repeat: no-repeat;
+	height: 30px;
+	width: 195px;
+	margin: 2px;
+}
+#content {
+	
+	border-top: thin solid black;
+	height: auto;
+	width: 1200px;
+	margin-bottom: 50px;
+}
+.clear {
+	clear: both;
+}
+.bottom {
+	-ms-transform: rotate(180deg); /* IE 9 */
+-webkit-transform: rotate(180deg); /* Safari and Chrome */
+-o-transform: rotate(180deg); /* Opera */
+-moz-transform: rotate(180deg); /* Firefox */
+z-index: 1;
+}
+#registrate {
+	float: left;
+	margin-top: 100px;
+}
+#login {
+	float: right;
+}
+#log {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+.top {
+	position: relative;
+	top:0px;
+	z-index: 1;
+}
+#registrate p {
+	color: #6e6e6e;
+	font-size: 12px;
+}
+.form {
+	background-image: url(imagesAdidas/login/bglogin.png);
+	background-repeat: no-repeat;
+	width: 344px;
+	height: 233px;
+	padding-top: 30px;
+	color: #313131;
+}
+.form input {
+	margin: 10px 0 10px 0;
+	height: 20px;
+	width: 225px;
+}
+.entrar {
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    top: 10px;
+}
+.userOptions {
+    float: right;
+    font-size: 12px;
+    margin: 30px;
+    text-align: right;
+    width: 155px;
+    
+}
+.userOptions a:link, a:hover, a:visited{
+	font-size: 12px;
+	color: #e3e3e3;
+	text-decoration: none;
+}
+#footer {
+	width: 1200px;
+	height: 50px;
+	border-top: thin solid black;
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+}
+#footer p {
+	width: 700px;
+	color: #6e6e6e;
+	font-size: 12px;
+	text-align: center;
+	margin: 0 auto;
+}
+#footer a:link, a:hover, a:visited {
+	font-style: italic;
+	text-decoration: underline;
+	color: #6e6e6e;
+}
+#registro {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+#reg {
+	float: left;
+	text-align: right;
+	   background-image: url("imagesAdidas/login/bgForm.png");
+	   background-repeat: no-repeat;
+    height: 360px;
+    width: 715px;
+    padding: 10px;
+	color: #313131;
+}
+#reg td {
+	width: 125px;
+	text-align: right;
+}
+#reg .long {
+    float: right;
+    width: 690px;
+    text-align: right;
+}
+#reg .short {
+    float: left;
+    width: 686px;
+}
+#reg .long input{
+	width: 533px;
+	text-align: left;
+}
+.short select {
+	width: 205px;
+	text-align: left;
+}
+.long input {
+	/*width: 400px;*/
+}
+.short input {
+	width: 200px;
+	/*float: left;*/
+}
+.double {
+	width: 700px;
+}
+#reg input {
+	text-align: left;
+	margin: 10px 0 10px 0;
+	height: 20px;
+}
+.enviarRegistro {
+	float: right;
+	position: relative;
+	top:200px;
+
+}
+.enviarRegistro input[type="image"] {
+    background: none repeat scroll 0 0 transparent;
+    margin: 0 auto;
+    padding: 0;
+	
+}
+.name {
+	
+}
+#content-perfil {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+#content-perfil h2{
+	font-size: 14px;
+	font-weight: bold;
+	color: #00aeef;
+	text-align: left;
+	 margin-left: 10px;
+}
+#miPerfil img  {
+	text-align: left;
+}
+#infoModulos {
+	float: left;
+	width: 485px;
+	color: #6e6e6e;
+	font-size: 12px;
+	 background-image: url("imagesAdidas/perfil/bgForm.png");
+	 background-repeat: no-repeat;
+	 }
+	 
+#perfil {
+    
+    height: 230px;
+    width: 485px;
+}
+#datosP{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	
+}
+#puntos{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#datosP td {
+	padding: 10px 0 10px 10px;
+}
+#puntos td{
+	padding: 10px 0 10px 10px;
+}
+.titlePerfil {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+#miPerfil {
+    float: right;
+    position: relative;
+    top: -120px;
+    width: 450px;
+    text-align: left;
+   
+}
+.titleTD{
+	color: #00aeef;
+	font-size: 12px;
+	text-align: left;
+	
+}
+
+.ans {
+	font-size: 12px;
+	color: #8b8b8b;
+}
+.titleModulos {
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	height: 35px;
+	text-align: center;
+}

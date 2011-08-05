@@ -1,0 +1,606 @@
+*{
+	margin: 0 ;
+	padding: 0;
+	font-family: Tahoma;
+}
+
+body {
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	
+}
+#container {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	background-color: #fff;
+}
+#containerGray {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	background-image: url(imagesAdidas/gray/bgFail.png);
+	background-size: 100% 100%;
+}
+#header {
+	width: 100%;
+	height: 100px;
+	background-color: white;
+}
+.logo {
+	float: left;
+	margin-top: 20px;
+	margin-left: 25px;
+}
+.adidas-reebok {
+	float: right;
+	padding-top: 20px;
+	margin-right: 25px;
+}
+
+#menuPerfil  {
+				background-image: url(imagesAdidas/menu/perfil.png);
+				width : 69px;
+				height:28px;
+				display:block;
+				
+			}
+			#menuForoDudas {
+				background-image: url(imagesAdidas/menu/foro.png);
+				width : 138px;
+				height:28px;
+				display:block;
+			}
+			#menuVentas {
+				background-image: url(imagesAdidas/menu/ventas.png);
+				width : 83px;
+				height:28px;
+				display:block;
+			}
+			#menuCatalogo {
+				background-image: url(imagesAdidas/menu/catalogo.png);
+				width : 195px;
+				height:28px;
+				display:block;
+			}
+			#menu {
+				width: 500px;
+				float: right;
+				z-index: 100;
+				position: relative;
+				top:33px;
+			}
+			#menu ul {
+				display: inline;
+			}
+			#menu ul li {
+    display: inline;
+    float: left;
+    margin: 1px;
+}
+
+		a:hover.menu {
+			background-position: 0 28px;
+		}
+#content {
+	
+	border-top: thin solid black;
+
+	width: 100%;
+	margin-bottom: 50px;
+}
+.clear {
+	clear: both;
+}
+.bottom {
+    background-image: url("imagesAdidas/bottomGrid.png");
+   
+    height: 168px;
+    /*position: absolute;*/
+    width: 100%;
+    z-index: 1;
+   
+}
+#registrate {
+	float: left;
+	margin-top: 100px;
+}
+#login {
+	float: right;
+}
+#log {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+#user {
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 95px;
+    text-align: left;
+    width: 150px;
+} 
+.user {
+    color: #6E6E6E;
+    font-size: 12px;
+    font-weight: lighter;
+    margin: 0 auto;
+    text-align: left;
+}
+.logout {
+	margin: 0 auto;
+	text-align: center;
+}
+#user a:link, a:hover, a:visited  {
+	font-size: 10px;
+	color: #6e6e6e;
+	font-style: normal;
+	text-decoration: none;
+	
+}
+
+.top {
+	position: relative;
+	top:0px;
+	z-index: 1;
+	background-image: url(imagesAdidas/topGrid.png);
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 171px;
+}
+#registrate p {
+	color: #6e6e6e;
+	font-size: 12px;
+}
+.form {
+	background-image: url(imagesAdidas/login/bglogin.png);
+	background-repeat: no-repeat;
+	width: 344px;
+	height: 233px;
+	padding-top: 30px;
+	color: #313131;
+}
+.form input {
+	margin: 10px 0 10px 0;
+	height: 20px;
+	width: 225px;
+}
+.form input.entrar {
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    top: 10px;
+    width: 106px;
+    height: 29px;
+}
+.userOptions {
+    float: right;
+    font-size: 12px;
+    margin: 30px;
+    text-align: right;
+    width: 155px;
+    
+}
+.userOptions a:link, a:hover, a:visited, a:active{
+	font-size: 12px;
+	color: #e3e3e3;
+	text-decoration: none;
+	font-style: normal;
+}
+#footer {
+	width: 100%;
+	height: 50px;
+	border-top: thin solid black;
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	color: #6e6e6e;
+}
+#footer p {
+	width: 700px;
+	color: #6e6e6e;
+	font-size: 12px;
+	text-align: center;
+	margin: 0 auto;
+}
+#footer a:link, a:hover, a:visited {
+	font-style: italic;
+	text-decoration: underline;
+	color: #6e6e6e;
+}
+#error {
+	/*width: 530px;
+	height: 252px;
+	background-image: url(imagesAdidas/error.png);*/
+	
+}
+#registro {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+#reg {
+	float: left;
+	text-align: right;
+	   background-image: url("imagesAdidas/login/bgForm.png");
+	   background-repeat: no-repeat;
+    height: 360px;
+    width: 715px;
+    padding: 10px;
+	color: #313131;
+}
+#reg td {
+	width: 125px;
+	text-align: right;
+}
+#reg .long {
+    float: right;
+    width: 690px;
+    text-align: right;
+}
+#reg .short {
+    float: left;
+    width: 686px;
+}
+#reg .long input{
+	width: 533px;
+	text-align: left;
+	
+}
+.short select {
+	width: 205px;
+	text-align: left;
+	
+}
+.long input {
+	/*width: 400px;*/
+}
+.short input {
+	width: 200px;
+	/*float: left;*/
+}
+.double {
+	width: 700px;
+}
+#reg input {
+	text-align: left;
+	margin: 10px 0 10px 0;
+	height: 20px;
+}
+.enviarRegistro {
+	float: right;
+	position: relative;
+	top:200px;
+
+}
+.enviarRegistro input[type="image"] {
+    background: none repeat scroll 0 0 transparent;
+    margin: 0 auto;
+    padding: 0;
+	
+}
+.name {
+	
+}
+#content-perfil {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+#content-perfil h2{
+	font-size: 14px;
+	font-weight: bold;
+	color: #00aeef;
+	text-align: left;
+	 margin-left: 10px;
+}
+#miPerfil img  {
+	text-align: left;
+}
+#infoModulos {
+    background-image: url("imagesAdidas/perfil/bgForm.png");
+    background-repeat: no-repeat;
+    color: #6E6E6E;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    top: 40px;
+    width: 485px;
+}	 
+#perfil {
+    
+    height: 230px;
+    width: 485px;
+}
+#datosP{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	
+}
+#puntos{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#datosP td {
+	padding: 10px 0 10px 10px;
+}
+#puntos td{
+	padding: 10px 0 10px 10px;
+}
+.titlePerfil {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+#miPerfil {
+    float: right;
+    position: relative;
+    top: -30px;
+    width: 450px;
+    text-align: left;
+    
+   
+}
+.titleTD{
+	color: #00aeef;
+	font-size: 12px;
+	text-align: left;
+	
+}
+
+.ans {
+	font-size: 12px;
+	color: #8b8b8b;
+}
+.titleModulos {
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	height: 35px;
+	text-align: center;
+}
+#content-home {
+	
+}
+
+#mainHome {
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+}
+#homeC {
+	margin: 0 auto;
+	text-align: center;
+}
+#homeC ul {
+	list-style: none outside none;
+	width: 300px;
+}
+#homeC li {
+	float: left;
+	list-style-type: none;
+	width: 300px;
+}
+
+#Product {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	display: none;
+}
+#productOne {
+	width: 1050px;
+}
+.imageProduct {
+	float: left;
+	width: 450px;
+}
+.especificaciones {
+    float: right;
+    position: relative;
+    top: 65px;
+    width: 460px;
+    text-align: left;
+}
+.Beneficios {
+	width: 220px;
+	float: left;
+	text-align: left;
+	
+}
+.clientes {
+	width: 220px;
+	float: right;
+	display: none;
+}
+span.info {
+	
+}
+span.info p {
+	font-size: 10px;
+	color: #2fa700;
+}
+.titleProduct {
+	margin: 20px;
+}
+.tituloB {
+	font-size: 12px;
+	color: #00aeef;
+	text-align: left;
+	margin: 10px 0 10px 0;
+}
+.textoB {
+	font-size: 12px;
+	color: #6e6e6e;
+	text-align: left;
+}
+.jugadores {
+	clear: both;
+	float: left;
+	margin-top: 50px;
+	display: none;
+}
+.jugadores a:link, a:visited {
+	color: #6e6e6e;
+	font-size: 12px;
+	text-decoration: none;
+	
+}
+.jugadores a:hover {
+	color: #00aeef;
+	font-style: normal;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.imagePlayer {
+    display: none;
+    float: left;
+}
+a.moreInfo {
+	color: #6e6e6e;
+	font-size: 12px;
+	text-decoration: none;
+	font-style: normal;
+	text-align: left;
+}
+#content-forgot {
+	width: 1000px;
+	height: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+#content-password {
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.titleGray {
+	text-align: right;
+}
+.olvide-text {
+	color: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+}
+#text-forgot {
+	width: 500px;
+	margin: 0 auto;
+	text-align: left;
+}
+.sendMail {
+	width: 500px;
+	margin-top: 5px;
+}
+.enviar {
+	position: relative;
+	left: 520px;
+	top:-50px;
+}
+
+.jugadoresP td {
+    padding: 0 10px;
+}
+
+#registroBien {
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+    width: 1078px;
+    background-image: url(imagesAdidas/login/bgBien.png);
+   
+}
+#registroBien img {
+	margin-top: 200px;
+
+}
+.bien {
+	margin: 0 auto;
+	text-align: center;
+	width: 400px;
+	font-size: 12px;
+	color: #fff;
+	}
+#registroBien a{
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+}
+.terminos {
+    height: 400px;
+    width: 500px;
+    overflow: auto;
+    color: #e3e3e3;
+    font-size: 12px;
+   
+}
+.terminos p {
+	padding: 10px;
+}
+/*-------------------Carrousel style-------------------------*/
+.wrapper {
+				background-color: white;
+				width: 1000px;
+				margin: 0px auto;
+				text-align: center;
+				padding: 50px;
+				
+			}
+			.list_carousel {
+				margin: 0 0 30px 60px;
+				width: 1000px;
+			}
+			.list_carousel ul {
+				
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				display: block;
+			}
+			.list_carousel li {
+				font-size: 40px;
+				color: #999;
+				text-align: center;
+				
+				width: 300px;
+				height: 300px;
+				padding: 0;
+				margin: 6px;
+				display: block;
+				float: left;
+			}
+
+			.clearfix {
+				float: none;
+				clear: both;
+			}
+			.prev {
+				float: left;
+				margin-left: 10px;
+			}
+			.next {
+				float: right;
+				margin-right: 10px;
+			}
+			.pager {
+				float: left;
+				width: 300px;
+				text-align: center;
+			}
+			.pager a {
+				margin: 0 5px;
+				text-decoration: none;
+			}
+			.pager a.selected {
+				text-decoration: underline;
+			}
+			.timer {
+				
+				height: 6px;
+				width: 0px;
+			}
