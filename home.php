@@ -75,17 +75,7 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
   exit;
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-	<head>
-		<title>:: Universidad Virtual  ::</title>
-		<link rel="stylesheet" href="style.css" type="text/css">
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>		
-		<script type="text/javascript" src="js/jquery.carouFredSel-4.3.3-packed.js"></script>	
-		<script src="js/swfobject_modified.js" type="text/javascript"></script>	
-		<script type="text/javascript" src="js/actions.js"></script>
+<?php include ("includes/header.php") ?>
 		<script type="text/javascript">
 <!--
 function MM_goToURL() { //v3.0
@@ -101,19 +91,6 @@ function TyC() {
 
 //-->
         </script>
-	</head>
-	<body>
-		<div id="container">
-			<div id="header">
-				<div id="logo">
-					<img src="imagesAdidas/logo.png" class="logo"/>
-					<img src="imagesAdidas/reebok-adidas.png" class="adidas-reebok"/>
-					
-					
-			  </div>	
-			  
-               <!--<h2 onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue">Perfil</h2>-->
-      </div>
       <div id="user">
     	              <h2 class="user">Hola <?php echo $_SESSION['MM_Username']; ?> </h2>
 					  <a href="<?php echo $logoutAction ?>" class="logout">Log out</a>	

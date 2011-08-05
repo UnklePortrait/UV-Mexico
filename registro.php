@@ -114,15 +114,7 @@ $tipo_vendedor = mysql_query($query_tipo_vendedor, $db_adidas) or die(mysql_erro
 $row_tipo_vendedor = mysql_fetch_assoc($tipo_vendedor);
 $totalRows_tipo_vendedor = mysql_num_rows($tipo_vendedor);
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-	<head>
-		<title>:: Universidad Virtual::</title>
-		<link rel="stylesheet" href="style.css" type="text/css">
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
- <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
- <script type="text/javascript" src="js/actions.js"></script>
+<?php include ("includes/header.php") ?>
 <script type="text/javascript">
 <!--
 function MM_jumpMenu(targ,selObj,restore){ //v3.0
@@ -250,15 +242,7 @@ function TyC() {
 		}
 //-->
 </script>
-	</head>
-<body>
-<div id="container">
-			<div id="header">
-				<div id="logo">
-					<a href="index.php"><img src="imagesAdidas/logo.png" class="logo"/></a>
-					<img src="imagesAdidas/adidasgroup.png" class="adidasgroup"/>
-				</div>
-			</div>
+	
 			<!--<div id="mainmenu">
 				</div>-->
 			<div class="clear"></div>
