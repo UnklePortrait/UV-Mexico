@@ -102,9 +102,14 @@ if (isset($_POST['usuario'])) {
   }
 }
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
-<?php include ("includes/header.php") ?>
-<script type="text/javascript">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>::Universidad Virtual::</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet"href="style.css" type="text/css">
+		<script type="text/javascript">
 <!--
 function MM_goToURL() { //v3.0
   var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
@@ -120,7 +125,14 @@ function TyC() {
 		}
 //-->
         </script>
-	
+	</head>
+	<div id="container">
+			<div id="header">
+				<div id="logo">
+					<a href="index.php"><img src="imagesAdidas/logo.png" class="logo"/></a>
+					<img src="imagesAdidas/adidasgroup.png" class="adidasgroup"/>
+				</div>				
+			</div>
 			<!--<div id="mainmenu">
 				</div>-->
 			<div class="clear"></div>
