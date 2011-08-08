@@ -18,58 +18,15 @@ if (isset($_POST['usuario'])) {
 	
 	$user = new User();
 	$id_user = $user->login($loginUsername, $password);
-	$profile = $user->profile($id_user);
-	
-	mysql_select_db($database_db_adidas, $db_adidas);
-  	
-  $LoginRS__query=sprintf("SELECT id_usuario, email, password, id_tipo_usuario, nombre,id_sucursal,id_departamento,id_puesto FROM usuarios WHERE email=%s AND password=%s",
-  GetSQLValueString($loginUsername, "text"), GetSQLValueString($password, "text")); 
-   
-  $LoginRS = mysql_query($LoginRS__query, $db_adidas) or die(mysql_error());
-  $loginFoundUser = mysql_num_rows($LoginRS);
-  if ($loginFoundUser) {
-    
-    $loginStrGroup  = mysql_result($LoginRS,0,'id_tipo_usuario');
-	$loginIdUser  = mysql_result($LoginRS,0,'id_usuario');
-	$loginNombre  = mysql_result($LoginRS,0,'nombre');
-	$sucursal= mysql_result($LoginRS,0,'id_sucursal');
-	$departamento= mysql_result($LoginRS,0,'id_departamento');
-	$puesto= mysql_result($LoginRS,0,'id_puesto');
-
-
-    
-    //declare two session variables and assign them
-    $_SESSION['MM_Username'] = $loginNombre;
-    $_SESSION['MM_UserGroup'] = $loginStrGroup;
-	$_SESSION['MM_UserId'] = $loginIdUser;	
-	$_SESSION['MM_UserPuesto'] =$puesto;
-	$_SESSION['MM_UserDepartamento'] =$departamento;
-	$_SESSION['MM_UserSucursal'] = $sucursal;
-	
-	switch ($loginStrGroup){
-	
-		case 1: 
-			$MM_redirectLoginSuccess = "home.php";
-		break;
-	
-		case 2:
-			$MM_redirectLoginSuccess = "home.php";
-		break;
-	
-		case 3:
-			$MM_redirectLoginSuccess = "home.php";
-		break;			
+	if($id_user){
+		if (isset($_SESSION['PrevUrl']) && false) {
+			$MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
+    	}
+    	header("Location: " . $MM_redirectLoginSuccess );
 	}
-
-
-    if (isset($_SESSION['PrevUrl']) && false) {
-      $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
-    }
-    header("Location: " . $MM_redirectLoginSuccess );
-  }
-  else {
-    header("Location: ". $MM_redirectLoginFailed );
-  }
+	else {
+		header("Location: ". $MM_redirectLoginFailed );
+	}
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
