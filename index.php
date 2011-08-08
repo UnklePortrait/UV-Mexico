@@ -1,41 +1,6 @@
-<?php require_once('Connections/db_adidas.php');
-if (!isset($_SESSION)) {
-  session_start();
-}
-?>
 <?php
-if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
-{
-  if (PHP_VERSION < 6) {
-    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
-  }
-
-  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
-
-  switch ($theType) {
-    case "text":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
-    case "long":
-    case "int":
-      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-      break;
-    case "double":
-      $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
-      break;
-    case "date":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;
-    case "defined":
-      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-      break;
-  }
-  return $theValue;
-}
-}
-?>
-<?php
+session_start();
+include('classes/user.php');
 // *** Validate request to login to this site.
 
 $loginFormAction = $_SERVER['PHP_SELF'];
@@ -44,13 +9,18 @@ if (isset($_GET['accesscheck'])) {
 }
 
 if (isset($_POST['usuario'])) {
-  $loginUsername=$_POST['usuario'];
-  $password=$_POST['password'];
-  $MM_fldUserAuthorization = "id_tipo_usuario";
-  $MM_redirectLoginSuccess = "home.php";
-  $MM_redirectLoginFailed = "index.php";
-  $MM_redirecttoReferrer = false;
-  mysql_select_db($database_db_adidas, $db_adidas);
+	$loginUsername=$_POST['usuario'];
+	$password=$_POST['password'];
+	$MM_fldUserAuthorization = "id_tipo_usuario";
+	$MM_redirectLoginSuccess = "home.php";
+	$MM_redirectLoginFailed = "index.php";
+	$MM_redirecttoReferrer = false;
+	
+	$user = new User();
+	$id_user = $user->login($loginUsername, $password);
+	$profile = $user->profile($id_user);
+	
+	mysql_select_db($database_db_adidas, $db_adidas);
   	
   $LoginRS__query=sprintf("SELECT id_usuario, email, password, id_tipo_usuario, nombre,id_sucursal,id_departamento,id_puesto FROM usuarios WHERE email=%s AND password=%s",
   GetSQLValueString($loginUsername, "text"), GetSQLValueString($password, "text")); 
@@ -109,22 +79,7 @@ if (isset($_POST['usuario'])) {
 		<title>::Universidad Virtual::</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<link rel="stylesheet"href="style.css" type="text/css">
-		<script type="text/javascript">
-<!--
-function MM_goToURL() { //v3.0
-  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
-  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
-}
-function MM_callJS(jsStr) { //v2.0
-  return eval(jsStr)
-}
-
-function TyC() {
-		window.open( "tyc.html", "myWindow", 
-		" fullscreen=0, toolbar=0, location=0, status=0, menubar=0, scrollbars=0, resizable=0, width=900, height=900",1)
-		}
-//-->
-        </script>
+		<script type="text/javascript" src="js/dwfunctions.js">
 	</head>
 	<div id="container">
 			<div id="header">

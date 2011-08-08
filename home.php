@@ -76,21 +76,6 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
 }
 ?>
 <?php include ("includes/header.php") ?>
-		<script type="text/javascript">
-<!--
-function MM_goToURL() { //v3.0
-  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
-  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
-}
-function TyC() {
-		window.open( "tyc.html", "myWindow", 
-		" fullscreen=0, toolbar=0, location=0, status=0, menubar=0, scrollbars=0, resizable=0, width=900, height=900",1)
-		}
-
-
-
-//-->
-        </script>
       <div id="user">
     	              <h2 class="user">Hola <?php echo $_SESSION['MM_Username']; ?> </h2>
 					  <a href="<?php echo $logoutAction ?>" class="logout">Log out</a>	
