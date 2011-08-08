@@ -24,11 +24,34 @@ class User{
 		}
 	}
 	public function profile($id_user){
-		$user_profile = $this->db->select_where("usuarios", "id_usuario, email, password, id_tipo_usuario, nombre, id_sucursal, id_departamento, id_puesto", "id_usuario='$id_user'");
-		$sucursal = $user_profile['id_sucursal'];
-		$departamento = $user_profile['id_departamento'];
+		$user_result = $this->db->select_where("usuarios", "id_usuario, email, password, id_tipo_usuario, nombre, id_sucursal, id_departamento, id_puesto", "id_usuario='$id_user'");
+		if(mysql_num_rows($user_result )>0){
+			$user_profile = mysql_fetch_array($user_result);
+			$id_sucursal = $user_profile['id_sucursal'];
+			$id_puesto=$user_profile['id_puesto'];
+			$id_departamento = $user_profile['id_departamento'];
+			$sucursal_result= $this->db->select_where("sucursal", "nombre, id_cadena", "id_sucursal='$id_sucursal'");
+			$sucursal_array= mysql_fetch_array($sucursal_result);
+			$sucursal_nombre=$sucursal_array['nombre'];
+			$sucursal_cadena=$sucursal_array['id_cadena'];
+			$departamento_result= $this->db->select_where("departamento", "nombre", "id_departamento='$id_departamento'");
+			$departamento_array=mysql_fetch_array($departamento_result);
+			$departamento_nombre=$departamento_array['nombre'];
+			$cadena_result= $this->db->select_where("cadena", "nombre", "id_cadena='$sucursal_cadena'");
+			$cadena_array=mysql_fetch_array($cadena_result);
+			$cadena_nombre=$cadena_array['nombre'];
+			$puesto_result= $this->db->select_where("tipo_vendedor", "nombre", "id_puesto='$id_puesto'");
+			$puesto_array=mysql_fetch_array($puesto_result);
+			$puesto_nombre=$puesto_array['nombre'];
+			
+			return array('id_usuario'=>$user_profile['id_usuario'],'email'=>$user_profile['email'],'password'=>$user_profile['password'],'id_tipo_usuario'=>$user_profile['id_tipo_usuario'],'nombre'=>$user_profile['nombre'],'sucursal'=>$sucursal_nombre,'departamento'=>$departamento_nombre,'cadena'=>$cadena_nombre,'puesto'=>$puesto_nombre)
+			
+			
+		}else{
+			return false;
+		}
+
 		
-		$sucursal = $this->db->select_where("sucursal", "nombre, id_cadena", "id_sucursal=''");
 	}
 }
 ?>
