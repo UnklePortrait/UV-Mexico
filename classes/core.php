@@ -10,5 +10,5 @@ define('DATABASE_DB', 'uniadidas');
 define('DATABASE_SERVER', 'localhost');
 define('DATABASE_USER', 'karen');
 define('DATABASE_PASSWORD', 'turcott');
-define('DATABASE_DB', 'karen');
+define('DATABASE_DB', 'db_adidas');
 ?>

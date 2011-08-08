@@ -1,17 +1,15 @@
 <?php
-//initialize the session
-if (!isset($_SESSION)) {
-  session_start();
-}
+include_once('functions.php');
 
-require_once('Connections/db_adidas.php');
-mysql_select_db($database_db_adidas, $db_adidas);
-
+$logoutAction = logout();
+$user = authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+/*
 $LoginRS__query="INSERT INTO visitas(id_usuario,fecha,hora_entrada) VALUES ('".$_SESSION['MM_UserId']."','".date('Y-m-d', time())."','".date('G:i',time())."')"; 
 
 $LoginRS = mysql_query($LoginRS__query, $db_adidas) or die(mysql_error());
+*/
 
-
+/*
 // ** Logout the current user. **
 $logoutAction = $_SERVER['PHP_SELF']."?doLogout=true";
 if ((isset($_SERVER['QUERY_STRING'])) && ($_SERVER['QUERY_STRING'] != "")){
@@ -36,8 +34,10 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
 
 $MM_authorizedUsers = "";
 $MM_donotCheckaccess = "true";
+*/
 
 // *** Restrict Access To Page: Grant or deny access to this page
+/*
 function isAuthorized($strUsers, $strGroups, $UserName, $UserGroup) { 
   // For security, start by assuming the visitor is NOT authorized. 
   $isValid = False; 
@@ -74,10 +74,11 @@ if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers,
   header("Location: ". $MM_restrictGoTo); 
   exit;
 }
+*/
 ?>
 <?php include ("includes/header.php") ?>
       <div id="user">
-    	              <h2 class="user">Hola <?php echo $_SESSION['MM_Username']; ?> </h2>
+    	              <h2 class="user">Hola <?php echo $user['nombre'] ?> </h2>
 					  <a href="<?php echo $logoutAction ?>" class="logout">Log out</a>	
 					  </div>
 			<div id="menu">
