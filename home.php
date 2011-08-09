@@ -8,7 +8,6 @@ $LoginRS__query="INSERT INTO visitas(id_usuario,fecha,hora_entrada) VALUES ('".$
 
 $LoginRS = mysql_query($LoginRS__query, $db_adidas) or die(mysql_error());
 */
-
 ?>
 <?php include ("includes/header.php") ?>
       <div id="user">
