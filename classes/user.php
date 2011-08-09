@@ -61,18 +61,23 @@ class User{
 			$id_sucursal = $user_profile['id_sucursal'];
 			$id_puesto=$user_profile['id_puesto'];
 			$id_departamento = $user_profile['id_departamento'];
+			
 			$sucursal_result= $this->db->select_where("sucursal", "nombre, id_cadena", "id_sucursal='$id_sucursal'");
 			$sucursal_array= mysql_fetch_array($sucursal_result);
+			print_r($sucursal_array);
 			$sucursal_nombre=$sucursal_array['nombre'];
 			$sucursal_cadena=$sucursal_array['id_cadena'];
 			$departamento_result= $this->db->select_where("departamento", "nombre", "id_departamento='$id_departamento'");
 			$departamento_array=mysql_fetch_array($departamento_result);
+			print_r($departamento_array);
 			$departamento_nombre=$departamento_array['nombre'];
 			$cadena_result= $this->db->select_where("cadena", "nombre", "id_cadena='$sucursal_cadena'");
 			$cadena_array=mysql_fetch_array($cadena_result);
+			print_r($cadena_array);
 			$cadena_nombre=$cadena_array['nombre'];
 			$puesto_result= $this->db->select_where("tipo_vendedor", "nombre", "id_puesto='$id_puesto'");
 			$puesto_array=mysql_fetch_array($puesto_result);
+			print_r($puesto_array);
 			$puesto_nombre=$puesto_array['nombre'];
 			
 			return array('id_usuario'=>$user_profile['id_usuario'],'email'=>$user_profile['email'],'password'=>$user_profile['password'],'tipo_usuario'=>$user_profile['id_tipo_usuario'],'nombre'=>$user_profile['nombre'], 'image'=>$user_profile['image'], 'sucursal'=>$sucursal_nombre,'departamento'=>$departamento_nombre,'cadena'=>$cadena_nombre,'puesto'=>$puesto_nombre);

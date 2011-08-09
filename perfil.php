@@ -5,7 +5,6 @@ $logoutAction = logout();
 authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
 upload();
 $user=profile();
-
 ?>
 		
 <?php include ("includes/header.php") ?>
@@ -75,16 +74,16 @@ $user=profile();
 						<table id="datosP">
 							<tr>
 								<td class="titleTD">Nombre:</td>
-								<td class="ans"><?php $user['nombre']; ?></td>
+								<td class="ans"><?php echo $user['nombre']; ?></td>
 							</tr>
 							<tr>
-								<td class="titleTD">Cadena</td>
+								<td class="titleTD">Cadena:</td>
 								<td class="ans"><?php echo $user['cadena']; ?></td>
-								<td class="titleTD">Sucursal</td>
+								<td class="titleTD">Sucursal:</td>
 								<td class="ans"><?php echo $user['sucursal'];?></td>
 							</tr>
 							<tr>
-								<td class="titleTD">Departamento</td>
+								<td class="titleTD">Departamento:</td>
 								<td class="ans"><?php echo $user['departamento']; ?></td>
 								<td class="titleTD">Puesto</td>
 								<td class="ans"><?php echo $user['puesto']; ?></td>
@@ -99,7 +98,7 @@ $user=profile();
 							</tr>
 							<tr>
 								<td class="titleTD">Por ingresos</td>
-								<td class="ans">20 </td>
+								<td class="ans"><?php echo $user['puntos'];?> </td>
 								<td class="titleTD">Por módulos</td>
 								<td class="ans">0 (0 módulos)</td>
 							</tr>

@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 include_once('classes/user.php');
 
 function login(){
@@ -41,14 +42,19 @@ function logout(){
 }
 
 function authorize($pass, $relocate){
+	if(!isset($_SESSION['id'])){
+	header("Location:index.php");
+	}
+	else{
 	$user = new User();
 	$user_tipo=$user->get_tipo_usuario($_SESSION['id']);
 
 	//Back to home if not session available
-	if(!$user_tipo || $user_tipo < $pass){
+	if(!isset($user_tipo) || $user_tipo < $pass){
 		header("Location:" . $relocate); 
 	}else{
 		return true;
+		}
 	}
 }
 

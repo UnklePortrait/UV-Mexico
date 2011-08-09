@@ -1,14 +1,14 @@
 <?php
 include_once('functions.php');
-
+date_default_timezone_set('America/Mexico_City');
 $logoutAction = logout();
 authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
 $user=profile();
-/*
-$LoginRS__query="INSERT INTO visitas(id_usuario,fecha,hora_entrada) VALUES ('".$_SESSION['MM_UserId']."','".date('Y-m-d', time())."','".date('G:i',time())."')"; 
+
+$LoginRS__query="INSERT INTO visitas(id_usuario,fecha,hora_entrada) VALUES ('".$_SESSION['MM_UserId']."','".date('Y-m-d', time())."','".date('G:i:s',time())."')"; 
 
 $LoginRS = mysql_query($LoginRS__query, $db_adidas) or die(mysql_error());
-*/
+
 ?>
 <?php include ("includes/header.php") ?>
       <div id="user">
