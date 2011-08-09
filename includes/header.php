@@ -21,4 +21,4 @@
 			  </div>	
 			  
                <!--<h2 onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue">Perfil</h2>-->
-      </div>
+</div>
