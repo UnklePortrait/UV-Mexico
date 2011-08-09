@@ -2,7 +2,8 @@
 include_once('functions.php');
 
 $logoutAction = logout();
-$user = authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+$user=profile();
 /*
 $LoginRS__query="INSERT INTO visitas(id_usuario,fecha,hora_entrada) VALUES ('".$_SESSION['MM_UserId']."','".date('Y-m-d', time())."','".date('G:i',time())."')"; 
 
