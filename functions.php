@@ -42,13 +42,29 @@ function logout(){
 
 function authorize($pass, $relocate){
 	$user = new User();
-	$user_profile = $user->profile($_SESSION['id']);
+	$user_tipo=$user->get_tipo_usuario($_SESSION['id']);
 
 	//Back to home if not session available
-	if(!$user_profile || $user_profile['tipo_usuario'] < $pass){
+	if(!$user_tipo || $user_tipo < $pass){
 		header("Location:" . $relocate); 
 	}else{
-		return $user_profile;
+		return true;
 	}
+}
+
+function upload(){
+	if(isset($_FILES['image']) && !empty($_FILES['image'])){	
+		$upload_dir="imagesAdidas/uploads/";
+		$upload_file=$upload_dir.uniqid("fotousuario_",false).".jpg";
+		if(move_uploaded_file ($_FILES['image']['tmp_name'],$upload_file)){
+			$user = new User();
+			$user->set_image($_SESSION['id'],$upload_file);
+		}
+	}
+}
+
+function profile(){
+$user = new User();
+return $user->profile($_SESSION['id']);
 }
 ?>

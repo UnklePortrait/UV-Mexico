@@ -9,6 +9,7 @@
 		<script type="text/javascript" src="js/jquery.carouFredSel-4.3.3-packed.js"></script>	
 		<script src="js/swfobject_modified.js" type="text/javascript"></script>	
 		<script type="text/javascript" src="js/actions.js"></script>
+    <script type="text/javascript"  src="../js/dwfunctions.js"></script>
         	</head>
 	<body>
 		<div id="container">

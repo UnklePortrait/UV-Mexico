@@ -1,164 +1,19 @@
 <?php
-//initialize the session
-if (!isset($_SESSION)) {
-  session_start();
-}
-require_once('Connections/db_adidas.php');
+include_once('functions.php');
 
-// ** Logout the current user. **
-$logoutAction = $_SERVER['PHP_SELF']."?doLogout=true";
-if ((isset($_SERVER['QUERY_STRING'])) && ($_SERVER['QUERY_STRING'] != "")){
-  $logoutAction .="&". htmlentities($_SERVER['QUERY_STRING']);
-}
+$logoutAction = logout();
+authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+upload();
+$user=profile();
 
-if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
-  //to fully log out a visitor we need to clear the session varialbles
-  $_SESSION['MM_Username'] = NULL;
-  $_SESSION['MM_UserGroup'] = NULL;
-  $_SESSION['PrevUrl'] = NULL;
-  unset($_SESSION['MM_Username']);
-  unset($_SESSION['MM_UserGroup']);
-  unset($_SESSION['PrevUrl']);
-	
-  $logoutGoTo = "index.php";
-  if ($logoutGoTo) {
-    header("Location: $logoutGoTo");
-    exit;
-  }
-}
-?>
-<?php
-mysql_select_db($database_db_adidas, $db_adidas);
-$LoginRS__query="SELECT nombre,id_cadena FROM sucursal WHERE id_sucursal=".$_SESSION ['MM_UserSucursal']; 
-
-$LoginRS = mysql_query($LoginRS__query, $db_adidas) or die(mysql_error());
-  $loginFoundUser = mysql_num_rows($LoginRS);
-   if ($loginFoundUser) {
-    
-    $sucursal = mysql_result($LoginRS,0,'nombre');
-	$cadena= mysql_result($LoginRS,0,'id_cadena');
-   }
-   $_SESSION['MM_UserCadena']=(empty($_SESSION['MM_UserCadena']))?$cadena:$_SESSION['MM_UserCadena'];
-   $LoginRS__query=sprintf("SELECT nombre FROM cadena WHERE id_cadena=%s ",
- $_SESSION ['MM_UserCadena']); 
-$LoginRS = mysql_query($LoginRS__query, $db_adidas) or die(mysql_error());
-  $loginFoundUser = mysql_num_rows($LoginRS);
-   if ($loginFoundUser) {
-    
-    $cadena = mysql_result($LoginRS,0,'nombre');
-   }
-   $LoginRS__query=sprintf("SELECT nombre FROM departamento WHERE id_departamento=%s ",
- $_SESSION ['MM_UserDepartamento']); 
-$LoginRS = mysql_query($LoginRS__query, $db_adidas) or die(mysql_error());
-  $loginFoundUser = mysql_num_rows($LoginRS);
-   if ($loginFoundUser) {
-    
-    $departamento = mysql_result($LoginRS,0,'nombre');
-   }
-   $LoginRS__query=sprintf("SELECT nombre FROM tipo_vendedor WHERE id_puesto=%s ",
- $_SESSION ['MM_UserPuesto']); 
-$LoginRS = mysql_query($LoginRS__query, $db_adidas) or die(mysql_error());
-  $loginFoundUser = mysql_num_rows($LoginRS);
-   if ($loginFoundUser) {
-    
-    $puesto = mysql_result($LoginRS,0,'nombre');
-   }
-
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
-{
-  if (PHP_VERSION < 6) {
-    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
-  }
-$LoginRS__query=sprintf("SELECT id_usuario, email, password, id_tipo_usuario, nombre,departamento,cadena,sucursal,puesto FROM usuarios WHERE email=%s AND password=%s",
- GetSQLValueString($loginUsername, "text"), GetSQLValueString($password, "text")); 
-
-
- $LoginRS = mysql_query($LoginRS__query, $db_adidas) or die(mysql_error());
-  $loginFoundUser = mysql_num_rows($LoginRS);
-
-  
-  if ($loginFoundUser) {
-    
-    $loginStrGroup  = mysql_result($LoginRS,0,'id_tipo_usuario');
-	$loginIdUser  = mysql_result($LoginRS,0,'id_usuario');
-	$loginNombre  = mysql_result($LoginRS,0,'nombre');
-	$loginCadena  = mysql_result($LoginRS,0,'cadena');
-	$loginSucursal  = mysql_result($LoginRS,0,'sucursal');
-	$loginPuesto  = mysql_result($LoginRS,0,'puesto');
-	$loginDepartamento  = mysql_result($LoginRS,0,'departamento');
-
-    
-    //declare two session variables and assign them
-    $_SESSION['MM_Username'] = $loginNombre;
-    $_SESSION['MM_UserGroup'] = $loginStrGroup;
-	$_SESSION['MM_UserId'] = $loginIdUser;	
-	$_SESSION['MM_UserCadena'] = $loginCadena;
-	$_SESSION['MM_UserSucursal'] = $loginSucursal;
-	$_SESSION['MM_UserPuesto'] = $loginPuesto;
-	$_SESSION['MM_UserDepartamento'] = $loginDepartamento;
-  }
-
-$MM_authorizedUsers = "";
-$MM_donotCheckaccess = "true";
-}
-// *** Restrict Access To Page: Grant or deny access to this page
-function isAuthorized($strUsers, $strGroups, $UserName, $UserGroup) { 
-  // For security, start by assuming the visitor is NOT authorized. 
-  $isValid = False; 
-
-  // When a visitor has logged into this site, the Session variable MM_Username set equal to their username. 
-  // Therefore, we know that a user is NOT logged in if that Session variable is blank. 
-  if (!empty($UserName)) { 
-    // Besides being logged in, you may restrict access to only certain users based on an ID established when they login. 
-    // Parse the strings into arrays. 
-    $arrUsers = Explode(",", $strUsers); 
-    $arrGroups = Explode(",", $strGroups); 
-    if (in_array($UserName, $arrUsers)) { 
-      $isValid = true; 
-    } 
-    // Or, you may restrict access to only certain users based on their username. 
-    if (in_array($UserGroup, $arrGroups)) { 
-      $isValid = true; 
-    } 
-    if (($strUsers == "") && true) { 
-      $isValid = true; 
-    } 
-  } 
-  return $isValid; 
-}
-$MM_restrictGoTo = "index.php";
-if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers, $_SESSION['MM_Username'], $_SESSION['MM_UserGroup'])))) {   
-  $MM_qsChar = "?";
-  $MM_referrer = $_SERVER['PHP_SELF'];
-  if (strpos($MM_restrictGoTo, "?")) $MM_qsChar = "&";
-  if (isset($QUERY_STRING) && strlen($QUERY_STRING) > 0) 
-  $MM_referrer .= "?" . $QUERY_STRING;
-  $MM_restrictGoTo = $MM_restrictGoTo. $MM_qsChar . "accesscheck=" . urlencode($MM_referrer);
-  header("Location: ". $MM_restrictGoTo); 
-  exit;
-}
 ?>
 		
 <?php include ("includes/header.php") ?>
-<script type="text/javascript">
-<!--
-function MM_goToURL() { //v3.0
-  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
-  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
-}
-function TyC() {
-		window.open( "tyc.html", "myWindow", 
-		" fullscreen=0, toolbar=0, location=0, status=0, menubar=0, scrollbars=0, resizable=0, width=900, height=900",1)
-		}
 
-
-
-//-->
-        </script>
 
 	
       <div id="user">
-    	              <h2 class="user">Hola <?php echo $_SESSION['MM_Username']; ?> </h2>
+    	              <h2 class="user">Hola <?php echo $user['nombre']; ?> </h2>
 					  <a href="<?php echo $logoutAction ?>" class="logout">cerrar sesion</a>	
 					  
                       </div>
@@ -207,24 +62,32 @@ function TyC() {
 				  </div>
 					<div id="miPerfil">
 					  <img src="imagesAdidas/perfil/title.png" class="titlePerfil">
-						
-						<h2>Datos Personales</h2>
+						<?php if(isset($user['image']) && !empty($user['image'])):?>
+						<img src="<?php echo $user['image']?>" width="100" height="200" >
+                        <?php else:?>
+                       <img src="imagesAdidas/perfil/undefined.png" width="100" height="200" >
+						<form  method="post" enctype="multipart/form-data">
+                        <input type="file" name="image" id="image" />
+                        <input type= "submit" value="Subir imagen"/>
+                        </form>
+                        <?php endif;?>
+                        <h2>Datos Personales</h2>
 						<table id="datosP">
 							<tr>
 								<td class="titleTD">Nombre:</td>
-								<td class="ans"><?php echo $_SESSION['MM_Username']; ?></td>
+								<td class="ans"><?php $user['nombre']; ?></td>
 							</tr>
 							<tr>
 								<td class="titleTD">Cadena</td>
-								<td class="ans"><?php echo $cadena; ?></td>
+								<td class="ans"><?php echo $user['cadena']; ?></td>
 								<td class="titleTD">Sucursal</td>
-								<td class="ans"><?php echo $sucursal;?></td>
+								<td class="ans"><?php echo $user['sucursal'];?></td>
 							</tr>
 							<tr>
 								<td class="titleTD">Departamento</td>
-								<td class="ans"><?php echo $departamento; ?></td>
+								<td class="ans"><?php echo $user['departamento']; ?></td>
 								<td class="titleTD">Puesto</td>
-								<td class="ans"><?php echo $puesto; ?></td>
+								<td class="ans"><?php echo $user['puesto']; ?></td>
 							</tr>
 						
 						</table>
