@@ -1,4 +1,13 @@
 $(document).ready(function(){
+	
+	//---------- Perfil show imageupload form ----------------//
+	$('#profileImage').hide();
+	$('#default_foto').click(function(e){
+		e.preventDefault();
+		$('#profileImage').slideDown();
+	});
+
+	//---------- Fin Perfil show imageupload form ----------------//
 
 $('#homeC').carouFredSel();
 	$('.hideHome').click(function(){
@@ -274,13 +283,4 @@ $('#homeC').carouFredSel();
 	function hideMore(){
 		$('.moreInfo').hide(500);
 	}
-	
-	
-	//---------- Perfil show imageupload form ----------------//
-	$('#profileImage').hide();
-	$('#default_foto').click(function(e){
-		e.preventDefault();
-		$('#profileImage').slideDown();
-	});
-	
 });
