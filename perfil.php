@@ -94,7 +94,7 @@ $user=profile();
 						<table id="puntos">
 							<tr>
 								<td class="titleTD">Total</td>
-								<td class="ans">0</td>
+								<td class="ans"><?php echo $user['puntos'];?></td>
 							</tr>
 							<tr>
 								<td class="titleTD">Por ingresos</td>
