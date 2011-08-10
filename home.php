@@ -8,11 +8,12 @@ $user=profile();
 <?php include ("includes/header.php") ?>
       <div id="user">
     	              <h2 class="user">Hola <?php echo $user['nombre'] ?> </h2>
-					  <a href="<?php echo $logoutAction ?>" class="logout">Log out</a>	
+					  <a href="<?php echo $logoutAction ?>" class="logout">Cerrar sesi&oacute;n</a>	
 					  </div>
 			<div id="menu">
 			<ul>
-				<li><a href="/perfil.php" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
+				<li><a href="home.php" id="menuInicio" class="menu"></a></li>
+                <li><a href="/perfil.php" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
 				<li><a href="#" id="menuForoDudas" class="menu" onClick="MM_goToURL('parent','foro.php');return document.MM_returnValue"></a></li>
 				<li><a href="#" id="menuVentas" class="menu"></a></li>
 				<li><a href="#" id="menuCatalogo" class="menu"></a></li>
@@ -22,6 +23,13 @@ $user=profile();
 			<div id="content">
 				<div class="top"></div>
 				<div id="content-home">
+                <div id='bannerHome'>
+		<img src="imagesAdidas/bannerHome/photo1.jpg" />
+		<img src="imagesAdidas/bannerHome/photo2.jpg" />
+		<img src="imagesAdidas/bannerHome/photo3.jpg" />
+		<img src="imagesAdidas/bannerHome/photo4.jpg" />
+		
+	</div>
 					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="600" id="Vid" title="video">
         	  	<param name="movie" value="swf/Adidas_.swf" />
         	  	<param name="quality" value="high" />

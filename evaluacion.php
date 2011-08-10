@@ -2,8 +2,46 @@
 include_once('functions.php');
 $logoutAction = logout();
 if(isset($_GET['evaluacion'])){
+$aciertos=0;	
+$errores=0;
 	$_GET['eval'] = $_GET['evaluacion'];
+	$error=false;
+	$error=(isset($_GET['p1']))?false:true;
+	$error=(isset($_GET['p2']))?false:true;
+	$error=(isset($_GET['p3']))?false:true;
+	$error=(isset($_GET['p4']))?false:true;
+	$error=(isset($_GET['p5']))?false:true;
+	$error=(isset($_GET['p6']))?false:true;
+	$error=(isset($_GET['p7']))?false:true;
+	$error=(isset($_GET['p8']))?false:true;
+	$error=(isset($_GET['p9']))?false:true;
+	
+	if(!$error){
+		switch($_GET['evaluacion'])
+{
+	case 'f50':
+	$respuestas=array('a','a','a','a','a','true','true','true','true');
+	break;
+	case'adipower':
+	$respuestas=array('b','b','b','b','b','false','false','false','false');
+	break;
+	case'adipure':
+	$respuestas=array('c','c','c','c','c','true','true','true','true',);
+	break;
 }
+for($i=1;$i<10;i++)
+{
+	if($_GET['p'.$i]==$respuestas[$i-1]){
+		$aciertos++;
+								  }	
+	else{
+	$errores++;
+	}
+}
+  $resultado=$aciertos-$errores;
+	}
+}
+
 //authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
 //$user=profile();
 $all_answers = true;
@@ -38,13 +76,13 @@ include ("includes/header.php");
 								$('#evaluacion').submit();
 							});
 							$('.notification').click(function(){
-								location.href='home.php';
+								location.href='perfil.php';
 							});
 						});
                     </script>
                     <?php if(isset($_GET['evaluacion'])): ?>
                     <div class="notification">
-                    	<?php if($all_answers): ?>
+                    	<?php if(!$error): ?>
                     	<div class="notification_success">
                         	<img src="imagesAdidas/evaluaciones/success.png" />
                         </div>
