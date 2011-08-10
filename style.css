@@ -814,7 +814,92 @@ font-size: 12px;
 	}
 
 
+/*-------------------Lightbox notificaciones-------------------------*/
 
+.notification{
+    background: url("imagesAdidas/evaluaciones/back.png") repeat scroll 0 0 transparent;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.notification .notification_success{
+    left: 50%;
+    margin-left: -223px;
+    margin-top: -107px;
+    position: absolute;
+    top: 50%;
+    
+}
+.notification .notification_error{
+    left: 50%;
+    margin-left: -217px;
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+}
+
+
+
+/*-------------------Slide evaluaciones-------------------------*/
+.slidedeck{
+    height:452px;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+    width:1000px;
+}
+
+.slidedeck_buttons{
+    left:625px;
+    position:absolute;
+    top:10px;
+    z-index:1;
+}
+
+.slidedeck #evaluacion{
+    position:absolute;
+    top:0;
+}
+
+.slidedeck .slide{
+    height:452px;
+    position:relative;
+    width:1000px;
+}
+
+.slidedeck_op1{
+    position: absolute;
+    top: 182px;
+    left: 215px;
+    z-index: 1;
+}
+.slidedeck_op2{
+    position: absolute;
+    top: 216px;
+    left: 215px;
+    z-index: 1;
+}
+.slidedeck_op3{
+    position: absolute;
+    top: 249px;
+    left: 215px;
+    z-index: 1;
+}
+.slidedeck_true{
+    position: absolute;
+    top: 227px;
+    left: 215px;
+    z-index: 1;
+}
+.slidedeck_false{
+    position: absolute;
+    top: 263px;
+    left: 215px;
+    z-index: 1;
+}
 
 
 /*-------------------Carrousel style-------------------------*/
