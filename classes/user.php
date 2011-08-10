@@ -55,13 +55,13 @@ class User{
 	}
 	
 	public function set_today_points($id_user){
-		$fecha = $date('Y-m-d', time());
-		$time = $date('G:i:s', time());
+		$fecha = date('Y-m-d', time());
+		$time = date('G:i:s', time());
 		$last_visit = $this->db->select_where("visitas", "id_visita", "id_usuario='$id_user' AND fecha='$fecha'");
 		if(mysql_num_rows($last_visit) > 0){
 			return false;
 		}else{
-			$user_visit = $this->db->insert("visitas(id_usuario, fecha, hora_entrada)", "'$id_user','$fecha','$time'");
+			$user_visit = $this->db->insert_into("visitas(id_usuario, fecha, hora_entrada)", "'$id_user','$fecha','$time'");
 		}
 	}
 	
@@ -75,23 +75,19 @@ class User{
 			
 			$sucursal_result= $this->db->select_where("sucursal", "nombre, id_cadena", "id_sucursal='$id_sucursal'");
 			$sucursal_array= mysql_fetch_array($sucursal_result);
-			print_r($sucursal_array);
 			$sucursal_nombre=$sucursal_array['nombre'];
 			$sucursal_cadena=$sucursal_array['id_cadena'];
 			
 			$departamento_result= $this->db->select_where("departamento", "nombre", "id_departamento='$id_departamento'");
 			$departamento_array=mysql_fetch_array($departamento_result);
-			print_r($departamento_array);
 			$departamento_nombre=$departamento_array['nombre'];
 			
 			$cadena_result= $this->db->select_where("cadena", "nombre", "id_cadena='$sucursal_cadena'");
 			$cadena_array=mysql_fetch_array($cadena_result);
-			print_r($cadena_array);
 			$cadena_nombre=$cadena_array['nombre'];
 			
 			$puesto_result= $this->db->select_where("tipo_vendedor", "nombre", "id_puesto='$id_puesto'");
 			$puesto_array=mysql_fetch_array($puesto_result);
-			print_r($puesto_array);
 			$puesto_nombre=$puesto_array['nombre'];
 			
 			$visitas_result = $this->db->select_where("visitas", "id_visita", "id_usuario='$id_user'");

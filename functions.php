@@ -1,7 +1,6 @@
 <?php
 session_start();
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+date_default_timezone_set('America/Mexico_City');
 include_once('classes/user.php');
 
 function login(){
@@ -71,6 +70,8 @@ function upload(){
 
 function profile(){
 $user = new User();
+$user->set_today_points($_SESSION['id']);
 return $user->profile($_SESSION['id']);
 }
+
 ?>
