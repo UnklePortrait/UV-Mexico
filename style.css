@@ -854,7 +854,7 @@ font-size: 12px;
 }
 
 .slidedeck_buttons{
-    left:625px;
+    left:710px;
     position:absolute;
     top:10px;
     z-index:1;
@@ -873,19 +873,19 @@ font-size: 12px;
 
 .slidedeck_op1{
     position: absolute;
-    top: 182px;
+    top: 207px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_op2{
     position: absolute;
-    top: 216px;
+    top: 243px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_op3{
     position: absolute;
-    top: 249px;
+    top: 275px;
     left: 215px;
     z-index: 1;
 }
