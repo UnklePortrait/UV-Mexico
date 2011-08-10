@@ -111,11 +111,24 @@ class User{
 			$puesto_nombre=$puesto_array['nombre'];
 			
 			$visitas_result = $this->db->select_where("visitas", "id_visita", "id_usuario='$id_user'");
+			$evaluaciones_result = $this->db->select_where("evaluaciones", "puntos", "id_usuario='$id_user'");
+			if(mysql_num_rows($evaluaciones_result) > 0){
+				while($evaluaciones_row = mysql_fetch_array($evaluaciones_result)){
+					$puntos_evaluaciones += $evaluaciones_row['puntos'];
+				}
+			}else{
+				$puntos_evaluaciones = 0;
+			}
+			
 			$puntos = 10;
-			$puntos += 10 * mysql_num_rows($visitas_result);
+			$puntos_visitas = 10 * mysql_num_rows($visitas_result);
+			
+			$puntos += $puntos_visitas;
+			$puntos += $puntos_evaluaciones;
+			
 			$this->db->update("usuarios", "puntos='$puntos'", "id_usuario='$id_user'");
 			
-			return array('id_usuario'=>$user_profile['id_usuario'],'email'=>$user_profile['email'],'password'=>$user_profile['password'],'tipo_usuario'=>$user_profile['id_tipo_usuario'],'nombre'=>$user_profile['nombre'], 'image'=>$user_profile['image'], 'sucursal'=>$sucursal_nombre,'departamento'=>$departamento_nombre,'cadena'=>$cadena_nombre,'puesto'=>$puesto_nombre, 'puntos'=>$puntos);		
+			return array('id_usuario'=>$user_profile['id_usuario'],'email'=>$user_profile['email'],'password'=>$user_profile['password'],'tipo_usuario'=>$user_profile['id_tipo_usuario'],'nombre'=>$user_profile['nombre'], 'image'=>$user_profile['image'], 'sucursal'=>$sucursal_nombre,'departamento'=>$departamento_nombre,'cadena'=>$cadena_nombre,'puesto'=>$puesto_nombre, 'puntos'=>$puntos, 'visitas'=>$puntos_visitas, 'evaluaciones'=>$puntos_evaluaciones);		
 		}else{
 			return false;
 		}
