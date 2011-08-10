@@ -22,14 +22,14 @@ $errores=0;
 	case 'f50':
 	$respuestas=array('a','a','a','a','a','true','true','true','true');
 	break;
-	case'adipower':
+	case'predator':
 	$respuestas=array('b','b','b','b','b','false','false','false','false');
 	break;
 	case'adipure':
 	$respuestas=array('c','c','c','c','c','true','true','true','true',);
 	break;
 }
-for($i=1;$i<10;i++)
+for($i=1;$i<10;$i++)
 {
 	if($_GET['p'.$i]==$respuestas[$i-1]){
 		$aciertos++;
@@ -39,12 +39,17 @@ for($i=1;$i<10;i++)
 	}
 }
   $resultado=$aciertos-$errores;
+  if($resultado<0){
+	  $resultado=0;
 	}
+  $user= new User();
+  $user->set_evaluation($_SESSION['id'],$resultado*10,$_GET['evaluacion']);
+	}
+
 }
 
 //authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
 //$user=profile();
-$all_answers = true;
 include ("includes/header.php");
 ?>
 			<div id="user">

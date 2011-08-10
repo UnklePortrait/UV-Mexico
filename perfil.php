@@ -98,13 +98,13 @@ $user=profile();
 							</tr>
 							<tr>
 								<td class="titleTD">Por ingresos</td>
-								<td class="ans"><?php echo $user['puntos'];?> </td>
+								<td class="ans"><?php echo $user['visitas'];?> </td>
 								<td class="titleTD">Por módulos</td>
 								<td class="ans">0 (0 módulos)</td>
 							</tr>
 							<tr>
 								<td class="titleTD">Por calificaciones</td>
-								<td class="ans">0 <span>Ver tabla</span></td>
+								<td class="ans"><?php echo $user['evaluaciones'];?><span>Ver tabla</span></td>
 								<td class="titleTD">Puntos adicionales</td>
 								<td class="ans">0</td>
 							</tr>
