@@ -30,7 +30,7 @@ $user=profile();
 		<img src="imagesAdidas/bannerHome/photo4.jpg" />
 		
 	</div>
-					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="600" id="Vid" title="video">
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="480" id="Vid" title="video">
         	  	<param name="movie" value="swf/Adidas_.swf" />
         	  	<param name="quality" value="high" />
         	  	<param name="wmode" value="transparent" />
@@ -39,7 +39,7 @@ $user=profile();
         	  	<param name="expressinstall" value="Scripts/expressInstall.swf" />
         	  	<!-- La siguiente etiqueta object es para navegadores distintos de IE. Ocúltela a IE mediante IECC. -->
         	  	<!--[if !IE]>-->
-              	<object type="application/x-shockwave-flash" data="swf/Adidas_.swf" width="1000" height="600">
+              	<object type="application/x-shockwave-flash" data="swf/Adidas_.swf" width="1000" height="480">
         	    <!--<![endif]-->
         	    <param name="quality" value="high" />
         	    <param name="wmode" value="transparent" />
