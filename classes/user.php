@@ -65,6 +65,26 @@ class User{
 		}
 	}
 	
+	
+	public function set_evaluation($id_user, $resultado, $tipo_examen){
+		$fecha = date('Y-m-d', time());
+		$time = date('G:i:s', time());
+		$exam_search = $this->db->select_where("examen", "id_examen", "nombre='$tipo_examen'");
+		$exam_array = mysql_fetch_array($exam_search);
+		$exam = $exam_array['id_examen'];
+		$last_evaluation_search = $this->db->select_where("evaluaciones", "id_evaluacion, puntos", "id_usuario='$id_user' AND tipo_examen='$exam'");
+		if(mysql_num_rows($last_evaluation_search) > 0){
+			$last_evaluation_array = mysql_fetch_array( $last_evaluation_search);
+			$last_evaluation_id = $last_evaluation_array['id_evaluacion'];
+			$last_evaluation_puntos = $last_evaluation_array['puntos'];
+			if($resultado > $last_evaluation_puntos){
+				$this->db->update("evaluaciones", "puntos='$resultado', fecha='$fecha', hora='$time'", "id_evaluacion='$last_evaluation_id'");
+			}
+		}else{
+			$this->db->insert_into("evaluaciones(id_usuario, tipo_examen, puntos, fecha, hora)", "'$id_user', '$exam', '$resultado', '$fecha', '$time'");
+		}
+	}
+	
 	public function profile($id_user){
 		$user_result = $this->db->select_where("usuarios", "id_usuario, email, password, id_tipo_usuario, nombre, id_sucursal, id_departamento, id_puesto, image", "id_usuario='$id_user'");
 		if(mysql_num_rows($user_result )>0){
