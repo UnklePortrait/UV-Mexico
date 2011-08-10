@@ -274,4 +274,13 @@ $('#homeC').carouFredSel();
 	function hideMore(){
 		$('.moreInfo').hide(500);
 	}
+	
+	
+	//---------- Perfil show imageupload form ----------------//
+	$('#profileImage').hide();
+	$('#default_foto').click(function(e){
+		e.preventDefault();
+		$('#profileImage').slideDown();
+	});
+	
 });

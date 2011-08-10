@@ -65,8 +65,8 @@ $user=profile();
 						<?php if(isset($user['image']) && !empty($user['image'])):?>
 						<img src="<?php echo $user['image']?>" width="150" height="200" >
                         <?php else:?>
-                       <img src="imagesAdidas/perfil/undefined.png" width="150" height="200" >
-						<form  method="post" enctype="multipart/form-data">
+                       <img id="default_foto" src="imagesAdidas/perfil/default.png" width="150" height="200" >
+						<form id="profileImage"  method="post" enctype="multipart/form-data">
                         <input type="file" name="image" id="image" />
                         <input type= "submit" value="Subir imagen"/>
                         </form>

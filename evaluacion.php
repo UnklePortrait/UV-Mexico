@@ -55,46 +55,7 @@ include ("includes/header.php");
 			<div class="linea"></div>
 			<div id="content">
             	<div class="slidedeck">
-                	<script type="text/javascript">
-						$(document).ready(function(){
-							var index = 0;
-							$('#enviar').hide();
-							$('#anterior').hide();
-							$('#siguiente').click(function(e){
-								e.preventDefault();
-								$('#enviar').hide();
-								$('#siguiente').show();
-								$('#anterior').show();
-								if(index < $('.slide').size() - 1){
-									index++;
-									$('#evaluacion').animate({top: (-452*index)+'px'});
-								}else{
-									$('#siguiente').hide();
-									$('#enviar').show();
-								}
-							});
-							$('#anterior').click(function(e){
-								e.preventDefault();
-								$('#enviar').hide();
-								$('#siguiente').show();
-								$('#anterior').show();
-								if(index > 0){
-									index--;
-									$('#evaluacion').animate({top: (-452*index)+'px'});
-								}else{
-									$('#anterior').hide();
-								}
-							});
-							$('#enviar').click(function(e){
-								e.preventDefault();
-								$('#evaluacion').submit();
-							});
-							$('.notification').click(function(){
-								location.href='perfil.php';
-							});
-						});
-                    </script>
-                    <?php if(isset($_GET['evaluacion'])): ?>
+                	<?php if(isset($_GET['evaluacion'])): ?>
                     <div class="notification">
                     	<?php if(!$error): ?>
                     	<div class="notification_success">
