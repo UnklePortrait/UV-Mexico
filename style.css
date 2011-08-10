@@ -214,14 +214,15 @@ object {
 
 
 .top {
-	position: relative;
-	top:0px;
-	z-index: 1;
-	background-image: url(imagesAdidas/topGrid.png);
-	background-repeat: repeat-x;
-	width: 100%;
-	height: 171px;
+    background-image: url("imagesAdidas/topGrid.png");
+    background-repeat: repeat-x;
+    height: 171px;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    z-index: 1;
 }
+
 #registrate p {
 	color: #6e6e6e;
 	font-size: 12px;
