@@ -59,8 +59,10 @@ float: right;
     top: 25px;
 }
 #menuInicio {
+
 	background-image: url(imagesAdidas/menu/inicio.png);
 	width: 84px;
+
 	height: 28px;
 	display: block;
 }

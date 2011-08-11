@@ -1,13 +1,9 @@
 
-<?php include ("includes/header.php") ?>
+<?php include ("includes/header2.php") ?>
 	<body>
 		<div id="containerGray">
-			<div id="header">
-				<div id="logo">
-					<img src="imagesAdidas/logo.png" class="logo"/>
-					<img src="imagesAdidas/adidas-reebok.png" class="adidas-reebok"/>
-				</div>				
-			</div>
+
+            
 			<!--<div id="mainmenu">
 				</div>-->
 			<div class="clear"></div>

@@ -1,8 +1,9 @@
 <?php
 include_once('functions.php');
-
+authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+$comentario=postComment();
 $logoutAction = logout();
-//$user = authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+$user=profile();
 ?>
 <?php include ("includes/header.php") ?>
       
@@ -12,6 +13,7 @@ $logoutAction = logout();
 					  </div>
 			<div id="menu">
 			<ul>
+
 				<li><a href="home.php" id="menuInicio" class="menu"></a></li>
 				<li><a href="#" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
 				<li class="menu_categoria">
@@ -31,6 +33,7 @@ $logoutAction = logout();
                     </ul>
                 </li>
 				<li><a href="#" id="menuVentas" class="menu"></a></li>
+
 				<li><a href="#" id="menuCatalogo" class="menu"></a></li>
 			</ul>
 			</div>
@@ -38,9 +41,44 @@ $logoutAction = logout();
 			<div id="content">
 				<div class="top"></div>
 				<div id="content-home">
-                <p class="olvide-text">Escribe la problemática</p>
-					<textarea name="mensaje" class="sendMail" cols="40" rows="10" id="mensaje" ></textarea>
-					
+                <div id="comments">
+                <?php 
+				foreach($comentario in $comentarios):
+				?>
+                <div class="comment">
+                <img src="<?php $comentario['image']?>"/>
+                <p class="comment_comentario">
+                <?php
+                echo $comentario['comentario'];
+				?>
+                </p>
+                <div class="commentFoot">
+                <p class="comment_nombre">
+                <?php
+				echo $comentario['nombre'];
+				?>
+                </p>
+                <div class="time">
+                <p class="comment_fecha">
+				<?php
+                echo $comentario['fecha'];
+				?>
+				</p>
+                <p class="comment_hora">
+                <?php
+                echo $comentario['hora'];
+				?>
+                </p>
+				</div>
+                </div>
+                
+                </div>
+                </div>
+                <p class="olvide-text">Ingresa tu duda y/o problematica</p>
+					<form name="form1" action="sendForo.php" method="post">
+                    <textarea name="comentario" class="sendMail" cols="40" rows="10" id="mensaje" ></textarea>
+                     <input type="image" class="enviar" src="imagesAdidas/login/enviar.png" />
+					</form>
 
 					
 				</div>					

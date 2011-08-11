@@ -33,8 +33,8 @@ login();
 						<div class="form">
 							<form method="post" class="log">
                             	<input type="hidden" name="login" />
-                                e-mail
-                                <input type="text"  name="usuario" onclick="if(this.value == 'correo electronico')this.value=''" onblur="if(this.value == '')this.value='correo electronico'"/></br>
+                                usuario
+                                <input type="text"  name="usuario" onblur="if(this.value == '')this.value='correo electrónico'" onclick="if(this.value == 'correo electrónico')this.value=''" /></br>
                                 contraseña
                                 <input type="password"  name="password"  class="password"/></br>
                                 <input type="image" class="entrar" src="imagesAdidas/login/entrar.png" />

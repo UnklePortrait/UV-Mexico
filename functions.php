@@ -67,6 +67,16 @@ function upload(){
 		}
 	}
 }
+function postComment(){
+
+if(isset ($_POST['comentario']) && !empty($_POST['comentario'])){
+	$comentario=$_POST['comentario']);
+	$user->comments($_SESSION['id'],$comentario);
+}
+$id_subcategoria=$_GET['subcat'];
+$user->getComments($id_subcategoria);
+
+}
 
 function profile(){
 $user = new User();

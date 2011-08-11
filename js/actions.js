@@ -9,6 +9,7 @@ $(document).ready(function(){
 
 	//---------- Fin Perfil show imageupload form ----------------//
 
+$( "#bannerHome" ).imageScroller( {loading:'Wait please...'} );
 $('#homeC').carouFredSel();
 	$('.hideHome').click(function(){
 		
