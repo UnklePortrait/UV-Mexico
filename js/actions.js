@@ -1,5 +1,8 @@
+function TyC() {
+	window.open( "tyc.html", "myWindow", "fullscreen=0, toolbar=0, location=0, status=0, menubar=0, scrollbars=0, resizable=0, width=900, height=900",1)
+}
+
 $(document).ready(function(){
-	
 	//---------- Perfil show imageupload form ----------------//
 	$('#profileImage').hide();
 	$('#default_foto').click(function(e){
