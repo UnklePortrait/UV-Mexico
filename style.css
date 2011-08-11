@@ -34,6 +34,7 @@ img {
 	margin: 0 auto;
 	background-image: url(imagesAdidas/gray/bgFail.png);
 	background-size: 100% 100%;
+	
 }
 #header {
 	width: 100%;
@@ -148,6 +149,12 @@ object {
 	width: 100%;
 	margin-bottom: 50px;
 }
+#content-gray {
+	width: 100%;
+	margin-bottom: 50px;
+	/*background-color: #868789;*/
+	height: 100%;
+}
 .clear {
 	/*clear: both;*/
 }
@@ -156,8 +163,8 @@ object {
     position: absolute;
     height: 168px;
     width: 100%;
-    z-index: 1;
-    bottom : 0 ;
+    z-index: 0;
+    bottom : 0;
 }
 #registrate {
 	float: left;
@@ -219,11 +226,11 @@ object {
 .top {
 	position: relative;
 	top:0px;
-	z-index: 1;
+	z-index: 0;
 	background-image: url(imagesAdidas/topGrid.png);
 	background-repeat: repeat-x;
 	width: 100%;
-	height: 120px;
+	height: 110px;
 }
 #registrate p {
 	color: #6e6e6e;
@@ -318,9 +325,11 @@ input.password {
     z-index: 100;
 }
 #registro {
-	width: 1000px;
-	margin: 0 auto;
-	text-align: center;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: -67px;
+    width: 1000px;
 }
 #reg {
 	float: left;
@@ -657,7 +666,7 @@ a.moreInfo {
 	text-align: center;
 }
 .titleGray {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     text-align: right;
 }
 .olvide-text {
@@ -669,13 +678,15 @@ a.moreInfo {
 	width: 500px;
 	margin: 0 auto;
 	text-align: left;
-	height: 600px;
+	height: 550px;
+	position: relative;
+	top:-50px;
 }
 #text-olvide {
 	width: 500px;
 	margin: 0 auto;
 	text-align: left;
-	height: 270px;
+	height: auto;
 }
 .sendMail {
 	width: 470px;

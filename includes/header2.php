@@ -10,6 +10,6 @@
 			<div id="header">
 				<div id="logo">
 					<img src="imagesAdidas/logo.png" class="logo"/>
-					<img src="imagesAdidas/adidasgroup.png" class="adidas-reebok"/>
+					<img src="imagesAdidas/adidasgroup.png" class="adidasgroup"/>
 				</div>				
 			</div>
