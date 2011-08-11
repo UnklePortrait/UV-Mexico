@@ -73,7 +73,16 @@ function postComment(){
 		$comentario=$_POST['comentario'];
 		$user->insertComments($_SESSION['id'],$comentario, $_GET['subcat']);
 	}
+	if(isset ($_POST['reply']) && !empty($_POST['reply'])){
+		$comentario=$_POST['reply'];
+		$user->replyComment($_SESSION['id'],$comentario, $_POST['id_comentario']);
+	}
 	return $user->getComments($_GET['subcat']);
+}
+
+function getCommentsFrom($id_comment){
+	$user = new User();
+	return $user->getCommentsFrom($id_comment);
 }
 
 function profile(){

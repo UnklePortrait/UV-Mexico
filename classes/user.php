@@ -97,9 +97,22 @@ class User{
 		}
 		else{
 		return false;
+		}	
+	}
+	
+	public function replyComment($id_user, $comentario, $id_comentario ){
+		$fecha = date('Y-m-d', time());
+		$time = date('G:i:s', time());
+		$insert=$this->db->insert_into("comentarios(id_usuario,comentario,fecha,hora,id_comentario_respuesta,id_subcategoria)","'$id_user','$comentario','$fecha','$time','$id_comentario','0'");
+		if($insert){
+		return $insert;
+		}
+		else{
+		return false;
 		}
 		
 	}
+	
 	public function getComments($subcategoria){
 		$commentsArray=array();
 		$subcategoria_result=$this->db->select_where("subcategoria","id_subcategoria", "nombre='$subcategoria'");
@@ -113,6 +126,21 @@ class User{
 				$result=mysql_fetch_array($user);
 				$result_array=array("nombre"=>$result['nombre'],"image"=>$result['image'],"comentario"=>$user_row['comentario'],"fecha"=>$user_row['fecha'],"hora"=>$user_row['hora'		],"id_comentario"=>$user_row['id_comentario']);
 				array_push($commentsArray,$result_array);			
+			}
+		}
+		return $commentsArray;
+	}
+	
+	public function getCommentsFrom($id_comentario){
+		$commentsArray=array();
+		$user_result = $this->db->select_where("comentarios", "id_usuario,comentario, fecha,hora", "id_comentario_respuesta='$id_comentario'");
+		if(mysql_num_rows($user_result )>0){
+			while($user_row=mysql_fetch_array($user_result)){
+				$id_user=$user_row['id_usuario'];
+				$user= $this->db->select_where("usuarios", "nombre", "id_usuario='$id_user'");
+				$result=mysql_fetch_array($user);
+				$result_array=array("nombre"=>$result['nombre'],"comentario"=>$user_row['comentario'],"fecha"=>$user_row['fecha'],"hora"=>$user_row['hora']);
+				array_push($commentsArray,$result_array);
 			}
 		}
 		return $commentsArray;

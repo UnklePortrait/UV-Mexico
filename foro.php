@@ -42,38 +42,39 @@ $user=profile();
 				<div class="top"></div>
 				<div id="content-home">
                 <div id="comments">
-                <?php 
-				foreach($comentarios as $comentario){
-				?>
+                <?php foreach($comentarios as $comentario): ?>
                 <div class="comment">
-                <img src="<?php $comentario['image']?>"/>
-                <p class="comment_comentario">
-                <?php
-                echo $comentario['comentario'];
-				?>
-                </p>
-                <div class="commentFoot">
-                <p class="comment_nombre">
-                <?php
-				echo $comentario['nombre'];
-				?>
-                </p>
-                <div class="time">
-                <p class="comment_fecha">
-				<?php
-                echo $comentario['fecha'];
-				?>
-				</p>
-                <p class="comment_hora">
-                <?php
-                echo $comentario['hora'];
-				?>
-                </p>
-				</div>
-                </div>
-                <?php
-				};
-				?>
+                    <img src="<?php echo $comentario['image'] ?>" width="150" height="200"/>
+                    <p class="comment_comentario"><?php echo $comentario['comentario'] ?></p>
+                    <div class="commentFoot">
+                        <p class="comment_nombre"><?php echo $comentario['nombre'] ?></p>
+                    	<div class="time">
+                        	<p class="comment_fecha"><?php echo $comentario['fecha']; ?></p>
+                        	<p class="comment_hora"><?php echo $comentario['hora'] ?></p>
+                    	</div>
+                    </div>
+                    <div class="comment_replies">
+                    	<?php $replies = getCommentsFrom($comentario['id_comentario']) ?>
+                        <?php foreach($replies as $reply): ?>
+                    	<div class="reply">
+                            <p class="reply_comentario"><?php echo $reply['comentario'] ?></p>
+                            <div class="replyFoot">
+                                <p class="reply_nombre"><?php echo $reply['nombre'] ?></p>
+                                <div class="reply_time">
+                                    <p class="reply_fecha"><?php echo $reply['fecha']; ?></p>
+                                    <p class="reply_hora"><?php echo $reply['hora'] ?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                       <form name="form_reply" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
+                            <textarea name="reply" class="sendMail" cols="40" rows="2" id="reply" ></textarea>
+                            <input type="hidden" name="id_comentario" value="<?php echo $comentario['id_comentario'] ?>" />
+                            <input type="submit" value="contestar" />
+						</form>
+                    </div>
+              	</div>
+                <?php endforeach; ?>
                 </div>
                 </div>
                 <p class="olvide-text">Ingresa tu duda y/o problematica</p>
