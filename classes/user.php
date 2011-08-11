@@ -85,6 +85,23 @@ class User{
 		}
 	}
 	
+	public function insertComments($id_user,$comentario){
+		$fecha = date('Y-m-d', time());
+		$time = date('G:i:s', time());
+		$subcategoria=$_GET['subcat'];
+		$insert=$this->db->insert_into("comentarios(id_usuario,comentario,fecha,hora,id_subcategoria)","'$id_user''$comentario','$fecha','$time',$subcategoria");
+		if($insert){
+		return $insert;
+		}
+		else{
+		return false;
+		}
+		
+	}
+	public function getComments($id_subcategoria){
+		$user_result = $this->db->select_where("comentarios", "id_usuario,id_comentario,comentario, fecha,hora", "id_subcategoria='$id_subcategoria'");
+	
+	}
 	public function profile($id_user){
 		$user_result = $this->db->select_where("usuarios", "id_usuario, email, password, id_tipo_usuario, nombre, id_sucursal, id_departamento, id_puesto, image", "id_usuario='$id_user'");
 		if(mysql_num_rows($user_result )>0){

@@ -22,9 +22,11 @@ $logoutAction = logout();
 			<div id="content">
 				<div class="top"></div>
 				<div id="content-home">
-                <p class="olvide-text">Escribe la problemática</p>
-					<textarea name="mensaje" class="sendMail" cols="40" rows="10" id="mensaje" ></textarea>
-					
+                <p class="olvide-text">Ingresa tu duda y/o problematica</p>
+					<form name="form1" action="sendForo.php" method="post">
+                    <textarea name="comentario" class="sendMail" cols="40" rows="10" id="mensaje" ></textarea>
+                     <input type="image" class="enviar" src="imagesAdidas/login/enviar.png" />
+					</form>
 
 					
 				</div>					
