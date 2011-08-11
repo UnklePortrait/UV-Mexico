@@ -684,6 +684,7 @@ a.moreInfo {
 	height: 550px;
 	position: relative;
 	top:-50px;
+	 z-index: 100;
 }
 #text-olvide {
 	width: 500px;

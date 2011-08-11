@@ -9,7 +9,7 @@
 	<div id="container">
 			<div id="header">
 				<div id="logo">
-					<img src="imagesAdidas/logo.png" class="logo"/>
+					<a href="index.php"><img src="imagesAdidas/logo.png" class="logo"/></a>
 					<img src="imagesAdidas/adidasgroup.png" class="adidasgroup"/>
 				</div>				
 			</div>
