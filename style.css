@@ -34,6 +34,7 @@ img {
 	margin: 0 auto;
 	background-image: url(imagesAdidas/gray/bgFail.png);
 	background-size: 100% 100%;
+	
 }
 #header {
 	width: 100%;
@@ -162,8 +163,8 @@ object {
     position: absolute;
     height: 168px;
     width: 100%;
-    z-index: 1;
-    bottom : 0 ;
+    z-index: 0;
+    bottom : 0;
 }
 #registrate {
 	float: left;
@@ -225,7 +226,7 @@ object {
 .top {
 	position: relative;
 	top:0px;
-	z-index: 1;
+	z-index: 0;
 	background-image: url(imagesAdidas/topGrid.png);
 	background-repeat: repeat-x;
 	width: 100%;
