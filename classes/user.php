@@ -85,11 +85,13 @@ class User{
 		}
 	}
 	
-	public function insertComments($id_user,$comentario){
+	public function insertComments($id_user,$comentario, $subcategoria){
 		$fecha = date('Y-m-d', time());
 		$time = date('G:i:s', time());
-		$subcategoria=$_GET['subcat'];
-		$insert=$this->db->insert_into("comentarios(id_usuario,comentario,fecha,hora,id_subcategoria)","'$id_user''$comentario','$fecha','$time',$subcategoria");
+		$subcategoria_result=$this->db->select_where("subcategoria","id_subcategoria", "nombre='$subcategoria'");
+		$subcategoria_array = mysql_fetch_array($subcategoria_result);
+		$subcat = $subcategoria_array['id_subcategoria'];
+		$insert=$this->db->insert_into("comentarios(id_usuario,comentario,fecha,hora,id_comentario_respuesta, id_subcategoria)","'$id_user','$comentario','$fecha','$time','0', '$subcat'");
 		if($insert){
 		return $insert;
 		}
@@ -98,25 +100,24 @@ class User{
 		}
 		
 	}
-	public function getComments($id_subcategoria){
+	public function getComments($subcategoria){
 		$commentsArray=array();
+		$subcategoria_result=$this->db->select_where("subcategoria","id_subcategoria", "nombre='$subcategoria'");
+		$subcategoria_array = mysql_fetch_array($subcategoria_result);
+		$id_subcategoria = $subcategoria_array['id_subcategoria'];
 		$user_result = $this->db->select_where("comentarios", "id_usuario,id_comentario,comentario, fecha,hora", "id_subcategoria='$id_subcategoria'");
 		if(mysql_num_rows($user_result )>0){
-		while($user_row=mysql_fetch_array($user_result)){
-			$id_user=$user_row['id_usuario'];
-			$user= $this->db->select_where("usuarios", "image,nombre", "id_usuario='$id_user'");
-			$result=mysql_fetch_array($user);
-			$result_array=array("nombre"=>$result['nombre'],"image"=>$result['image'],"comentario"=>$user_row['comentario'],"fecha"=>$user_row['fecha'],"hora"=>$user_row['hora'		],"id_comentario"=>$user_row['id_comentario']);
-			array_push($commentsArray,$result_array);
-			
+			while($user_row=mysql_fetch_array($user_result)){
+				$id_user=$user_row['id_usuario'];
+				$user= $this->db->select_where("usuarios", "image,nombre", "id_usuario='$id_user'");
+				$result=mysql_fetch_array($user);
+				$result_array=array("nombre"=>$result['nombre'],"image"=>$result['image'],"comentario"=>$user_row['comentario'],"fecha"=>$user_row['fecha'],"hora"=>$user_row['hora'		],"id_comentario"=>$user_row['id_comentario']);
+				array_push($commentsArray,$result_array);			
+			}
 		}
 		return $commentsArray;
-		
-		}
-		
-		
-	
 	}
+	
 	public function profile($id_user){
 		$user_result = $this->db->select_where("usuarios", "id_usuario, email, password, id_tipo_usuario, nombre, id_sucursal, id_departamento, id_puesto, image", "id_usuario='$id_user'");
 		if(mysql_num_rows($user_result )>0){

@@ -1,7 +1,7 @@
 <?php
 include_once('functions.php');
 authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
-$comentario=postComment();
+$comentarios=postComment();
 $logoutAction = logout();
 $user=profile();
 ?>
@@ -43,7 +43,7 @@ $user=profile();
 				<div id="content-home">
                 <div id="comments">
                 <?php 
-				foreach($comentario in $comentarios):
+				foreach($comentarios as $comentario){
 				?>
                 <div class="comment">
                 <img src="<?php $comentario['image']?>"/>
@@ -71,11 +71,13 @@ $user=profile();
                 </p>
 				</div>
                 </div>
-                
+                <?php
+				};
+				?>
                 </div>
                 </div>
                 <p class="olvide-text">Ingresa tu duda y/o problematica</p>
-					<form name="form1" action="sendForo.php" method="post">
+					<form name="form1" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
                     <textarea name="comentario" class="sendMail" cols="40" rows="10" id="mensaje" ></textarea>
                      <input type="image" class="enviar" src="imagesAdidas/login/enviar.png" />
 					</form>

@@ -68,20 +68,18 @@ function upload(){
 	}
 }
 function postComment(){
-
-if(isset ($_POST['comentario']) && !empty($_POST['comentario'])){
-	$comentario=$_POST['comentario']);
-	$user->comments($_SESSION['id'],$comentario);
-}
-$id_subcategoria=$_GET['subcat'];
-$user->getComments($id_subcategoria);
-
+	$user = new User();
+	if(isset ($_POST['comentario']) && !empty($_POST['comentario'])){
+		$comentario=$_POST['comentario'];
+		$user->insertComments($_SESSION['id'],$comentario, $_GET['subcat']);
+	}
+	return $user->getComments($_GET['subcat']);
 }
 
 function profile(){
-$user = new User();
-$user->set_today_points($_SESSION['id']);
-return $user->profile($_SESSION['id']);
+	$user = new User();
+	$user->set_today_points($_SESSION['id']);
+	return $user->profile($_SESSION['id']);
 }
 
 ?>

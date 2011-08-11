@@ -1,9 +1,10 @@
 <?php
 include_once('functions.php');
 $user=profile();
+postComment();
 
 $nombre = $user['nombre'];
-$mail = $user ['email']
+$mail = $user['email'];
 $consultas="consultas@uv-mexico.com.mx";
 $header = 'From: ' . $consultas . " \r\n";
 $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
@@ -21,6 +22,9 @@ $asunto = 'Nuevo comentario en foro de dudas';
 
 mail("krnturcott@gmail.com,mitsue@alucinastudio.com", $asunto, utf8_decode($mensaje), $header);
 
-//echo "<meta http-equiv='refresh' content='0;url=http://www.uv-mexico.com.mx/solicitud.php'/>";
+$subcat = $_GET['subcat'];
+$cat = $_GET['cat'];
+
+echo "<meta http-equiv='refresh' content='0;url=http://www.uv-mexico.com.mx/foro.php?cat=$cat&subcat=$subcat'/>";
 
 ?>
