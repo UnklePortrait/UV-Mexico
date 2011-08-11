@@ -155,7 +155,7 @@ object {
     height: 168px;
     width: 100%;
     z-index: -1;
-   /* bottom : 0 ;*/
+    bottom : 0 ;
 }
 #registrate {
 	float: left;
@@ -638,7 +638,7 @@ a.moreInfo {
 
 #content-forgot {
 	width: 1000px;
-	height: 500px;
+	height: auto;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -661,6 +661,7 @@ a.moreInfo {
 	width: 500px;
 	margin: 0 auto;
 	text-align: left;
+	height: 600px;
 }
 .sendMail {
 	width: 470px;
