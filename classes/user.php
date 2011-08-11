@@ -99,7 +99,22 @@ class User{
 		
 	}
 	public function getComments($id_subcategoria){
+		$commentsArray=array();
 		$user_result = $this->db->select_where("comentarios", "id_usuario,id_comentario,comentario, fecha,hora", "id_subcategoria='$id_subcategoria'");
+		if(mysql_num_rows($user_result )>0){
+		while($user_row=mysql_fetch_array($user_result)){
+			$id_user=$user_row['id_usuario'];
+			$user= $this->db->select_where("usuarios", "image,nombre", "id_usuario='$id_user'");
+			$result=mysql_fetch_array($user);
+			$result_array=array("nombre"=>$result['nombre'],"image"=>$result['image'],"comentario"=>$user_row['comentario'],"fecha"=>$user_row['fecha'],"hora"=>$user_row['hora'		],"id_comentario"=>$user_row['id_comentario']);
+			array_push($commentsArray,$result_array);
+			
+		}
+		return $commentsArray;
+		
+		}
+		
+		
 	
 	}
 	public function profile($id_user){

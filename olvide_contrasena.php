@@ -1,6 +1,9 @@
 
 <?php include ("includes/header2.php") ?>
+	<body>
+		<div id="containerGray">
 
+            
 			<!--<div id="mainmenu">
 				</div>-->
 			<div class="clear"></div>
