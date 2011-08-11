@@ -100,7 +100,7 @@ float: right;
     right: 15px;
     width: 590px;
     z-index: 100;
-    *top: 50px !important;
+    *top: 20px !important;
 }
 			#menu ul {
 				display: inline;
@@ -135,7 +135,7 @@ object {
 	text-align: right;
 	position: relative;
 	left: 310px;
-	top:65px;
+	top:80px;
 	}
 
 
@@ -160,6 +160,15 @@ object {
 	/*clear: both;*/
 }
 .bottom1 {
+    background-image: url("imagesAdidas/bottomGrid.png");
+    position: relative;
+    height: 168px;
+    width: 100%;
+    z-index: 0;
+    bottom : 0px;
+    *z-index: 0 !important;
+}
+.bottom3 {
     background-image: url("imagesAdidas/bottomGrid.png");
     position: relative;
     height: 168px;

@@ -1,7 +1,9 @@
-<?php include ("includes/header.php") ?>
+<?php include ("includes/header2.php") ?>
 	
+	<div id="containerGray">
 			<!--<div id="mainmenu">
 				</div>-->
+				
 			<div class="clear"></div>
 			<div id="content">
 				<div class="top"></div>
