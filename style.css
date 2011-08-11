@@ -815,6 +815,51 @@ font-size: 12px;
 	}
 
 
+/*-------------------Menu desplegable-------------------------*/
+#menu li.menu_categoria{
+	position:relative;
+}
+#menu li.menu_categoria ul{
+	background-color: #28ACE2;
+	display: none;
+	padding: 10px 0;
+	position: absolute;
+	width: 180px;
+}
+#menu li.menu_categoria:hover ul{
+	display: block;
+}
+#menu li.menu_categoria ul li{
+	display:block;
+	float:none;
+}
+#menu li.menu_categoria ul li a{
+	color:#FFF;
+	display:block;
+	padding:3px 5px;
+	text-decoration:none;
+}
+#menu li.menu_categoria ul li a:hover{
+	background-color:#0075D4;
+}
+#menu li.menu_categoria:hover ul li.menu_subcategoria ul{
+	background-color: #3C7ABE;
+	display: none;
+	padding: 10px 0;
+	position: absolute;
+	width: 180px;
+	left: 180px;
+	top: 10px;
+}
+#menu li.menu_categoria:hover ul li.menu_subcategoria:hover ul{
+	display:block;
+}
+#menu li.menu_subcategoria ul li a:hover{
+	background-color:#00A6F7;
+}
+
+
+
 /*-------------------Lightbox notificaciones-------------------------*/
 
 .notification{

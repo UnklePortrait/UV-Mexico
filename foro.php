@@ -12,12 +12,28 @@ $logoutAction = logout();
 					  </div>
 			<div id="menu">
 			<ul>
+				<li><a href="home.php" id="menuInicio" class="menu"></a></li>
 				<li><a href="#" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
-				<li><a href="#" id="menuForoDudas" class="menu"></a></li>
-                <li><a href="#" id="menuVentas" class="menu"></a></li>
+				<li class="menu_categoria">
+                	<a href="#" id="menuForoDudas" class="menu"></a>
+                    <ul>
+                    	<li class="menu_subcategoria">
+                        	<a href="#">F&uacute;tbol</a>
+                        	<ul>
+                            	<li><a href="foro.php?cat=futbol&subcat=f50">F50</a></li>
+                                <li><a href="foro.php?cat=futbol&subcat=predator">Predator</a></li>
+                                <li><a href="foro.php?cat=futbol&subcat=adipure">Adipure</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Running</a></li>
+                        <li><a href="#">Training</a></li>
+                        <li><a href="#">NEO</a></li>
+                    </ul>
+                </li>
+				<li><a href="#" id="menuVentas" class="menu"></a></li>
 				<li><a href="#" id="menuCatalogo" class="menu"></a></li>
 			</ul>
-				</div>
+			</div>
 			<div class="linea"></div>
 			<div id="content">
 				<div class="top"></div>
