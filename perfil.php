@@ -18,14 +18,28 @@ $user=profile();
                       </div>
 			<div id="menu">
 			<ul>
+				<li><a href="home.php" id="menuInicio" class="menu"></a></li>
 				<li><a href="#" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
-				<li><a href="#" id="menuForoDudas" class="menu"></a></li>
+				<li class="menu_categoria">
+                	<a href="#" id="menuForoDudas" class="menu"></a>
+                    <ul>
+                    	<li class="menu_subcategoria">
+                        	<a href="#">F&uacute;tbol</a>
+                        	<ul>
+                            	<li><a href="foro.php?cat=futbol&subcat=f50">F50</a></li>
+                                <li><a href="foro.php?cat=futbol&subcat=predator">Predator</a></li>
+                                <li><a href="foro.php?cat=futbol&subcat=adipure">Adipure</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Running</a></li>
+                        <li><a href="#">Training</a></li>
+                        <li><a href="#">NEO</a></li>
+                    </ul>
+                </li>
 				<li><a href="#" id="menuVentas" class="menu"></a></li>
 				<li><a href="#" id="menuCatalogo" class="menu"></a></li>
 			</ul>
-				</div>
-			
-
+			</div>
 			<div class="linea"></div>
 			<div id="content">
 			  <div class="top"></div>
@@ -64,8 +78,8 @@ $user=profile();
 						<?php if(isset($user['image']) && !empty($user['image'])):?>
 						<img src="<?php echo $user['image']?>" width="150" height="200" >
                         <?php else:?>
-                       <img src="imagesAdidas/perfil/undefined.png" width="150" height="200" >
-						<form  method="post" enctype="multipart/form-data">
+                       <img id="default_foto" src="imagesAdidas/perfil/default.png" width="150" height="200" >
+						<form id="profileImage"  method="post" enctype="multipart/form-data">
                         <input type="file" name="image" id="image" />
                         <input type= "submit" value="Subir imagen"/>
                         </form>

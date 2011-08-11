@@ -12,7 +12,7 @@ $logoutAction = logout();
 					  </div>
 			<div id="menu">
 			<ul>
-				<li><a href="#" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
+				<li><a href="#" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfilO.php');return document.MM_returnValue"></a></li>
 				<li><a href="#" id="menuForoDudas" class="menu"></a></li>
                 <li><a href="#" id="menuVentas" class="menu"></a></li>
 				<li><a href="#" id="menuCatalogo" class="menu"></a></li>

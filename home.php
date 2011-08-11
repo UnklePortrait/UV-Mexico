@@ -13,7 +13,7 @@ $user=profile();
 			<div id="menu">
 			<ul>
 				<li><a href="home.php" id="menuInicio" class="menu"></a></li>
-                <li><a href="/perfil.php" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
+                <li><a href="/perfil.php" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfilO.php');return document.MM_returnValue"></a></li>
 				<li><a href="#" id="menuForoDudas" class="menu" onClick="MM_goToURL('parent','foro.php');return document.MM_returnValue"></a></li>
 				<li><a href="#" id="menuVentas" class="menu"></a></li>
 				<li><a href="#" id="menuCatalogo" class="menu"></a></li>
