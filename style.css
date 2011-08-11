@@ -152,7 +152,7 @@ object {
 	width: 100%;
 	margin-bottom: 50px;
 	/*background-color: #868789;*/
-	height: 480px;
+	height: 100%;
 }
 .clear {
 	/*clear: both;*/
@@ -229,7 +229,7 @@ object {
 	background-image: url(imagesAdidas/topGrid.png);
 	background-repeat: repeat-x;
 	width: 100%;
-	height: 120px;
+	height: 110px;
 }
 #registrate p {
 	color: #6e6e6e;
@@ -324,9 +324,11 @@ input.password {
     z-index: 100;
 }
 #registro {
-	width: 1000px;
-	margin: 0 auto;
-	text-align: center;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: -67px;
+    width: 1000px;
 }
 #reg {
 	float: left;
