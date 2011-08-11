@@ -146,6 +146,11 @@ object {
 	width: 100%;
 	margin-bottom: 50px;
 }
+#content-gray {
+	width: 100%;
+	margin-bottom: 50px;
+	background-color: #868789;
+}
 .clear {
 	/*clear: both;*/
 }
@@ -655,7 +660,7 @@ a.moreInfo {
 	text-align: center;
 }
 .titleGray {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     text-align: right;
 }
 .olvide-text {
@@ -667,7 +672,9 @@ a.moreInfo {
 	width: 500px;
 	margin: 0 auto;
 	text-align: left;
-	height: 600px;
+	height: 550px;
+	position: relative;
+	top:-50px;
 }
 #text-olvide {
 	width: 500px;

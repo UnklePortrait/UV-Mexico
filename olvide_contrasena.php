@@ -11,7 +11,7 @@
 			<!--<div id="mainmenu">
 				</div>-->
 			<div class="clear"></div>
-			<div id="content">
+			<div id="content-gray">
 				<div class="top"></div>
 				<div id="content-olvide">
 					<div id="text-olvide">
