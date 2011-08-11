@@ -155,7 +155,7 @@ object {
     height: 168px;
     width: 100%;
     z-index: -1;
-    bottom : 0 ;
+   /* bottom : 0 ;*/
 }
 #registrate {
 	float: left;
