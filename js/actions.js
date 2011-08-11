@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+$( "#bannerHome" ).imageScroller( {loading:'Wait please...'} );
 $('#homeC').carouFredSel();
 	$('.hideHome').click(function(){
 		
