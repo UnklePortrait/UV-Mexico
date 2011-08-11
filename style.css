@@ -151,7 +151,8 @@ object {
 #content-gray {
 	width: 100%;
 	margin-bottom: 50px;
-	background-color: #868789;
+	/*background-color: #868789;*/
+	height: 480px;
 }
 .clear {
 	/*clear: both;*/
@@ -682,7 +683,7 @@ a.moreInfo {
 	width: 500px;
 	margin: 0 auto;
 	text-align: left;
-	height: 270px;
+	height: auto;
 }
 .sendMail {
 	width: 470px;
