@@ -22,7 +22,7 @@
                     </form>
 				</div>
 				</div>
-				<div class="bottom"></div>	
+				<div class="bottom1"></div>	
 			</div>
 			<div class="clear"></div>
 			<div id="footer">

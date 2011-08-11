@@ -159,13 +159,22 @@ object {
 .clear {
 	/*clear: both;*/
 }
+.bottom1 {
+    background-image: url("imagesAdidas/bottomGrid.png");
+    position: relative;
+    height: 168px;
+    width: 100%;
+    z-index: 0;
+    bottom : 0px;
+    *z-index: 0 !important;
+}
 .bottom {
     background-image: url("imagesAdidas/bottomGrid.png");
     position: absolute;
     height: 168px;
     width: 100%;
     z-index: 0;
-    bottom : 0;
+    bottom : 0px;
     *z-index: 0 !important;
 }
 #registrate {
