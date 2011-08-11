@@ -4,14 +4,15 @@
 	<head>
 		<title>:: Universidad Virtual  ::</title>
 		<link rel="stylesheet" href="style.css" type="text/css">
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>		
 		<script type="text/javascript" src="js/jquery.carouFredSel-4.3.3-packed.js"></script>	
 		<script type="text/javascript" src="js/jquery.imageScroller.js"></script>
 		<script src="js/swfobject_modified.js" type="text/javascript"></script>	
 		<script type="text/javascript" src="js/actions.js"></script>
-    <script type="text/javascript"  src="js/dwfunctions.js"></script>
-        	</head>
+    	<script type="text/javascript"  src="js/dwfunctions.js"></script>
+    	<script type="text/javascript"  src="js/slidedeck.js"></script>
+    </head>
 	<body>
 		<div id="container">
 			<div id="header">

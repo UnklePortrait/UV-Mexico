@@ -59,8 +59,10 @@ float: right;
     top: 25px;
 }
 #menuInicio {
-	background-image: url(imagesAdidas/menu/inicio1.png);
-	width: 85px;
+
+	background-image: url(imagesAdidas/menu/inicio.png);
+	width: 84px;
+
 	height: 28px;
 	display: block;
 }
@@ -147,7 +149,7 @@ object {
 	margin-bottom: 50px;
 }
 .clear {
-	clear: both;
+	/*clear: both;*/
 }
 .bottom {
     background-image: url("imagesAdidas/bottomGrid.png");
@@ -155,6 +157,7 @@ object {
     height: 168px;
     width: 100%;
     z-index: 1;
+    bottom : 0 ;
 }
 #registrate {
 	float: left;
@@ -220,7 +223,7 @@ object {
 	background-image: url(imagesAdidas/topGrid.png);
 	background-repeat: repeat-x;
 	width: 100%;
-	height: 171px;
+	height: 120px;
 }
 #registrate p {
 	color: #6e6e6e;
@@ -637,7 +640,13 @@ a.moreInfo {
 
 #content-forgot {
 	width: 1000px;
-	height: 500px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+#content-olvide {
+	width: 1000px;
+	height: auto;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -660,6 +669,13 @@ a.moreInfo {
 	width: 500px;
 	margin: 0 auto;
 	text-align: left;
+	height: 600px;
+}
+#text-olvide {
+	width: 500px;
+	margin: 0 auto;
+	text-align: left;
+	height: 270px;
 }
 .sendMail {
 	width: 470px;
@@ -815,6 +831,51 @@ font-size: 12px;
 	}
 
 
+/*-------------------Menu desplegable-------------------------*/
+#menu li.menu_categoria{
+	position:relative;
+}
+#menu li.menu_categoria ul{
+	background-color: #28ACE2;
+	display: none;
+	padding: 10px 0;
+	position: absolute;
+	width: 180px;
+}
+#menu li.menu_categoria:hover ul{
+	display: block;
+}
+#menu li.menu_categoria ul li{
+	display:block;
+	float:none;
+}
+#menu li.menu_categoria ul li a{
+	color:#FFF;
+	display:block;
+	padding:3px 5px;
+	text-decoration:none;
+}
+#menu li.menu_categoria ul li a:hover{
+	background-color:#0075D4;
+}
+#menu li.menu_categoria:hover ul li.menu_subcategoria ul{
+	background-color: #3C7ABE;
+	display: none;
+	padding: 10px 0;
+	position: absolute;
+	width: 180px;
+	left: 180px;
+	top: 10px;
+}
+#menu li.menu_categoria:hover ul li.menu_subcategoria:hover ul{
+	display:block;
+}
+#menu li.menu_subcategoria ul li a:hover{
+	background-color:#00A6F7;
+}
+
+
+
 /*-------------------Lightbox notificaciones-------------------------*/
 
 .notification{
@@ -854,7 +915,7 @@ font-size: 12px;
 }
 
 .slidedeck_buttons{
-    left:625px;
+    left:710px;
     position:absolute;
     top:10px;
     z-index:1;
@@ -873,19 +934,19 @@ font-size: 12px;
 
 .slidedeck_op1{
     position: absolute;
-    top: 182px;
+    top: 207px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_op2{
     position: absolute;
-    top: 216px;
+    top: 243px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_op3{
     position: absolute;
-    top: 249px;
+    top: 275px;
     left: 215px;
     z-index: 1;
 }

@@ -13,12 +13,29 @@ $user=profile();
 			<div id="menu">
 			<ul>
 				<li><a href="home.php" id="menuInicio" class="menu"></a></li>
-                <li><a href="/perfil.php" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfilO.php');return document.MM_returnValue"></a></li>
-				<li><a href="#" id="menuForoDudas" class="menu" onClick="MM_goToURL('parent','foro.php');return document.MM_returnValue"></a></li>
+
+				<li><a href="#" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
+				<li class="menu_categoria">
+                	<a href="#" id="menuForoDudas" class="menu"></a>
+                    <ul>
+                    	<li class="menu_subcategoria">
+                        	<a href="#">F&uacute;tbol</a>
+                        	<ul>
+                            	<li><a href="foro.php?cat=futbol&subcat=f50">F50</a></li>
+                                <li><a href="foro.php?cat=futbol&subcat=predator">Predator</a></li>
+                                <li><a href="foro.php?cat=futbol&subcat=adipure">Adipure</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Running</a></li>
+                        <li><a href="#">Training</a></li>
+                        <li><a href="#">NEO</a></li>
+                    </ul>
+                </li>
+
 				<li><a href="#" id="menuVentas" class="menu"></a></li>
 				<li><a href="#" id="menuCatalogo" class="menu"></a></li>
 			</ul>
-				</div>
+			</div>
 			<div class="linea"></div>
 			<div id="content">
 				<div class="top"></div>
@@ -30,7 +47,7 @@ $user=profile();
 		<img src="imagesAdidas/bannerHome/photo4.jpg" />
 		
 	</div>
-					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="600" id="Vid" title="video">
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="480" id="Vid" title="video">
         	  	<param name="movie" value="swf/Adidas_.swf" />
         	  	<param name="quality" value="high" />
         	  	<param name="wmode" value="transparent" />
@@ -39,7 +56,7 @@ $user=profile();
         	  	<param name="expressinstall" value="Scripts/expressInstall.swf" />
         	  	<!-- La siguiente etiqueta object es para navegadores distintos de IE. Ocúltela a IE mediante IECC. -->
         	  	<!--[if !IE]>-->
-              	<object type="application/x-shockwave-flash" data="swf/Adidas_.swf" width="1000" height="600">
+              	<object type="application/x-shockwave-flash" data="swf/Adidas_.swf" width="1000" height="480">
         	    <!--<![endif]-->
         	    <param name="quality" value="high" />
         	    <param name="wmode" value="transparent" />

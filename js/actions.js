@@ -1,4 +1,13 @@
 $(document).ready(function(){
+	
+	//---------- Perfil show imageupload form ----------------//
+	$('#profileImage').hide();
+	$('#default_foto').click(function(e){
+		e.preventDefault();
+		$('#profileImage').slideDown();
+	});
+
+	//---------- Fin Perfil show imageupload form ----------------//
 
 $( "#bannerHome" ).imageScroller( {loading:'Wait please...'} );
 $('#homeC').carouFredSel();

@@ -2,9 +2,9 @@
 include_once('functions.php');
 
 $logoutAction = logout();
-authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
-upload();
-$user=profile();
+//authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+//upload();
+//$user=profile();
 ?>
 		
 <?php include ("includes/header.php") ?>
