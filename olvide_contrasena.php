@@ -13,8 +13,8 @@
 			<div class="clear"></div>
 			<div id="content">
 				<div class="top"></div>
-				<div id="content-forgot">
-					<div id="text-forgot">
+				<div id="content-olvide">
+					<div id="text-olvide">
 					<img src="imagesAdidas/gray/titulo_olvide.png" class="titleGray">
 					<form name="form1" method="post" action= "forgotten_password.php">
 					<p class="olvide-text">Ingresa la cuenta de correo con la que diste de alta, para enviarte tus datos.</p>

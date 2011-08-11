@@ -642,6 +642,12 @@ a.moreInfo {
 	margin: 0 auto;
 	text-align: center;
 }
+#content-olvide {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
 #content-password {
 	width: 1000px;
 	height: 100%;
@@ -658,6 +664,12 @@ a.moreInfo {
 	margin-top: 30px;
 }
 #text-forgot {
+	width: 500px;
+	margin: 0 auto;
+	text-align: left;
+	height: 600px;
+}
+#text-olvide {
 	width: 500px;
 	margin: 0 auto;
 	text-align: left;
