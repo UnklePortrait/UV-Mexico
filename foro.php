@@ -47,18 +47,21 @@ $user=profile();
                 		   	<img src="<?php echo $comentario['image'] ?>" width="150" height="200" class="foroPic"/>
 			                <p class="comment_comentario"><?php echo $comentario['comentario'] ?></p>
         		          	  <div class="commentFoot">
+        		          	  <img src="imagesAdidas/comment.png" class="commentImg">
 	                	    	    <p class="comment_nombre"><?php echo $comentario['nombre'] ?></p>
 	                    		<div class="time">
     	                    		<p class="comment_fecha"><?php echo $comentario['fecha']; ?></p>
         	                		<p class="comment_hora"><?php echo $comentario['hora'] ?></p>
             	        		</div>
                 		    </div>
+                		    <br/>
 	                    <div class="comment_replies">
     	                	<?php $replies = getCommentsFrom($comentario['id_comentario']) ?>
         	                <?php foreach($replies as $reply): ?>
             	        	<div class="reply">
                 	            <p class="reply_comentario"><?php echo $reply['comentario'] ?></p>
                     	        <div class="replyFoot">
+                    	        	<img src="imagesAdidas/comment.png" class="commentImg">
                         	        <p class="reply_nombre"><?php echo $reply['nombre'] ?></p>
                             	    <div class="reply_time">
                                 	    <p class="reply_fecha"><?php echo $reply['fecha']; ?></p>
@@ -80,7 +83,7 @@ $user=profile();
                 </div>
                 </div>
                 <div id="dudas">
-                <p class="olvide-text">Ingresa tu duda y/o problematica</p>
+                	<img src="imagesAdidas/comentario.png" class="titleForo">
 					<form name="form1" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
                     <textarea name="comentario" class="sendForo" cols="40" rows="10" id="mensaje" ></textarea>
                      <input type="image" class="enviarForo" src="imagesAdidas/login/enviar.png" />

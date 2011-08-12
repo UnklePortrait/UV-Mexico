@@ -1111,3 +1111,61 @@ font-size: 12px;
     position: relative;
     top: -45px;
 }
+.titleForo {
+	margin: 10px;
+}
+.comment {
+	width: 400px;
+	text-align: left;
+}
+.commentImg {
+	float: left;
+}
+.commentFoot {
+	color: #45b7e6;
+	font-size: 14px;
+}
+.comment_nombre{
+	float: left;
+	margin: 5px;
+}
+.time {
+	float: left;
+	
+}
+.comment_fecha {
+	float: left;
+	margin: 25px;
+}
+.comment_hora {
+	float: left;
+	margin: 5px;
+}
+.comment_comentario {
+	color: #9a9a9a;
+	font-size: 14px;
+}
+.comment_replies {
+	
+	
+}
+.reply_comentario {
+color: #9a9a9a;
+	font-size: 14px;
+}
+.replyFoot {
+color: #45b7e6;
+	font-size: 14px;
+}
+.reply_nombre {
+	float: left;
+	margin: 5px;
+}
+.reply_fecha {
+	float: left;
+	margin-left: 25px;
+}
+.reply_hora {
+	float: left;
+	margin: 5px;
+}
