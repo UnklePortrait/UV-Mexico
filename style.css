@@ -174,7 +174,7 @@ object {
     height: 168px;
     width: 100%;
     z-index: 0;
-    bottom : 0px;
+   /* bottom : 0px;*/
     *z-index: 0 !important;
 }
 .bottom {
@@ -465,6 +465,10 @@ input.password {
 .name {
 	
 }
+#swfHome {
+	position: relative;
+	top:-50px;
+}
 #content-perfil {
 	width: 1000px;
 	margin: 0 auto;
@@ -554,6 +558,7 @@ input.password {
 	width: 1000px;	
 	position: relative;
 	top:-150px;
+	height: 340px;
 }
 
 #mainHome {
@@ -1066,3 +1071,39 @@ font-size: 12px;
 				width: 0px;
 			}
 
+/*--------------------------FORODEDUDAS------------------*/
+#content-foro{
+	margin: 0 auto;
+	text-align: center;
+	width: 1000px;	
+	
+	height: 400px;
+}
+.foroPic {
+	float: left;
+}
+
+#comments {
+	float: left;
+	width: 500px;
+	height: 400px;
+	overflow-y: auto;
+}
+#dudas {
+	float: right;
+	width: 490px;
+	height: 300px;
+}
+.sendForo {
+
+    margin-top: 5px;
+    width: 380px;
+
+}
+
+.enviarForo {
+    float: right;
+    left: 126px;
+    position: relative;
+    top: -45px;
+}

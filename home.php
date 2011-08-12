@@ -40,14 +40,14 @@ $user=profile();
 			<div id="content">
 				<div class="top"></div>
 				<div id="content-home">
-                <div id='bannerHome'>
-		<img src="imagesAdidas/bannerHome/photo1.jpg" />
-		<img src="imagesAdidas/bannerHome/photo2.jpg" />
-		<img src="imagesAdidas/bannerHome/photo3.jpg" />
-		<img src="imagesAdidas/bannerHome/photo4.jpg" />
-		
-	</div>
-					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="480" id="Vid" title="video">
+                	<div id='bannerHome'>
+						<img src="imagesAdidas/bannerHome/photo1.jpg" />
+						<img src="imagesAdidas/bannerHome/photo2.jpg" />
+						<img src="imagesAdidas/bannerHome/photo3.jpg" />
+						<img src="imagesAdidas/bannerHome/photo4.jpg" />		
+					</div>
+					<div id="swfHome">
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="480" id="Vid" title="adidas">
         	  	<param name="movie" value="swf/Adidas_.swf" />
         	  	<param name="quality" value="high" />
         	  	<param name="wmode" value="transparent" />
@@ -72,11 +72,11 @@ $user=profile();
         	 	<!--<![endif]-->
       	  		</object>
 
-					
+					</div>
 				</div>					
 			</div>
 			<div class="clear"></div>
-			<div class="bottom"></div>
+			<div class="bottom3"></div>
 			<div id="footer">
 			<div class="linea"></div>
 				<p>Estas imágenes e información contenidos en esta página privilegiada y confidencial destinado únicamente para el uso exclusivo de adidas. Se le notifica que cualquier divulgación, copia o uso de información dentro de ella está estrictamente prohibido. © 2010 adidas Group. adidas, el logo y las 3-tiras son marcas registradas de adidas Group. <a href="#" onClick="TyC()">Términos y Condiciones</a></p>
