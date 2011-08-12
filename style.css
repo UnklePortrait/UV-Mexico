@@ -1093,12 +1093,16 @@ font-size: 12px;
 	float: right;
 	width: 490px;
 	height: 300px;
+	background-image: url(imagesAdidas/foro.png);
+	background-repeat: no-repeat;
+	background-position: 30px 30px;
+	position: relative;
+	top:80px;
 }
 .sendForo {
-
+    height: 185px;
     margin-top: 5px;
     width: 380px;
-
 }
 
 .enviarForo {
