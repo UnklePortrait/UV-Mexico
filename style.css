@@ -149,6 +149,7 @@ object {
 #content {
 	width: 100%;
 	/*margin-bottom: 50px;*/
+	min-height: 250px;
 }
 #content-gray {
 	width: 100%;
@@ -684,7 +685,7 @@ a.moreInfo {
 }
 #content-olvide {
 	width: 1000px;
-	height: auto;
+	min-height: 250px;
 	margin: 0 auto;
 	text-align: center;
 }
