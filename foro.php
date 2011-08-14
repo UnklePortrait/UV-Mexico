@@ -44,7 +44,7 @@ $user=profile();
                 	<div id="comments">
 	    	            <?php foreach($comentarios as $comentario): ?>
     	    	        <div class="comment">
-    	    	        	<br />
+    	    	        	
                 		   	<img src="<?php echo $comentario['image'] ?>" width="150" height="200" class="foroPic"/>
 			                <p class="comment_comentario"><?php echo $comentario['comentario'] ?></p>
         		          	  <div class="commentFoot">
@@ -55,12 +55,12 @@ $user=profile();
         	                		<p class="comment_hora"><?php echo $comentario['hora'] ?></p>
             	        		</div>
                 		    </div>
-                		    <br />
+                		    
 	                    <div class="comment_replies">
     	                	<?php $replies = getCommentsFrom($comentario['id_comentario']) ?>
         	                <?php foreach($replies as $reply): ?>
             	        	<div class="reply">
-            	        		<br />
+            	        		
                 	            <p class="reply_comentario"><?php echo $reply['comentario'] ?></p>
                     	        <div class="replyFoot">
                     	        	<img src="imagesAdidas/comment.png" class="commentImg">

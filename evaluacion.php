@@ -78,51 +78,51 @@ include ("includes/header.php");
                     <form id="evaluacion" method="get">
                     <input type="hidden" name="evaluacion" value="<?php echo $_GET['eval'] ?>" />
                 	<div class="slide">
-                		<img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide0.jpg" />
+                		<img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide0.png" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide1.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide1.png" />
                         <input type="radio" class="slidedeck_op1" name="p1" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p1" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p1" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide2.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide2.png" />
                         <input type="radio" class="slidedeck_op1" name="p2" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p2" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p2" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide3.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide3.png" />
                         <input type="radio" class="slidedeck_op1" name="p3" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p3" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p3" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide4.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide4.png" />
                         <input type="radio" class="slidedeck_true" name="p4" value="true" />
                         <input type="radio" class="slidedeck_false" name="p4" value="false" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide5.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide5.png" />
                         <input type="radio" class="slidedeck_op1" name="p5" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p5" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p5" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide6.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide6.png" />
                         <input type="radio" class="slidedeck_op1" name="p6" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p6" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p6" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide7.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide7.png" />
                         <input type="radio" class="slidedeck_op1" name="p7" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p7" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p7" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide8.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide8.png" />
                         <input type="radio" class="slidedeck_op1" name="p8" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p8" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p8" value="c" />
@@ -132,54 +132,54 @@ include ("includes/header.php");
                     <form id="evaluacion" method="get">
                     <input type="hidden" name="evaluacion" value="<?php echo $_GET['eval'] ?>" />
                 	<div class="slide">
-                		<img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide0.jpg" />
+                		<img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide0.png" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide1.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide1.png" />
                         <input type="radio" class="slidedeck_op1" name="p1" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p1" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p1" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide2.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide2.png" />
                         <input type="radio" class="slidedeck_op1" name="p2" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p2" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p2" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide3.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide3.png" />
                         <input type="radio" class="slidedeck_op1" name="p3" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p3" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p3" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide4.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide4.png" />
                         <input type="radio" class="slidedeck_op1" name="p4" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p4" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p4" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide5.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide5.png" />
                         <input type="radio" class="slidedeck_true" name="p5" value="true" />
                         <input type="radio" class="slidedeck_false" name="p5" value="false" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide6.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide6.png" />
                         <input type="radio" class="slidedeck_true" name="p6" value="true" />
                         <input type="radio" class="slidedeck_false" name="p6" value="false" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide7.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide7.png" />
                         <input type="radio" class="slidedeck_true" name="p7" value="true" />
                         <input type="radio" class="slidedeck_false" name="p7" value="false" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide8.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide8.png" />
                         <input type="radio" class="slidedeck_true" name="p8" value="true" />
                         <input type="radio" class="slidedeck_false" name="p8" value="false" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide9.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide9.png" />
                         <input type="radio" class="slidedeck_true" name="p9" value="true" />
                         <input type="radio" class="slidedeck_false" name="p9" value="false" />
                     </div>
@@ -189,55 +189,55 @@ include ("includes/header.php");
                     <form id="evaluacion" method="get">
                     <input type="hidden" name="evaluacion" value="<?php echo $_GET['eval'] ?>" />
                 	<div class="slide">
-                		<img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide0.jpg" />
+                		<img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide0.png" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide1.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide1.png" />
                         <input type="radio" class="slidedeck_op1" name="p1" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p1" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p1" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide2.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide2.png" />
                         <input type="radio" class="slidedeck_op1" name="p2" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p2" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p2" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide3.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide3.png" />
                         <input type="radio" class="slidedeck_op1" name="p3" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p3" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p3" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide4.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide4.png" />
                         <input type="radio" class="slidedeck_true" name="p4" value="true" />
                         <input type="radio" class="slidedeck_false" name="p4" value="false" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide5.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide5.png" />
                         <input type="radio" class="slidedeck_true" name="p5" value="true" />
                         <input type="radio" class="slidedeck_false" name="p5" value="false" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide6.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide6.png" />
                         <input type="radio" class="slidedeck_true" name="p6" value="true" />
                         <input type="radio" class="slidedeck_false" name="p6" value="false" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide7.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide7.png" />
                         <input type="radio" class="slidedeck_op1" name="p7" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p7" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p7" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide8.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide8.png" />
                         <input type="radio" class="slidedeck_op1" name="p8" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p8" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p8" value="c" />
                     </div>
                     <div class="slide">
-                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide9.jpg" />
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide9.png" />
                         <input type="radio" class="slidedeck_op1" name="p9" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p9" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p9" value="c" />
