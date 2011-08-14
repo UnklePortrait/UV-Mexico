@@ -2,9 +2,9 @@
 include_once('functions.php');
 
 $logoutAction = logout();
-//authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
-//upload();
-//$user=profile();
+authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+upload();
+$user=profile();
 ?>
 		
 <?php include ("includes/header.php") ?>
@@ -76,9 +76,9 @@ $logoutAction = logout();
 					<div id="miPerfil">
 					  <img src="imagesAdidas/perfil/title.png" class="titlePerfil">
 						<?php if(isset($user['image']) && !empty($user['image'])):?>
-						<img src="<?php echo $user['image']?>" width="150" height="200" >
+						<img src="<?php echo $user['image']?>" width="85" height="93" >
                         <?php else:?>
-                       <img id="default_foto" src="imagesAdidas/perfil/default.png" width="150" height="200" >
+                       <img id="default_foto" src="imagesAdidas/perfil/default.png" width="85" height="93" >
 						<form id="profileImage"  method="post" enctype="multipart/form-data">
                         <input type="file" name="image" id="image" />
                         <input type= "submit" value="Subir imagen"/>

@@ -68,24 +68,18 @@ $user=profile();
                                     	<p class="reply_hora"><?php echo $reply['hora'] ?></p>
 	                                </div>
     	                        </div>
-                      
-                      
-                        <?php endforeach; ?>
-                       <form name="form_reply" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
+                      		</div>
+                        	<?php endforeach; ?>
+                       		<form name="form_reply" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
                             <textarea name="reply" class="sendMail" cols="40" rows="2" id="reply" ></textarea>
                             <input type="hidden" name="id_comentario" value="<?php echo $comentario['id_comentario'] ?>" />
                             <input type="submit" value="contestar" />
-						</form>
-                    </div>
-              	</div>
-                <?php endforeach; ?>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div id="dudas">
+							</form>
+                    	</div>
+              		</div>
+                	<?php endforeach; ?>
+                	</div>
+               <div id="dudas">
                 	<img src="imagesAdidas/comentario.png" class="titleForo">
 					<form name="form1" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
                     <textarea name="comentario" class="sendForo" cols="40" rows="10" id="mensaje" ></textarea>
