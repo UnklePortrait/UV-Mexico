@@ -100,7 +100,7 @@ float: right;
     right: 15px;
     width: 590px;
     z-index: 100;
-    *top: 20px !important;
+    *top: 25px !important;
 }
 			#menu ul {
 				display: inline;
@@ -126,7 +126,7 @@ object {
 
 #bannerHome {
 	width: 580px;
-	height: 150px;
+	height: 145px;
 	overflow: hidden;
 	/*border: 3px solid black;*/
 	padding: 0px;
@@ -135,7 +135,7 @@ object {
 	text-align: right;
 	position: relative;
 	left: 310px;
-	top:80px;
+	top:85px;
 	}
 
 
@@ -473,14 +473,15 @@ input.password {
 	width: 1000px;
 	margin: 0 auto;
 	text-align: center;
-	height: 450px;
+	height: 320px;
 }
-#content-perfil h2{
-	font-size: 14px;
-	font-weight: bold;
-	color: #00aeef;
-	text-align: left;
-	 margin-left: 10px;
+#content-perfil h2 {
+    color: #00AEEF;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: -14px;
+    text-align: left;
 }
 #miPerfil img  {
 	text-align: left;
@@ -504,14 +505,18 @@ input.password {
     *position:relative !important;
     *top: -25px !important;
 }
-#datosP{
-	margin-top: 40px;
-	margin-bottom: 40px;
-	
+#datosP {
+    margin-bottom: 20px;
+    margin-top: 0px;
+   
 }
-#puntos{
-	margin-top: 40px;
-	margin-bottom: 40px;
+#puntos {
+    margin-bottom: 12px;
+    margin-top: 10px;
+}
+#profileImage {
+	position: relative;
+	top:-30px;
 }
 
 #datosP td {
@@ -555,7 +560,7 @@ input.password {
 	text-align: center;
 	width: 1000px;	
 	position: relative;
-	top:-150px;
+	top:-170px;
 	height: 340px;
 }
 
