@@ -473,6 +473,7 @@ input.password {
 	width: 1000px;
 	margin: 0 auto;
 	text-align: center;
+	height: 520px;
 }
 #content-perfil h2{
 	font-size: 14px;
@@ -1135,7 +1136,7 @@ font-size: 12px;
 }
 .comment_fecha {
 	float: left;
-	margin: 25px;
+	margin: 5px;
 }
 .comment_hora {
 	float: left;
@@ -1163,7 +1164,7 @@ color: #45b7e6;
 }
 .reply_fecha {
 	float: left;
-	margin-left: 25px;
+	margin: 5px;
 }
 .reply_hora {
 	float: left;

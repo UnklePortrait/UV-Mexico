@@ -132,7 +132,7 @@ $logoutAction = logout();
 		  
 	</div>
 			<div class="clear"></div>
-			<div class="bottom"></div>	
+			<div class="bottom3"></div>	
 			<div id="footer">
 			<div class="linea"></div>
 				<p>Estas imágenes e información contenidos en esta página privilegiada y confidencial destinado únicamente para el uso exclusivo de adidas. Se le notifica que cualquier divulgación, copia o uso de información dentro de ella está estrictamente prohibido. © 2010 adidas Group. adidas, el logo y las 3-tiras son marcas registradas de adidas Group. <a href="#" onclick="TyC()">Términos y Condiciones</a></p>
