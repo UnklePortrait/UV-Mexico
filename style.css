@@ -473,7 +473,7 @@ input.password {
 	width: 1000px;
 	margin: 0 auto;
 	text-align: center;
-	height: 520px;
+	height: 450px;
 }
 #content-perfil h2{
 	font-size: 14px;
@@ -528,12 +528,9 @@ input.password {
 #miPerfil {
     float: right;
     position: relative;
-    top: -60px;
-    width: 450px;
     text-align: left;
-    
-    
-   
+    top: -10px;
+    width: 450px;
 }
 .titleTD{
 	color: #00aeef;

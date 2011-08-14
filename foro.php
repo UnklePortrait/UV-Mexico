@@ -82,6 +82,9 @@ $user=profile();
                 </div>
                 </div>
                 </div>
+                </div>
+                </div>
+                </div>
                 <div id="dudas">
                 	<img src="imagesAdidas/comentario.png" class="titleForo">
 					<form name="form1" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
