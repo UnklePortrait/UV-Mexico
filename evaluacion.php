@@ -20,13 +20,13 @@ if(isset($_GET['evaluacion'])){
 	if(!$error){
 		switch($_GET['evaluacion']){
 			case 'f50':
-			$respuestas=array('a','a','a','a','a','true','true','true','true');
+			$respuestas=array('a','a','a','a','true','true','true','true','true');
 			break;
 			case'predator':
-			$respuestas=array('b','b','b','b','b','false','false','false','false');
+			$respuestas=array('b','b','b','false','b','b','b','b');
 			break;
 			case'adipure':
-			$respuestas=array('c','c','c','c','c','true','true','true','true',);
+			$respuestas=array('c','c','c','true','true','true','c','c','c');
 			break;
 		}
 		for($i=1;$i<10;$i++){
