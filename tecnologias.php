@@ -3,7 +3,6 @@ include_once('functions.php');
 $logoutAction = logout();
 authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
 $user=profile();
-
 ?>
 <?php include ("includes/header.php") ?>
       <div id="user">
@@ -40,7 +39,8 @@ $user=profile();
 			<div id="content">
 				<div class="top"></div>
 				<div id="content-tecnologia">
-					<div id="slideTec1">
+                	<?php if($_GET['tech'] == "1"): ?>
+                    <div id="slideTec1">
                 		<div class="descriptionTec">
                 			<img src="imagesAdidas/tecnologias/predator/title1.png">
 	                		<p class="desTec">Viraje</p>
@@ -52,6 +52,7 @@ $user=profile();
                 			<img src="imagesAdidas/tecnologias/predator/img1.png">
 	                	</div>
 					</div>
+                    <?php elseif($_GET['tech'] == "2"): ?>
 					<div id="slideTec2">
 						<div class="descriptionTec">
         	        		<img src="imagesAdidas/tecnologias/predator/title2.png">
@@ -64,6 +65,7 @@ $user=profile();
         	        		<img src="imagesAdidas/tecnologias/predator/img2.png">
             	    	</div>
 					</div>	
+                    <?php elseif($_GET['tech'] == "3"): ?>
 					<div id="slideTec3">	
 						<div class="descriptionTec">
         	        		<img src="imagesAdidas/tecnologias/predator/title3.png">
@@ -76,6 +78,7 @@ $user=profile();
         	        	</div>
 					
 					</div>
+                    <?php elseif($_GET['tech'] == "4"): ?>
 					<div id="slideTec4">
 						<div class="descriptionTec" >
         	        		<img src="imagesAdidas/tecnologias/predator/title4.png">
@@ -95,6 +98,7 @@ $user=profile();
 	                	</div>
 					
 					</div>
+                    <?php elseif($_GET['tech'] == "5"): ?>
 					<div id="slideTec5">
 						<div class="descriptionTec">
         	        		<img src="imagesAdidas/tecnologias/predator/title5.png">
@@ -110,6 +114,7 @@ $user=profile();
                 			<img src="imagesAdidas/tecnologias/predator/img5.png">
                 		</div>
 					</div>
+                    <?php elseif($_GET['tech'] == "6"): ?>
 					<div id="slideTec6">
 						<div class="descriptionTec">
                 			<img src="imagesAdidas/tecnologias/predator/title6.png">
@@ -130,6 +135,7 @@ $user=profile();
             	    		<img src="imagesAdidas/tecnologias/predator/img6.png">
                 		</div>					
 					</div>
+                    <?php elseif($_GET['tech'] == "7"): ?>
 					<div id="slideTec7">
 						<div class="descriptionTec" >
                 			<img src="imagesAdidas/tecnologias/predator/title7.png">
@@ -146,6 +152,7 @@ Para máxima aceleración, frenado y giros. Los nuevos taches con forma triangul
         	        		<img src="imagesAdidas/tecnologias/predator/img7.png">
             	    	</div>					
 					</div>
+                    <?php elseif($_GET['tech'] == "8"): ?>
 					<div id="slideTec9">
 						<div class="descriptionTec" >
                 			<img src="imagesAdidas/tecnologias/predator/title8.png">
@@ -164,7 +171,8 @@ Para máxima aceleración, frenado y giros. Los nuevos taches con forma triangul
         	        	<div class="imgTec">
     	            		<img src="imagesAdidas/tecnologias/predator/img8.png">
             	    	</div>					
-					</div>			
+					</div>
+                    <?php endif; ?>			
 			</div>
 			<div class="clear"></div>
 			<div class="bottom3"></div>
