@@ -144,6 +144,7 @@ class User{
 				array_push($commentsArray,$result_array);
 			}
 		}
+
 		return $commentsArray;
 	}
 	
@@ -171,10 +172,6 @@ class User{
 			$puesto_result= $this->db->select_where("tipo_vendedor", "nombre", "id_puesto='$id_puesto'");
 			$puesto_array=mysql_fetch_array($puesto_result);
 			$puesto_nombre=$puesto_array['nombre'];
-			
-			$id_tipo_usuario_result= $this->db->select_where("id_tipo_usuario", "id_tipo_usuario='$id_tipo_usuario'");
-			$id_tipo_usuario_array=mysql_fetch_array($id_tipo_usuario_result);
-			$id_tipo_usuario_nombre=$id_tipo_usuario_array['id_tipo_usuario'];
 			
 			$visitas_result = $this->db->select_where("visitas", "id_visita", "id_usuario='$id_user'");
 			$evaluaciones_result = $this->db->select_where("evaluaciones", "puntos", "id_usuario='$id_user'");
