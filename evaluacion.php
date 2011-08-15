@@ -26,7 +26,7 @@ if(isset($_GET['evaluacion'])){
 			$respuestas=array('b','b','b','b','b','false','false','false','false');
 			break;
 			case'adipure':
-			$respuestas=array('c','c','c','c','c','true','true','true','true',);
+			$respuestas=array('c','c','c','true','true','true','c','c','c');
 			break;
 		}
 		for($i=1;$i<10;$i++){
