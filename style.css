@@ -878,11 +878,12 @@ font-size: 12px;
 	position:relative;
 }
 #menu li.menu_categoria ul{
-	background-color: #28ACE2;
+	background-image: url(imagesAdidas/menu/bgForo.png);
+	height: 90px;
 	display: none;
 	padding: 10px 0;
 	position: absolute;
-	width: 180px;
+	width: 170px;
 }
 #menu li.menu_categoria:hover ul{
 	display: block;
@@ -893,21 +894,24 @@ font-size: 12px;
 }
 #menu li.menu_categoria ul li a{
 	color:#FFF;
+	font-size: 14px;
 	display:block;
-	padding:3px 0px;
+	padding:2px 0px;
 	text-decoration:none;
 }
 #menu li.menu_categoria ul li a:hover{
 	background-color:#0075D4;
 }
 #menu li.menu_categoria:hover ul li.menu_subcategoria ul{
-	background-color: #3C7ABE;
+	background-image: url(imagesAdidas/menu/bgsubForo.png);
+
 	display: none;
-	padding: 10px 0;
+	padding: 2px 0;
 	position: absolute;
-	width: 180px;
-	left: 180px;
-	top: 10px;
+	width: 171px;
+	left: 168px;
+	top: 5px;
+	height: 104px;
 }
 #menu li.menu_categoria:hover ul li.menu_subcategoria:hover ul{
 	display:block;
