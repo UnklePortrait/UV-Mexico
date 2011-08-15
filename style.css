@@ -976,31 +976,31 @@ font-size: 12px;
 
 .slidedeck_op1{
     position: absolute;
-    top: 207px;
+    top: 215px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_op2{
     position: absolute;
-    top: 243px;
+    top: 182px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_op3{
     position: absolute;
-    top: 275px;
+    top: 250px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_true{
     position: absolute;
-    top: 227px;
+    top: 205px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_false{
     position: absolute;
-    top: 263px;
+    top: 240px;
     left: 215px;
     z-index: 1;
 }
@@ -1080,17 +1080,17 @@ font-size: 12px;
 	margin: 0 auto;
 	text-align: center;
 	width: 1000px;	
-	
-	height: 400px;
-}
+	min-height: 280px;
+	}
 .foroPic {
 	float: left;
+	
 }
 
 #comments {
 	float: left;
 	width: 500px;
-	height: 400px;
+	height: 320px;
 	overflow-y: auto;
 }
 #dudas {
@@ -1101,7 +1101,7 @@ font-size: 12px;
 	background-repeat: no-repeat;
 	background-position: 30px 30px;
 	position: relative;
-	top:80px;
+	top:20px;
 }
 .sendForo {
     height: 185px;
@@ -1148,14 +1148,24 @@ font-size: 12px;
 .comment_comentario {
 	color: #9a9a9a;
 	font-size: 14px;
+	margin-left: 35px;
+	width: 300px;
+	text-align: justify;
 }
 .comment_replies {
 	
 	
 }
+.reply {
+	margin: 10px;
+	padding-left: 15px;
+}
 .reply_comentario {
-color: #9a9a9a;
-	font-size: 14px;
+    color: #9A9A9A;
+    font-size: 14px;
+    width: 300px;
+    text-align: justify;
+    margin-left: 35px;
 }
 .replyFoot {
 color: #45b7e6;
