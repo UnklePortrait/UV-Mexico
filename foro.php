@@ -42,6 +42,13 @@ $user=profile();
 				<div class="top"></div>
 				<div id="content-foro">
                 	<div id="comments">
+                		<?php if ($_GET["subcat"]=="f50"):?>
+                			<img src="imagesAdidas/foro/f50.png">
+                		<?php else if ($_GET["subcat"]=="predator"):?>
+                			<img src="imagesAdidas/foro/f50.png">
+                		<?php else if ($_GET["subcat"]=="adipure"):?>
+                			<img src="imagesAdidas/foro/f50.png">
+                		<?php endif;?>			
 	    	            <?php foreach($comentarios as $comentario): ?>
     	    	        <div class="comment">
     	    	        	
