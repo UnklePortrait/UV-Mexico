@@ -1200,10 +1200,12 @@ color: #45b7e6;
 .descriptionTec {
 	width: 450px;
 	float: left;
+	height: 350px;
 }
 .imgTec {
 	width: 450px;
 	float: right;
+	height: 350px;
 }
 .desTec {
 	font-size: 12px;
@@ -1217,4 +1219,12 @@ color: #45b7e6;
 	margin: 10px;
 	text-align: justify;
 	color: #8b8b8b;
+}
+.descriptionTec ul li {
+	font-size: 12px;
+	margin: 10px;
+	text-align: justify;
+	color: #8b8b8b;
+	list-style-type: none;
+	display: block;
 }

@@ -65,7 +65,7 @@ $user=profile();
             	    	</div>
 					</div>	
 					<div id="slideTec3">	
-						<div class="descriptionTec" id="slideTec3">
+						<div class="descriptionTec">
         	        		<img src="imagesAdidas/tecnologias/predator/title3.png">
             	    		<p class="desTec"></p>
                 			<p class="textTec">Lazada asimétrica para dar una zona de pateo mas amplia y un  mejor contacto con el balón.</p>
