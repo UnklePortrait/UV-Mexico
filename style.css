@@ -1190,3 +1190,10 @@ color: #45b7e6;
 
 /*----------------------Tecnologia--------------------------*/
 
+#content-tecnologia {
+	width: 1000px;
+	min-height: 300px;
+	margin: 0 auto;
+	text-align: center;
+		
+}
