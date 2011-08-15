@@ -70,7 +70,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 	$_SESSION['MM_UserCadena'] = $_REQUEST['id_cadena'];
 	$_SESSION['MM_UserDepartamento'] = $_REQUEST['id_departamento'];
 	$_SESSION['MM_UserSucursal'] = $_REQUEST['id_sucursal'];
-    $_SESSION['MM_UserGroup'] = 3;
+    $_SESSION['MM_UserGroup'] = 2;
 	$_SESSION['MM_UserId'] = mysql_insert_id();
 	$insertGoTo .= (strpos($insertGoTo, '?')) ? "&" : "?";
     $insertGoTo .= $_SERVER['QUERY_STRING'];

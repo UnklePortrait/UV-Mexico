@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('America/Mexico_City');
 include_once("classes/database.php");
 class User{
 	private $db;
@@ -171,6 +172,10 @@ class User{
 			$puesto_array=mysql_fetch_array($puesto_result);
 			$puesto_nombre=$puesto_array['nombre'];
 			
+			$id_tipo_usuario_result= $this->db->select_where("id_tipo_usuario", "id_tipo_usuario='$id_tipo_usuario'");
+			$id_tipo_usuario_array=mysql_fetch_array($id_tipo_usuario_result);
+			$id_tipo_usuario_nombre=$id_tipo_usuario_array['id_tipo_usuario'];
+			
 			$visitas_result = $this->db->select_where("visitas", "id_visita", "id_usuario='$id_user'");
 			$evaluaciones_result = $this->db->select_where("evaluaciones", "puntos", "id_usuario='$id_user'");
 			if(mysql_num_rows($evaluaciones_result) > 0){
@@ -189,7 +194,7 @@ class User{
 			
 			$this->db->update("usuarios", "puntos='$puntos'", "id_usuario='$id_user'");
 			
-			return array('id_usuario'=>$user_profile['id_usuario'],'email'=>$user_profile['email'],'password'=>$user_profile['password'],'tipo_usuario'=>$user_profile['id_tipo_usuario'],'nombre'=>$user_profile['nombre'], 'image'=>$user_profile['image'], 'sucursal'=>$sucursal_nombre,'departamento'=>$departamento_nombre,'cadena'=>$cadena_nombre,'puesto'=>$puesto_nombre, 'puntos'=>$puntos, 'visitas'=>$puntos_visitas, 'evaluaciones'=>$puntos_evaluaciones);		
+			return array('id_usuario'=>$user_profile['id_usuario'],'email'=>$user_profile['email'],'password'=>$user_profile['password'],'tipo_usuario'=>$user_profile['id_tipo_usuario'],'nombre'=>$user_profile['nombre'], 'image'=>$user_profile['image'], 'sucursal'=>$sucursal_nombre,'departamento'=>$departamento_nombre,'cadena'=>$cadena_nombre,'puesto'=>$puesto_nombre, 'puntos'=>$puntos, 'visitas'=>$puntos_visitas, 'evaluaciones'=>$puntos_evaluaciones,);		
 		}else{
 			return false;
 		}
