@@ -65,7 +65,8 @@ sendPHP($user);
         	                <?php foreach($replies as $reply): ?>
             	        	<div class="reply">
             	        		
-                	            <p class="reply_comentario"><?php echo $reply['comentario'] ?></p>
+                	            <img src="<?php echo $reply['image'] ?>" width="100" height="150" class="foroPic"/>
+                                <p class="reply_comentario"><?php echo $reply['comentario'] ?></p>
                     	        <div class="replyFoot">
                     	        	<img src="imagesAdidas/comment.png" class="commentImg">
                         	        <p class="reply_nombre"><?php echo $reply['nombre'] ?></p>
@@ -80,7 +81,7 @@ sendPHP($user);
                             <form name="form_reply"  method="post">
                             <textarea name="reply" class="sendMail" cols="40" rows="2" id="reply" ></textarea>
                             <input type="hidden" name="id_comentario" value="<?php echo $comentario['id_comentario'] ?>" />
-                            <input type="submit" value="contestar" />
+                            <input type="submit" value="contestar"/>
 							</form>
                             <?php endif;?>
 
