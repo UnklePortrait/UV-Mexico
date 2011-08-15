@@ -31,7 +31,10 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('#evaluacion').submit();
 	});
-	$('.notification').click(function(){
-		location.href='perfil.php';
+	$('.notification_error').click(function(){
+		location.href='home.php';
+	});
+	$('.notification_success').click(function(){
+		location.href='historia.php';
 	});
 });
