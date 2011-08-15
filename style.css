@@ -894,7 +894,7 @@ font-size: 12px;
 #menu li.menu_categoria ul li a{
 	color:#FFF;
 	display:block;
-	padding:3px 5px;
+	padding:3px 0px;
 	text-decoration:none;
 }
 #menu li.menu_categoria ul li a:hover{
@@ -976,32 +976,32 @@ font-size: 12px;
 
 .slidedeck_op1{
     position: absolute;
-    top: 215px;
+    top: 208px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_op2{
     position: absolute;
     top: 182px;
-    left: 215px;
+    left: 245px;
     z-index: 1;
 }
 .slidedeck_op3{
     position: absolute;
     top: 250px;
-    left: 215px;
+    left: 277px;
     z-index: 1;
 }
 .slidedeck_true{
     position: absolute;
     top: 205px;
-    left: 215px;
+    left: 230px;
     z-index: 1;
 }
 .slidedeck_false{
     position: absolute;
     top: 240px;
-    left: 215px;
+    left: 265px;
     z-index: 1;
 }
 
