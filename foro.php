@@ -4,7 +4,6 @@ authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
 $comentarios=postComment();
 $logoutAction = logout();
 $user=profile();
-postComment();
 sendPHP($user);
 ?>
 <?php include ("includes/header.php") ?>
@@ -49,7 +48,7 @@ sendPHP($user);
 	    	            <?php foreach($comentarios as $comentario): ?>
     	    	        <div class="comment">
     	    	        	
-                		   	<img src="<?php echo $comentario['image'] ?>" width="150" height="200" class="foroPic"/>
+                		   	<img src="<?php echo $comentario['image'] ?>" width="75" height="100" class="foroPic"/>
 			                <p class="comment_comentario"><?php echo $comentario['comentario'] ?></p>
         		          	  <div class="commentFoot">
         		          	  <img src="imagesAdidas/comment.png" class="commentImg">
@@ -65,7 +64,7 @@ sendPHP($user);
         	                <?php foreach($replies as $reply): ?>
             	        	<div class="reply">
             	        		
-                	            <img src="<?php echo $reply['image'] ?>" width="100" height="150" class="foroPic"/>
+                	            <img src="<?php echo $reply['image'] ?>" width="37.5" height="50" class="foroPic"/>
                                 <p class="reply_comentario"><?php echo $reply['comentario'] ?></p>
                     	        <div class="replyFoot">
                     	        	<img src="imagesAdidas/comment.png" class="commentImg">
