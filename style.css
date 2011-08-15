@@ -982,26 +982,26 @@ font-size: 12px;
 }
 .slidedeck_op2{
     position: absolute;
-    top: 182px;
-    left: 245px;
+    top: 245px;
+    left: 215px;
     z-index: 1;
 }
 .slidedeck_op3{
     position: absolute;
-    top: 250px;
-    left: 277px;
+    top: 277px;
+    left: 215px;
     z-index: 1;
 }
 .slidedeck_true{
     position: absolute;
-    top: 205px;
-    left: 230px;
+    top: 230px;
+    left: 215px;
     z-index: 1;
 }
 .slidedeck_false{
     position: absolute;
-    top: 240px;
-    left: 265px;
+    top: 265px;
+    left: 215px;
     z-index: 1;
 }
 
