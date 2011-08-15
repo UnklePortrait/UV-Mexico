@@ -4,6 +4,8 @@ authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
 $comentarios=postComment();
 $logoutAction = logout();
 $user=profile();
+postComment();
+sendPHP($user);
 ?>
 <?php include ("includes/header.php") ?>
       
@@ -75,7 +77,7 @@ $user=profile();
                       		</div>
                         	<?php endforeach; ?>
                        		<?php if($user['tipo_usuario']==1):?>
-                            <form name="form_reply" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
+                            <form name="form_reply"  method="post">
                             <textarea name="reply" class="sendMail" cols="40" rows="2" id="reply" ></textarea>
                             <input type="hidden" name="id_comentario" value="<?php echo $comentario['id_comentario'] ?>" />
                             <input type="submit" value="contestar" />
@@ -90,7 +92,7 @@ $user=profile();
                 	
                     <img src="imagesAdidas/comentario.png" class="titleForo">
 					
-                    <form name="form1" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
+                    <form name="form1"  method="post">
                     <textarea name="comentario" class="sendForo" cols="40" rows="10" id="mensaje" ></textarea>
                      <input type="image" class="enviarForo" src="imagesAdidas/login/enviar.png" />
 					</form>

@@ -57,9 +57,7 @@ include ("includes/header.php");
                 	<?php if(isset($_GET['evaluacion'])): ?>
                     <div class="notification">
                     	<?php if(!$error): ?>
-                    	<div class="notification_success">
-                        	<img src="imagesAdidas/evaluaciones/success.png" />
-                        </div>
+                    	<div class="notification_success"><img src="imagesAdidas/evaluaciones/success.png" /></div>
                         <?php else: ?>
                         <div class="notification_error">
                         	<img src="imagesAdidas/evaluaciones/error.png" />

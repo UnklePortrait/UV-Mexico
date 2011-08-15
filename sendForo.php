@@ -14,7 +14,9 @@ $header .= "Content-Type: text/plain";
 $mensaje = "Este mensaje fue enviado por " . $nombre . "\r\n";
 $mensaje .= "Su e-mail es: " . $mail . " \r\n";
 $mensaje .= "Comentario: " . $_POST['comentario'] . " \r\n";
+$mensaje .= "Para verlo de click en el siguiente link http://www.uv-mexico.com.mx \r\n";
 $mensaje .= "Enviado el " . date('d/m/Y', time());
+
 
 
 //$para = 'krnturcott@gmail.com';
