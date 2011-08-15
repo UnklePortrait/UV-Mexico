@@ -1197,3 +1197,11 @@ color: #45b7e6;
 	text-align: center;
 		
 }
+#descriptionTec {
+	width: 450px;
+	float: left;
+}
+#imgTec {
+	width: 450px;
+	float: right;
+}
