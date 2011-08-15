@@ -127,6 +127,18 @@ include ("includes/header.php");
                         <input type="radio" class="slidedeck_op2" name="p8" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p8" value="c" />
                     </div>
+                         <div class="slide">
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide9.png" />
+                        <input type="radio" class="slidedeck_op1" name="p9" value="a" />
+                        <input type="radio" class="slidedeck_op2" name="p9" value="b" />
+                        <input type="radio" class="slidedeck_op3" name="p9" value="c" />
+                    </div>
+                         <div class="slide">
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide10.png" />
+                        <input type="radio" class="slidedeck_op1" name="p10" value="a" />
+                        <input type="radio" class="slidedeck_op2" name="p10" value="b" />
+                        <input type="radio" class="slidedeck_op3" name="p10" value="c" />
+                    </div>
 					<?php break;
 					case "f50":?>
                     <form id="evaluacion" method="get">
@@ -182,6 +194,12 @@ include ("includes/header.php");
                         <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide9.png" />
                         <input type="radio" class="slidedeck_true" name="p9" value="true" />
                         <input type="radio" class="slidedeck_false" name="p9" value="false" />
+                    </div>
+                    <div class="slide">
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide10.png" />
+                        <input type="radio" class="slidedeck_op1" name="p10" value="a" />
+                        <input type="radio" class="slidedeck_op2" name="p10" value="b" />
+                        <input type="radio" class="slidedeck_op3" name="p10" value="c" />
                     </div>
                     </form>
                     <?php break;
@@ -241,6 +259,12 @@ include ("includes/header.php");
                         <input type="radio" class="slidedeck_op1" name="p9" value="a" />
                         <input type="radio" class="slidedeck_op2" name="p9" value="b" />
                         <input type="radio" class="slidedeck_op3" name="p9" value="c" />
+                    </div>
+                    <div class="slide">
+                        <img src="imagesAdidas/evaluaciones/<?php echo $_GET['eval'] ?>/slide10.png" />
+                        <input type="radio" class="slidedeck_op1" name="p10" value="a" />
+                        <input type="radio" class="slidedeck_op2" name="p10" value="b" />
+                        <input type="radio" class="slidedeck_op3" name="p10" value="c" />
                     </div>
                     </form>
                     <?php break;?>

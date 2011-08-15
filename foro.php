@@ -74,26 +74,27 @@ $user=profile();
     	                        </div>
                       		</div>
                         	<?php endforeach; ?>
-                       		<?php if($id_)
+                       		<?php if($user['tipo_usuario']==1):?>
                             <form name="form_reply" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
                             <textarea name="reply" class="sendMail" cols="40" rows="2" id="reply" ></textarea>
                             <input type="hidden" name="id_comentario" value="<?php echo $comentario['id_comentario'] ?>" />
                             <input type="submit" value="contestar" />
 							</form>
+                            <?php endif;?>
+
                     	</div>
               		</div>
                 	<?php endforeach; ?>
                 	</div>
                <div id="dudas">
-                	<?php if($user['tipo_usuario']==1):?>
+                	
                     <img src="imagesAdidas/comentario.png" class="titleForo">
 					
                     <form name="form1" action="sendForo.php?cat=<?php echo $_GET['cat'] ?>&subcat=<?php echo $_GET['subcat'] ?>" method="post">
                     <textarea name="comentario" class="sendForo" cols="40" rows="10" id="mensaje" ></textarea>
                      <input type="image" class="enviarForo" src="imagesAdidas/login/enviar.png" />
 					</form>
-                    <?php endif;?>
-</div>
+                    </div>
 					
 				</div>						
 			</div>
