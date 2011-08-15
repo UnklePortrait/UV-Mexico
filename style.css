@@ -976,31 +976,31 @@ font-size: 12px;
 
 .slidedeck_op1{
     position: absolute;
-    top: 208px;
+    top: 205px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_op2{
     position: absolute;
-    top: 245px;
+    top: 242px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_op3{
     position: absolute;
-    top: 277px;
+    top: 274px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_true{
     position: absolute;
-    top: 230px;
+    top: 226px;
     left: 215px;
     z-index: 1;
 }
 .slidedeck_false{
     position: absolute;
-    top: 265px;
+    top: 262px;
     left: 215px;
     z-index: 1;
 }
