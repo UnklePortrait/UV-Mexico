@@ -1248,4 +1248,47 @@ color: #45b7e6;
 
 /*--------------------------Historia-----------------------------*/
 
+#content-history {
 
+	margin: 0 auto;
+	text-align: center;
+	width: 1000px;	
+	
+	height: 400px;
+}
+.titleHis {
+	text-align: left;
+	margin-top: -40px;
+}
+.historyPhoto {
+	float: left;
+	width: 350px;
+}
+.historyText {
+	float: right;
+	width: 600px;
+	text-align: left;
+	margin-left: 10px;
+}
+.historia {
+font-size: 12px;
+	margin: 10px;
+	text-align: justify;
+	color: #8b8b8b;
+
+}
+.historia span{
+font-size: 12px;
+	margin: 10px;
+	text-align: justify;
+	color: #8b8b8b;
+	font-weight: bold;
+
+}
+.his{
+	font-size: 12px;
+	margin-left: 30px;
+	text-align: justify;
+	color: #8b8b8b;
+	list-style-type: none;
+}
