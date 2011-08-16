@@ -80,9 +80,12 @@ function postComment(){
 	return $user->getComments($_GET['subcat']);
 }
 
-function get_eval($user){
+function get_eval($tipo){
 	$user=new User();
-	$user->get_evaluation_info($_SESSION['id']);
+	$puntos = $user->get_evaluation_info($_SESSION['id'],$tipo);
+
+	return $puntos;
+	
 }
 function getCommentsFrom($id_comment){
 	$user = new User();
@@ -110,8 +113,9 @@ $mensaje .= "Enviado el " . date('d/m/Y', time());
 //$para = 'krnturcott@gmail.com';
 $asunto = 'Nuevo comentario en foro de dudas';
 
+if (isset( $_POST['comentario'])){
 mail("krnturcott@gmail.com,mitsue@alucinastudio.com", $asunto, utf8_decode($mensaje), $header);
-
+}
 }
 function profile(){
 	$user = new User();

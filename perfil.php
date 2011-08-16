@@ -5,7 +5,7 @@ $logoutAction = logout();
 authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
 upload();
 $user=profile();
-get_eval($user)
+
 ?>
 		
 <?php include ("includes/header.php") ?>
@@ -55,22 +55,30 @@ get_eval($user)
 							<td>Puntos</td>
 						</tr>
 						<tr>
-							<td>Adiprene+</td>
-							<td>No</td>
-							<td>0</td>
-							<td>0</td>
+							<?php $tipo="adipure"; 
+							$eval=get_eval($tipo);?>
+                            <td>Adipure</td>
+                            <td><?php echo ($eval['success'])?"Si":"No" ;?></td>
+							<td><?php echo ($eval['success'])?$eval['puntos']/10:"0";?></td>
+							<td><?php echo ($eval['success'])?$eval['puntos']:"0";?> </td>
+                           
+ 
 						</tr>
 						<tr>
-							<td>Adizero F50</td>
-							<td>No</td>
-							<td>0</td>
-							<td>0</td>
+							<?php $tipo="f50"; 
+							$eval=get_eval($tipo);?>
+                            <td>Adizero F50</td>
+ 							<td><?php echo ($eval['success'])?"Si":"No" ;?></td>
+							<td><?php echo ($eval['success'])?$eval['puntos']/10:"0";?></td>
+							<td><?php echo ($eval['success'])?$eval['puntos']:"0";?> </td>
 						</tr>
 						<tr>
-							<td>Predator</td>
-							<td>No</td>
-							<td>0</td>
-							<td>0</td>
+							<?php $tipo="predator"; 
+							$eval=get_eval($tipo);?>
+                            <td>Predator</td>
+							 <td><?php echo ($eval['success'])?"Si":"No" ;?></td>
+							<td><?php echo ($eval['success'])?$eval['puntos']/10:"0";?></td>
+							<td><?php echo ($eval['success'])?$eval['puntos']:"0";?> </td>
 						</tr>
 					</table>
 				  </div>

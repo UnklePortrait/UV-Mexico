@@ -67,13 +67,26 @@ class User{
 	}
 	
 	
-	public function get_evaluation_info($id_user){
-	$eval_array=array();
-	$eval= $this->db->select_where("evaluaciones","tipo_examen,puntos ","id_usuario='$id_user'");
-	$result=mysql_fetch_array($user);
-	$result_array=array("tipo_examen"=>$result['tipo_examen'],"puntos"=>$result['puntos']);
-				array_push($eval_array,$result_array);
+	public function get_evaluation_info($id_user,$tipo){
+		$puntos=0;
+		
+		$exam_search = $this->db->select_where("examen", "id_examen", "nombre='$tipo'");
+		$exam_array = mysql_fetch_array($exam_search);
+		$exam = $exam_array['id_examen'];
+		$eval= $this->db->select_where("evaluaciones","puntos","id_usuario='$id_user' AND tipo_examen='$exam'");
+		/*$result_array=array("tipo_examen"=>$result['tipo_examen'],"puntos"=>$result['puntos']);
+					array_push($eval_array,$result_array);*/
+		if(mysql_num_rows($eval) > 0)	
+		{
+			$result=mysql_fetch_array($eval);
+			$result_array=array("success"=>true,"puntos"=>$result['puntos']);		
+		}
+		else{
+			$result_array=array("success"=>false,"puntos"=>0);
+		}
+		return $result_array;
 	}
+	
 	public function set_evaluation($id_user, $resultado, $tipo_examen){
 		$fecha = date('Y-m-d', time());
 		$time = date('G:i:s', time());
@@ -132,7 +145,7 @@ class User{
 				$id_user=$user_row['id_usuario'];
 				$user= $this->db->select_where("usuarios", "image,nombre", "id_usuario='$id_user'");
 				$result=mysql_fetch_array($user);
-				$result_array=array("nombre"=>$result['nombre'],"image"=>$result['image'],"comentario"=>$user_row['comentario'],"fecha"=>$user_row['fecha'],"hora"=>$user_row['hora'		],"id_comentario"=>$user_row['id_comentario']);
+				$result_array=array("nombre"=>$result['nombre'],"image"=>$result['image'],"comentario"=>$user_row['comentario'],"fecha"=>$user_row['fecha'],"hora"=>$user_row	['hora'],"id_comentario"=>$user_row['id_comentario']);
 				array_push($commentsArray,$result_array);			
 			}
 		}
