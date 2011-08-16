@@ -4,6 +4,7 @@ authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
 $comentarios=postComment();
 $logoutAction = logout();
 $user=profile();
+
 sendPHP($user);
 ?>
 <?php include ("includes/header.php") ?>
