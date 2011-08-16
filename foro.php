@@ -43,6 +43,15 @@ sendPHP($user);
 			<div id="content">
 				<div class="top"></div>
 				<div id="content-foro">
+				<div class="titleForo">
+				 <?php if ($_GET["subcat"]=="f50"):?>
+                			<img src="imagesAdidas/foro/f50.png" class="foroTitle">
+                		<?php elseif ($_GET["subcat"]=="predator"):?>
+                			<img src="imagesAdidas/foro/predator.png" class="foroTitle">
+                		<?php elseif ($_GET["subcat"]=="adipure"):?>
+                			<img src="imagesAdidas/foro/adipure.png"class="foroTitle">
+                		<?php endif;?>
+                		</div>
                 	<div id="comments">
                 		
                 					
