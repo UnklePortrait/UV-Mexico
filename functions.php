@@ -80,6 +80,10 @@ function postComment(){
 	return $user->getComments($_GET['subcat']);
 }
 
+function get_eval($user){
+	$user=new User();
+	$user->get_evaluation_info($_SESSION['id']);
+}
 function getCommentsFrom($id_comment){
 	$user = new User();
 	return $user->getCommentsFrom($id_comment);

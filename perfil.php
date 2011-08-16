@@ -5,6 +5,7 @@ $logoutAction = logout();
 authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
 upload();
 $user=profile();
+get_eval($user)
 ?>
 		
 <?php include ("includes/header.php") ?>

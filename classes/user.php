@@ -67,6 +67,13 @@ class User{
 	}
 	
 	
+	public function get_evaluation_info($id_user){
+	$eval_array=array();
+	$eval= $this->db->select_where("evaluaciones","tipo_examen,puntos ","id_usuario='$id_user'");
+	$result=mysql_fetch_array($user);
+	$result_array=array("tipo_examen"=>$result['tipo_examen'],"puntos"=>$result['puntos']);
+				array_push($eval_array,$result_array);
+	}
 	public function set_evaluation($id_user, $resultado, $tipo_examen){
 		$fecha = date('Y-m-d', time());
 		$time = date('G:i:s', time());
