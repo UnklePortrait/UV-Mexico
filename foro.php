@@ -47,32 +47,38 @@ sendPHP($user);
                 					
 	    	            <?php foreach($comentarios as $comentario): ?>
     	    	        <div class="comment">
-    	    	        	
-                		   	<img src="<?php echo $comentario['image'] ?>" width="75" height="100" class="foroPic"/>
-			                <p class="comment_comentario"><?php echo $comentario['comentario'] ?></p>
-        		          	  <div class="commentFoot">
-        		          	  <img src="imagesAdidas/comment.png" class="commentImg">
-	                	    	    <p class="comment_nombre"><?php echo $comentario['nombre'] ?></p>
-	                    		<div class="time">
-    	                    		<p class="comment_fecha"><?php echo $comentario['fecha']; ?></p>
-        	                		<p class="comment_hora"><?php echo $comentario['hora'] ?></p>
-            	        		</div>
+    	    	        	<div class="commentText">
+	                		   	<img src="<?php echo $comentario['image'] ?>" width="75" height="100" class="foroPic"/>
+				                <p class="comment_comentario"><?php echo $comentario['comentario'] ?></p>
+        			          	  <div class="commentFoot">
+        			          	  <img src="imagesAdidas/comment.png" class="commentImg">
+	            	    	    	    <p class="comment_nombre"><?php echo $comentario['nombre'] ?></p>
+	                	    		<div class="time">
+    	                	    		<p class="comment_fecha"><?php echo $comentario['fecha']; ?></p>
+        	                			<p class="comment_hora"><?php echo $comentario['hora'] ?></p>
+            	        			</div>
+	                		    </div>
                 		    </div>
-                		    
 	                    <div class="comment_replies">
     	                	<?php $replies = getCommentsFrom($comentario['id_comentario']) ?>
         	                <?php foreach($replies as $reply): ?>
+            	        	
+            	        	<br/>
             	        	<div class="reply">
-            	        		
-                	            <img src="<?php echo $reply['image'] ?>" width="37.5" height="50" class="foroPic"/>
-                                <p class="reply_comentario"><?php echo $reply['comentario'] ?></p>
-                    	        <div class="replyFoot">
-                    	        	<img src="imagesAdidas/comment.png" class="commentImg">
-                        	        <p class="reply_nombre"><?php echo $reply['nombre'] ?></p>
-                            	    <div class="reply_time">
-                                	    <p class="reply_fecha"><?php echo $reply['fecha']; ?></p>
-                                    	<p class="reply_hora"><?php echo $reply['hora'] ?></p>
-	                                </div>
+            	        		<div class="replyImg">
+                	            <img src="<?php echo $reply['image'] ?>" width="37.5" height="50" class="replyPic"/>
+                	            </div>
+                	            <div class="replyText">
+                                	<p class="reply_comentario"><?php echo $reply['comentario'] ?></p>
+                                
+	                    	        <div class="replyFoot">
+    	                	        	<img src="imagesAdidas/comment.png" class="commentImg">
+        	                	        <p class="reply_nombre"><?php echo $reply['nombre'] ?></p>
+            	                	    <div class="reply_time">
+                	                	    <p class="reply_fecha"><?php echo $reply['fecha']; ?></p>
+                    	                	<p class="reply_hora"><?php echo $reply['hora'] ?></p>
+	                    	            </div>
+    	                    		</div>
     	                        </div>
                       		</div>
                         	<?php endforeach; ?>
