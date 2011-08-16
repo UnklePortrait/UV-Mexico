@@ -1084,7 +1084,7 @@ font-size: 12px;
 	margin: 0 auto;
 	text-align: center;
 	width: 1000px;	
-	min-height: 280px;
+	min-height: 320px;
 	}
 .foroPic {
 	float: left;
@@ -1292,3 +1292,9 @@ font-size: 12px;
 	color: #8b8b8b;
 	list-style-type: none;
 }
+.foroTitle {
+	text-align: left;
+}
+.titleForo {
+	text-align: left;
+	}
