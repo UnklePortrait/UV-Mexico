@@ -39,9 +39,9 @@ $user=profile();
 			<div id="content">
 				<div class="top"></div>
 				<div id="content-tecnologia">
-                	<?php if($_GET['tech'] == "1"): ?>
-                    <div id="slideTec1">
-                		<a href="evaluacion.php?eval=zona_predator" id="prueba" class="evaluacion" src="imagesAdidas/evaluaciones/contestar_evaluacion.png">
+                	<?php if($_GET['tech'] == "1"): ?>                    
+                    <a href="evaluacion.php?eval=zona_predator" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec1">                    
                         <div class="descriptionTec">
                 			<img src="imagesAdidas/tecnologias/predator/title1.png">
 	                		<p class="desTec">Viraje</p>
@@ -54,8 +54,8 @@ $user=profile();
 	                	</div>
 					</div>
                     <?php elseif($_GET['tech'] == "2"): ?>
-					<div id="slideTec2">
-						<a href="evaluacion.php?eval=powerspine" id="prueba" class="evaluacion" src="imagesAdidas/evaluaciones/contestar_evaluacion.png">
+					<a href="evaluacion.php?eval=powerspine" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec2">
                         <div class="descriptionTec">
         	        		<img src="imagesAdidas/tecnologias/predator/title2.png">
             	    		<p class="desTec">Poder</p>
@@ -68,9 +68,9 @@ $user=profile();
             	    	</div>
 					</div>	
                     <?php elseif($_GET['tech'] == "3"): ?>
-					<div id="slideTec3">	
+					 <img src="imagesAdidas/tecnologias/predator/title3.png">
+                    <div id="slideTec3">	
                         <div class="descriptionTec">
-        	        		<img src="imagesAdidas/tecnologias/predator/title3.png">
             	    		<p class="desTec"></p>
                 			<p class="textTec">Lazada asimétrica para dar una zona de pateo mas amplia y un  mejor contacto con el balón.</p>
                 		
@@ -81,8 +81,8 @@ $user=profile();
 					
 					</div>
                     <?php elseif($_GET['tech'] == "4"): ?>
-					<div id="slideTec4">
-						<a href="evaluacion.php?eval=tpu" id="prueba" class="evaluacion" src="imagesAdidas/evaluaciones/contestar_evaluacion.png">
+					<a href="evaluacion.php?eval=tpu" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec4">
                         <div class="descriptionTec" >
         	        		<img src="imagesAdidas/tecnologias/predator/title4.png">
             	    		<p class="desTec"></p>
@@ -102,8 +102,8 @@ $user=profile();
 					
 					</div>
                     <?php elseif($_GET['tech'] == "5"): ?>
-					<div id="slideTec5">
-						<a href="evaluacion.php?eval=tpu" id="prueba" class="evaluacion" src="imagesAdidas/evaluaciones/contestar_evaluacion.png">
+					<a href="evaluacion.php?eval=tpu" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec5">
                         <div class="descriptionTec">
         	        		<img src="imagesAdidas/tecnologias/predator/title5.png">
             	    		<p class="desTec">Estructura interna de TPU en el calzado que refuerza las paredes laterales.</p>
@@ -119,8 +119,8 @@ $user=profile();
                 		</div>
 					</div>
                     <?php elseif($_GET['tech'] == "6"): ?>
-					<div id="slideTec6">
-						<a href="evaluacion.php?eval=adilite" id="prueba" class="evaluacion" src="imagesAdidas/evaluaciones/contestar_evaluacion.png">
+					<a href="evaluacion.php?eval=adilite" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec6">
                         <div class="descriptionTec">
                 			<img src="imagesAdidas/tecnologias/predator/title6.png">
 	                		<p class="desTec">Para el calzado más ligero del planeta</p>
@@ -141,8 +141,8 @@ $user=profile();
                 		</div>					
 					</div>
                     <?php elseif($_GET['tech'] == "7"): ?>
-					<div id="slideTec7">
-                    <a href="evaluacion.php?eval=traxion" id="prueba" class="evaluacion" src="imagesAdidas/evaluaciones/contestar_evaluacion.png">
+					<a href="evaluacion.php?eval=traxion" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec7">                    
 						<div class="descriptionTec" >
                 			<img src="imagesAdidas/tecnologias/predator/title7.png">
 	                		<p class="desTec">Desempeño funcional con cada tache</p>
@@ -159,8 +159,8 @@ Para máxima aceleración, frenado y giros. Los nuevos taches con forma triangul
             	    	</div>					
 					</div>
                     <?php elseif($_GET['tech'] == "8"): ?>
-					<div id="slideTec9">
-						<a href="evaluacion.php?eval=sprintframe" id="prueba" class="evaluacion" src="imagesAdidas/evaluaciones/contestar_evaluacion.png">
+					<a href="evaluacion.php?eval=sprintframe" id="prueba" class="evaluacion" src="imagesAdidas/evaluaciones/contestar_evaluacion.png">
+                    <div id="slideTec9">
                         <div class="descriptionTec" >
                 			<img src="imagesAdidas/tecnologias/predator/title8.png">
             	    		<p class="desTec">Estabilidad a través de la geometría</p>
