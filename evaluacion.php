@@ -16,6 +16,7 @@ if(isset($_GET['evaluacion'])){
 	$error=(isset($_GET['p7']))?false:true;
 	$error=(isset($_GET['p8']))?false:true;
 	$error=(isset($_GET['p9']))?false:true;
+	$error=(isset($_GET['p10']))?false:true;
 	
 	if(!$error){
 		switch($_GET['evaluacion']){
