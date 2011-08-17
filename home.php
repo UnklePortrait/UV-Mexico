@@ -1,8 +1,8 @@
 <?php
 include_once('functions.php');
 $logoutAction = logout();
-authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
-$user=profile();
+//authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+//$user=profile();
 
 ?>
 <?php include ("includes/header.php") ?>
@@ -52,6 +52,7 @@ $user=profile();
         	  			<param name="quality" value="high" />
         	  			<param name="wmode" value="transparent" />
         	  			<param name="swfversion" value="6.0.65.0" />
+                        <param name="allowScriptAccess" value="always" />
         	  			<!-- Esta etiqueta param indica a los usuarios de Flash Player 6.0 r65 o posterior que descarguen la versión más reciente de Flash Player. Elimínela si no desea que los usuarios vean el mensaje. -->
         	  			<param name="expressinstall" value="Scripts/expressInstall.swf" />
                         <!-- La siguiente etiqueta object es para navegadores distintos de IE. Ocúltela a IE mediante IECC. -->
@@ -61,6 +62,7 @@ $user=profile();
                         <param name="quality" value="high" />
                         <param name="wmode" value="transparent" />
                         <param name="swfversion" value="6.0.65.0" />
+                        <param name="allowScriptAccess" value="always" />
                         <param name="expressinstall" value="Scripts/expressInstall.swf" />
                         <!-- El navegador muestra el siguiente contenido alternativo para usuarios con Flash Player 6.0 o versiones anteriores. -->
         				<div>
@@ -73,7 +75,6 @@ $user=profile();
       	  			</object>
 					</div>
 				</div>
-                <img class="personaje"  />					
 			</div>
 			<div class="clear"></div>
 			<div class="bottom3"></div>

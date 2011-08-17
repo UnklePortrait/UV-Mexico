@@ -2,16 +2,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 	<head>
-		<title>:: Universidad Virtual  ::</title>
-		<link rel="stylesheet" href="style.css" type="text/css">
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>:: Universidad Virtual  ::</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet"  href="js/containerbox/containerbox.css" />
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>		
 		<script type="text/javascript" src="js/jquery.carouFredSel-4.3.3-packed.js"></script>	
 		<script type="text/javascript" src="js/jquery.imageScroller.js"></script>
 		<script src="js/swfobject_modified.js" type="text/javascript"></script>	
 		<script type="text/javascript" src="js/actions.js"></script>
-    	<script type="text/javascript"  src="js/dwfunctions.js"></script>
-    	<script type="text/javascript"  src="js/slidedeck.js"></script>
+    	<script type="text/javascript" src="js/dwfunctions.js"></script>
+    	<script type="text/javascript" src="js/slidedeck.js"></script>
+        <script type="text/javascript" src="js/containerbox/containerbox.js"></script>
     </head>
 	<body>
 		<div id="container">

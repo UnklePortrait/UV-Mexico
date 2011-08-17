@@ -27,9 +27,9 @@
 }
 #containerbox-close{
 	display:block;
-	width:59px;
-	height:59px;
-	background:url(imgs/cerrar100.png) center center no-repeat transparent;
+	width:42px;
+	height:42px;
+	background:url(imgs/cerrar.png) center center no-repeat transparent;
 	position:absolute;
 	top:0;
 	z-index:101;
