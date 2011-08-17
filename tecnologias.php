@@ -39,9 +39,10 @@ $user=profile();
 			<div id="content">
 				<div class="top"></div>
 				<div id="content-tecnologia">
-                	<?php if($_GET['tech'] == "1"): ?>
-                    <div id="slideTec1">
-                		<div class="descriptionTec">
+                	<?php if($_GET['tech'] == "1"): ?>                    
+                    <a href="evaluacion.php?eval=zona_predator" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec1">                    
+                        <div class="descriptionTec">
                 			<img src="imagesAdidas/tecnologias/predator/title1.png">
 	                		<p class="desTec">Viraje</p>
     	            		<p class="textTec">El elemento PREDATOR ha sido diseñado de una mezcla de caucho de silicona. </p>
@@ -53,8 +54,9 @@ $user=profile();
 	                	</div>
 					</div>
                     <?php elseif($_GET['tech'] == "2"): ?>
-					<div id="slideTec2">
-						<div class="descriptionTec">
+					<a href="evaluacion.php?eval=powerspine" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec2">
+                        <div class="descriptionTec">
         	        		<img src="imagesAdidas/tecnologias/predator/title2.png">
             	    		<p class="desTec">Poder</p>
                 			<p class="textTec">La tecnología POWERSPINE esta inspirada en el sistema FINGERSAVE. Diseñadas específicamente para minimizar la pérdida de energía durante el pateo a través de una reducción de la  “flexión de pateo” en el área del empeine.</p>
@@ -66,9 +68,9 @@ $user=profile();
             	    	</div>
 					</div>	
                     <?php elseif($_GET['tech'] == "3"): ?>
-					<div id="slideTec3">	
-						<div class="descriptionTec">
-        	        		<img src="imagesAdidas/tecnologias/predator/title3.png">
+					 <img src="imagesAdidas/tecnologias/predator/title3.png">
+                    <div id="slideTec3">	
+                        <div class="descriptionTec">
             	    		<p class="desTec"></p>
                 			<p class="textTec">Lazada asimétrica para dar una zona de pateo mas amplia y un  mejor contacto con el balón.</p>
                 		
@@ -79,8 +81,9 @@ $user=profile();
 					
 					</div>
                     <?php elseif($_GET['tech'] == "4"): ?>
-					<div id="slideTec4">
-						<div class="descriptionTec" >
+					<a href="evaluacion.php?eval=tpu" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec4">
+                        <div class="descriptionTec" >
         	        		<img src="imagesAdidas/tecnologias/predator/title4.png">
             	    		<p class="desTec"></p>
                 			<p class="textTec">El marco inferior de TPU es uno de los elementos mas icónicos del nuevo F50 adizero. Su función es la de Reforzar la capa de material transfiriendo las fuerzas desde la capellada a la resistente suela; y proveer una Estabilidad mejorada en la zona media y lateral.</p>
@@ -99,8 +102,9 @@ $user=profile();
 					
 					</div>
                     <?php elseif($_GET['tech'] == "5"): ?>
-					<div id="slideTec5">
-						<div class="descriptionTec">
+					<a href="evaluacion.php?eval=tpu" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec5">
+                        <div class="descriptionTec">
         	        		<img src="imagesAdidas/tecnologias/predator/title5.png">
             	    		<p class="desTec">Estructura interna de TPU en el calzado que refuerza las paredes laterales.</p>
                 			<p class="textTec"><ul>
@@ -115,8 +119,9 @@ $user=profile();
                 		</div>
 					</div>
                     <?php elseif($_GET['tech'] == "6"): ?>
-					<div id="slideTec6">
-						<div class="descriptionTec">
+					<a href="evaluacion.php?eval=adilite" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec6">
+                        <div class="descriptionTec">
                 			<img src="imagesAdidas/tecnologias/predator/title6.png">
 	                		<p class="desTec">Para el calzado más ligero del planeta</p>
     	            		<p class="textTec">
@@ -136,7 +141,8 @@ $user=profile();
                 		</div>					
 					</div>
                     <?php elseif($_GET['tech'] == "7"): ?>
-					<div id="slideTec7">
+					<a href="evaluacion.php?eval=traxion" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <div id="slideTec7">                    
 						<div class="descriptionTec" >
                 			<img src="imagesAdidas/tecnologias/predator/title7.png">
 	                		<p class="desTec">Desempeño funcional con cada tache</p>
@@ -153,8 +159,9 @@ Para máxima aceleración, frenado y giros. Los nuevos taches con forma triangul
             	    	</div>					
 					</div>
                     <?php elseif($_GET['tech'] == "8"): ?>
-					<div id="slideTec9">
-						<div class="descriptionTec" >
+					<a href="evaluacion.php?eval=sprintframe" id="prueba" class="evaluacion" src="imagesAdidas/evaluaciones/contestar_evaluacion.png">
+                    <div id="slideTec9">
+                        <div class="descriptionTec" >
                 			<img src="imagesAdidas/tecnologias/predator/title8.png">
             	    		<p class="desTec">Estabilidad a través de la geometría</p>
         	        		<p class="textTec">Usando el revolucionario material de la suela y los estoperoles geométricos, la suela crea la estabilidad necesaria al formar 3 puentes-dimensionales y una forma de 3-D la cual le quita peso pero mantiene la importante integridad de la parte central del pie. </p>
