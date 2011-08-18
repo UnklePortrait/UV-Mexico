@@ -54,13 +54,17 @@ if(isset($_GET['evaluacion'])){
 			$respuestas=array('c','c','b','true','false','false','a','a','a','b');
 			break;
 		}
-		for($i=1;$i<10;$i++){
+		if(isset($_GET['p1'])){
+              for($i=1;$i<10;$i++){
 			if($_GET['p'.$i]==$respuestas[$i-1]){
 				$aciertos++;
 			}else{
 				$errores++;
 			}
 		}
+                  }
+                 if(isset($_GET['tp1'])){
+
                   for($i=1;$i<5;$i++){
 			if($_GET['tp'.$i]==$respuestas[$i-1]){
 				$aciertos++;
@@ -68,7 +72,7 @@ if(isset($_GET['evaluacion'])){
 				$errores++;
 			}
 		}
-
+                }
   		$resultado=$aciertos-$errores;
   		if($resultado<0){
 	  		$resultado=0;
