@@ -19,7 +19,7 @@ $user=profile();
                       </div>
 			<div id="menu">
 			<ul>
-				<li><a href="home.php" id="menuInicio" class="menu"></a></li>
+				<li><a href="home1.php" id="menuInicio" class="menu"></a></li>
 				<li><a href="#" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
 				<li class="menu_categoria">
                 	<a href="#" id="menuForoDudas" class="menu"></a>
@@ -27,9 +27,9 @@ $user=profile();
                     	<li class="menu_subcategoria">
                         	<a href="#">F&uacute;tbol</a>
                         	<ul>
-                            	<li><a href="foro.php?cat=futbol&subcat=f50">F50</a></li>
-                                <li><a href="foro.php?cat=futbol&subcat=predator">Predator</a></li>
-                                <li><a href="foro.php?cat=futbol&subcat=adipure">Adipure</a></li>
+                            	<li><a href="foro1.php?cat=futbol&amp;subcat=f50">F50</a></li>
+                                <li><a href="foro1.php?cat=futbol&amp;subcat=predator">Predator</a></li>
+                                <li><a href="foro1.php?cat=futbol&amp;subcat=adipure">Adipure</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Running</a></li>

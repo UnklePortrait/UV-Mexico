@@ -11,7 +11,7 @@ $user=profile();
 					  </div>
 			<div id="menu">
 			<ul>
-				<li><a href="home.php" id="menuInicio" class="menu"></a></li>
+				<li><a href="home1.php" id="menuInicio" class="menu"></a></li>
 
 				<li><a href="#" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
 				<li class="menu_categoria">
@@ -20,9 +20,9 @@ $user=profile();
                     	<li class="menu_subcategoria">
                         	<a href="#">F&uacute;tbol</a>
                         	<ul>
-                            	<li><a href="foro.php?cat=futbol&subcat=f50">F50</a></li>
-                                <li><a href="foro.php?cat=futbol&subcat=predator">Predator</a></li>
-                                <li><a href="foro.php?cat=futbol&subcat=adipure">Adipure</a></li>
+                            	<li><a href="foro1.php?cat=futbol&amp;subcat=f50">F50</a></li>
+                                <li><a href="foro1.php?cat=futbol&amp;subcat=predator">Predator</a></li>
+                                <li><a href="foro1.php?cat=futbol&amp;subcat=adipure">Adipure</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Running</a></li>
@@ -40,7 +40,7 @@ $user=profile();
 				<div class="top"></div>
 				<div id="content-tecnologia">
                 	<?php if($_GET['tech'] == "1"): ?>                    
-                    <a href="evaluacion.php?eval=zona_predator" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+                    <a href="evaluacion1.php?eval=zona_predator" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
                     <div id="slideTec1">                    
                         <div class="descriptionTec">
                 			<img src="imagesAdidas/tecnologias/predator/title1.png">
@@ -54,7 +54,7 @@ $user=profile();
 	                	</div>
 					</div>
                     <?php elseif($_GET['tech'] == "2"): ?>
-					<a href="evaluacion.php?eval=powerspine" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+					<a href="evaluacion1.php?eval=powerspine" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
                     <div id="slideTec2">
                         <div class="descriptionTec">
         	        		<img src="imagesAdidas/tecnologias/predator/title2.png">
@@ -81,7 +81,7 @@ $user=profile();
 					
 					</div>
                     <?php elseif($_GET['tech'] == "4"): ?>
-					<a href="evaluacion.php?eval=tpu" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+					<a href="evaluacion1.php?eval=tpu" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
                     <div id="slideTec4">
                         <div class="descriptionTec" >
         	        		<img src="imagesAdidas/tecnologias/predator/title4.png">
@@ -102,7 +102,7 @@ $user=profile();
 					
 					</div>
                     <?php elseif($_GET['tech'] == "5"): ?>
-					<a href="evaluacion.php?eval=tpu" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+					<a href="evaluacion1.php?eval=tpu" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
                     <div id="slideTec5">
                         <div class="descriptionTec">
         	        		<img src="imagesAdidas/tecnologias/predator/title5.png">
@@ -119,7 +119,7 @@ $user=profile();
                 		</div>
 					</div>
                     <?php elseif($_GET['tech'] == "6"): ?>
-					<a href="evaluacion.php?eval=adilite" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+					<a href="evaluacion1.php?eval=adilite" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
                     <div id="slideTec6">
                         <div class="descriptionTec">
                 			<img src="imagesAdidas/tecnologias/predator/title6.png">
@@ -141,7 +141,7 @@ $user=profile();
                 		</div>					
 					</div>
                     <?php elseif($_GET['tech'] == "7"): ?>
-					<a href="evaluacion.php?eval=traxion" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
+					<a href="evaluacion1.php?eval=traxion" id="prueba" class="evaluacion"><img src="imagesAdidas/evaluaciones/contestar_evaluacion.png" /></a>
                     <div id="slideTec7">                    
 						<div class="descriptionTec" >
                 			<img src="imagesAdidas/tecnologias/predator/title7.png">

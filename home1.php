@@ -1,18 +1,18 @@
 <?php
 include_once('functions.php');
 $logoutAction = logout();
-//authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
-//$user=profile();
+authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+$user=profile();
 
 ?>
-<?php include ("includes/headerHome.php") ?>
+<?php include ("includes/header.php") ?>
       <div id="user">
     	              <h2 class="user">Hola <?php echo $user['nombre'] ?> </h2>
 					  <a href="<?php echo $logoutAction ?>" class="logout">Cerrar sesi&oacute;n</a>	
 					  </div>
 			<div id="menu">
 			<ul>
-				<li><a href="home.php" id="menuInicio" class="menu"></a></li>
+				<li><a href="home1.php" id="menuInicio" class="menu"></a></li>
 
 				<li><a href="#" id="menuPerfil" class="menu"  onclick="MM_goToURL('parent','perfil.php');return document.MM_returnValue"></a></li>
 				<li class="menu_categoria">
@@ -21,9 +21,9 @@ $logoutAction = logout();
                     	<li class="menu_subcategoria">
                         	<a href="#">F&uacute;tbol</a>
                         	<ul>
-                            	<li><a href="foro1.php?cat=futbol&amp;subcat=f50">F50</a></li>
-                                <li><a href="foro1.php?cat=futbol&amp;subcat=predator">Predator</a></li>
-                                <li><a href="foro1.php?cat=futbol&amp;subcat=adipure">Adipure</a></li>
+                            	<li><a href="foro.php?cat=futbol&subcat=f50">F50</a></li>
+                                <li><a href="foro.php?cat=futbol&subcat=predator">Predator</a></li>
+                                <li><a href="foro.php?cat=futbol&subcat=adipure">Adipure</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Running</a></li>
@@ -52,7 +52,6 @@ $logoutAction = logout();
         	  			<param name="quality" value="high" />
         	  			<param name="wmode" value="transparent" />
         	  			<param name="swfversion" value="6.0.65.0" />
-                        <param name="allowScriptAccess" value="always" />
         	  			<!-- Esta etiqueta param indica a los usuarios de Flash Player 6.0 r65 o posterior que descarguen la versión más reciente de Flash Player. Elimínela si no desea que los usuarios vean el mensaje. -->
         	  			<param name="expressinstall" value="Scripts/expressInstall.swf" />
                         <!-- La siguiente etiqueta object es para navegadores distintos de IE. Ocúltela a IE mediante IECC. -->
@@ -62,7 +61,6 @@ $logoutAction = logout();
                         <param name="quality" value="high" />
                         <param name="wmode" value="transparent" />
                         <param name="swfversion" value="6.0.65.0" />
-                        <param name="allowScriptAccess" value="always" />
                         <param name="expressinstall" value="Scripts/expressInstall.swf" />
                         <!-- El navegador muestra el siguiente contenido alternativo para usuarios con Flash Player 6.0 o versiones anteriores. -->
         				<div>
@@ -75,6 +73,7 @@ $logoutAction = logout();
       	  			</object>
 					</div>
 				</div>
+                <img class="personaje"  />					
 			</div>
 			<div class="clear"></div>
 			<div class="bottom3"></div>
