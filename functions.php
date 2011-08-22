@@ -11,7 +11,7 @@ function login(){
 	if (isset($_POST['login'])) {
 		$loginUsername=$_POST['usuario'];
 		$password=$_POST['password'];
-		$MM_redirectLoginSuccess = "home.php";
+		$MM_redirectLoginSuccess = "home1.php";
 		$MM_redirectLoginFailed = "index.php";
 		$MM_redirecttoReferrer = false;
 	

@@ -46,7 +46,7 @@ if (isset($_POST['usuario'])) {
   $loginUsername=$_GET['usuario'];
   $password=$_GET['password'];
   $MM_fldUserAuthorization = "id_tipo_usuario";
-  $MM_redirectLoginSuccess = "home.php";
+  $MM_redirectLoginSuccess = "home1.php";
   $MM_redirectLoginFailed = "index.php";
   $MM_redirecttoReferrer = false;
   mysql_select_db($database_db_adidas, $db_adidas);
@@ -71,7 +71,7 @@ if (isset($_POST['usuario'])) {
 	switch ($loginStrGroup){
 	
 		case 1: 
-			$MM_redirectLoginSuccess = "home.php";
+			$MM_redirectLoginSuccess = "home1.php";
 		break;
 	
 		case 2:
@@ -115,7 +115,7 @@ function MM_callJS(jsStr) { //v2.0
 				<div id="registroBien">
 					<img src="imagesAdidas/login/registroBien.png">
 					<p class="bien"></p>
-										<a href="home.php" class="salir">entrar</a>
+										<a href="home1.php" class="salir">entrar</a>
 				</div>	
 	
 				<div class="bottom"></div>

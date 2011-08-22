@@ -48,7 +48,7 @@ if(isset($_GET['evaluacion'])){
 			$respuestas=array('c','c','b','true','false','false','a','a','a','b');
 			break;
 		}
-		for($i=1;$i<=10;$i++){
+		for($i=1;$i<10;$i++){
 			if($_GET['p'.$i]==$respuestas[$i-1]){
 				$aciertos++;
 			}else{

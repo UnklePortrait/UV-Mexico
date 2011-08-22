@@ -145,7 +145,9 @@ class User{
 				$id_user=$user_row['id_usuario'];
 				$user= $this->db->select_where("usuarios", "image,nombre", "id_usuario='$id_user'");
 				$result=mysql_fetch_array($user);
-				$result_array=array("nombre"=>$result['nombre'],"image"=>$result['image'],"comentario"=>$user_row['comentario'],"fecha"=>$user_row['fecha'],"hora"=>$user_row	['hora'],"id_comentario"=>$user_row['id_comentario']);
+				$nombre = empty($result['nombre'])?"unavailable":$result['nombre'];
+				$image = empty($result['image'])?"undefined.jpg":$result['image'];
+				$result_array=array("nombre"=>$nombre,"image"=>$image,"comentario"=>$user_row['comentario'],"fecha"=>$user_row['fecha'],"hora"=>$user_row['hora'],"id_comentario"=>$user_row['id_comentario']);
 				array_push($commentsArray,$result_array);			
 			}
 		}
