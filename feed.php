@@ -1,7 +1,7 @@
 <?php 
 require_once('classes/database.php');
 $database=new DataBase();
-$subcat_name = $_GET['subcat'];
+$subcat_name = $_REQUEST['subcat'];
 $subcat_result = $database->select_where("subcategoria", "id_subcategoria", "nombre='$subcat_name'");
 $subcat_array = mysql_fetch_array($subcat_result);
 $subcat_id = $subcat_array['id_subcategoria'];

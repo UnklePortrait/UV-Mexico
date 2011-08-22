@@ -1,5 +1,44 @@
 
-
+//---------- Show player/technologies lightbox ----------------//
+	var image, loader;
+	function showPlayer(player){
+		image = new Image();
+		image.src = 'imagesAdidas/jugadores/'+player+'.jpg'; 
+		loader = setTimeout('loaded()',100);
+	}
+	function showTech(tech){
+		image = new Image();
+		image.src = 'imagesAdidas/tecnologias/'+tech+'.jpg';
+		loader = setTimeout('loaded()',100);
+	}
+	function loaded(){
+		if(image.complete){
+			clearTimeout(loader);
+			$('body').append(
+			'<div id="containerbox">'+
+				'<div id="containerbox-content">'+
+					'<a href="#" id="containerbox-close"><span>Cerrar</span></a>'+
+				'</div>'+
+				'<div id="containerbox-back"></div>'+
+			'</div>'
+			);
+			$('#containerbox-content').append(image);
+			$('#containerbox-content').css('margin-top', $(window).height()/2-image.height/2);
+			$('#containerbox-content').css('margin-left', $(window).width()/2-image.width/2);
+			$('#containerbox-close').css('left',image.width);
+			$('#containerbox').hide().fadeIn(500);
+			$('#containerbox-close').click(closeContainer);
+			$('#containerbox-back').click(closeContainer);
+		}
+	}
+	function closeContainer(e){
+		e.preventDefault();
+		$('#containerbox').fadeOut(500,removeContainer);
+	}
+	function removeContainer(){
+		$('#containerbox').remove();
+	}
+	
 $(document).ready(function(){
 	//---------- Perfil show imageupload form ----------------//
 	$('#profileImage').hide();

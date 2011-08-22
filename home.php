@@ -1,8 +1,8 @@
 <?php
 include_once('functions.php');
 $logoutAction = logout();
-authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
-$user=profile();
+//authorize(0, "index.php?accesscheck=" . $_SERVER['PHP_SELF']);
+//$user=profile();
 
 ?>
 <?php include ("includes/headerHome.php") ?>
